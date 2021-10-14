@@ -103,9 +103,9 @@ namespace Telas {
             // 
             this.comboBoxCategoriaServico.FormattingEnabled = true;
             this.comboBoxCategoriaServico.Items.AddRange(new object[] {
-            "Produtos",
-            "Serviços",
-            "Pessoas"});
+            "Produto",
+            "Serviço",
+            "Pessoa"});
             this.comboBoxCategoriaServico.Location = new System.Drawing.Point(42, 30);
             this.comboBoxCategoriaServico.Name = "comboBoxCategoriaServico";
             this.comboBoxCategoriaServico.Size = new System.Drawing.Size(180, 21);
@@ -144,6 +144,7 @@ namespace Telas {
             this.button7.TabIndex = 86;
             this.button7.Text = "Cadastrar";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label10
             // 
