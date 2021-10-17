@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using Users;
+using M.Entities;
 
 namespace Control {
     public class Cadastros {
 
-        public static Boolean salvarCategoria(string classe, string nome) {
-            if(DAOCategoria.cadastrarCategoria(classe, nome)) {
+        public static Boolean salvarCategoria(CategoriaGeral categoria) {
+            if(DAOCategoria.cadastrarCategoria(categoria)) {
                 return true;
             }
             else {
@@ -19,6 +20,15 @@ namespace Control {
         }
         public static Boolean salvarPessoa(string nome, string cpf, string nascimento, string email, int categoria, char sexo, string telefone) {
             if (DAOPessoa.cadastrarPessoa(nome, cpf, nascimento, email, categoria, sexo, telefone)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        public static Boolean salvarCategoriaLocal(CategoriaLocal categoria) {
+            if (DAOLocal.cadastrarCategoriaLocal(categoria)){
                 return true;
             }
             else {

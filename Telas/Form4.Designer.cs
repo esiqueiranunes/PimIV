@@ -29,6 +29,7 @@ namespace Telas {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnShowCadLocal = new System.Windows.Forms.Button();
             this.panelCadLocal = new System.Windows.Forms.Panel();
+            this.tbNomeLocal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbDescricaoLocal = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -38,22 +39,21 @@ namespace Telas {
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnShowCadCategoriaLocal = new System.Windows.Forms.Button();
             this.panelCadCategoriaLocal = new System.Windows.Forms.Panel();
+            this.tbDescontoLocal = new System.Windows.Forms.TextBox();
+            this.tbValorLocal = new System.Windows.Forms.TextBox();
+            this.tbCategoriaLocal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownQuantidade = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnCadastrarCategoriaLocal = new System.Windows.Forms.Button();
             this.btnListarLocais = new System.Windows.Forms.Button();
-            this.tbNomeLocal = new System.Windows.Forms.TextBox();
-            this.tbCategoriaLocal = new System.Windows.Forms.TextBox();
-            this.tbValorLocal = new System.Windows.Forms.TextBox();
-            this.tbDescontoLocal = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelCadLocal.SuspendLayout();
             this.panelCadCategoriaLocal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -78,7 +78,7 @@ namespace Telas {
             this.button4.Location = new System.Drawing.Point(618, 26);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(106, 36);
-            this.button4.TabIndex = 105;
+            this.button4.TabIndex = 15;
             this.button4.Text = "Sair";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
@@ -105,7 +105,7 @@ namespace Telas {
             this.btnShowCadLocal.Location = new System.Drawing.Point(0, 100);
             this.btnShowCadLocal.Name = "btnShowCadLocal";
             this.btnShowCadLocal.Size = new System.Drawing.Size(765, 23);
-            this.btnShowCadLocal.TabIndex = 117;
+            this.btnShowCadLocal.TabIndex = 1;
             this.btnShowCadLocal.Text = "NOVO LOCAL";
             this.btnShowCadLocal.UseVisualStyleBackColor = false;
             this.btnShowCadLocal.Click += new System.EventHandler(this.btnShowCadEndereco_Click);
@@ -128,6 +128,13 @@ namespace Telas {
             this.panelCadLocal.Size = new System.Drawing.Size(765, 137);
             this.panelCadLocal.TabIndex = 120;
             // 
+            // tbNomeLocal
+            // 
+            this.tbNomeLocal.Location = new System.Drawing.Point(55, 27);
+            this.tbNomeLocal.Name = "tbNomeLocal";
+            this.tbNomeLocal.Size = new System.Drawing.Size(161, 20);
+            this.tbNomeLocal.TabIndex = 2;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -144,7 +151,7 @@ namespace Telas {
             this.tbDescricaoLocal.Multiline = true;
             this.tbDescricaoLocal.Name = "tbDescricaoLocal";
             this.tbDescricaoLocal.Size = new System.Drawing.Size(299, 40);
-            this.tbDescricaoLocal.TabIndex = 92;
+            this.tbDescricaoLocal.TabIndex = 4;
             // 
             // label13
             // 
@@ -167,7 +174,7 @@ namespace Telas {
             this.comboBox3.Location = new System.Drawing.Point(222, 26);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(132, 21);
-            this.comboBox3.TabIndex = 90;
+            this.comboBox3.TabIndex = 3;
             // 
             // label3
             // 
@@ -187,7 +194,7 @@ namespace Telas {
             this.button3.Location = new System.Drawing.Point(618, 67);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(106, 36);
-            this.button3.TabIndex = 87;
+            this.button3.TabIndex = 6;
             this.button3.Text = "Botão";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -199,7 +206,7 @@ namespace Telas {
             this.btnCadastrar.Location = new System.Drawing.Point(492, 67);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(106, 36);
-            this.btnCadastrar.TabIndex = 86;
+            this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
@@ -214,7 +221,7 @@ namespace Telas {
             this.btnShowCadCategoriaLocal.Location = new System.Drawing.Point(0, 260);
             this.btnShowCadCategoriaLocal.Name = "btnShowCadCategoriaLocal";
             this.btnShowCadCategoriaLocal.Size = new System.Drawing.Size(765, 23);
-            this.btnShowCadCategoriaLocal.TabIndex = 121;
+            this.btnShowCadCategoriaLocal.TabIndex = 7;
             this.btnShowCadCategoriaLocal.Text = "NOVA CATEGORIA";
             this.btnShowCadCategoriaLocal.UseVisualStyleBackColor = false;
             this.btnShowCadCategoriaLocal.Click += new System.EventHandler(this.button1_Click);
@@ -226,18 +233,39 @@ namespace Telas {
             this.panelCadCategoriaLocal.Controls.Add(this.tbValorLocal);
             this.panelCadCategoriaLocal.Controls.Add(this.tbCategoriaLocal);
             this.panelCadCategoriaLocal.Controls.Add(this.label6);
-            this.panelCadCategoriaLocal.Controls.Add(this.numericUpDown1);
+            this.panelCadCategoriaLocal.Controls.Add(this.numericUpDownQuantidade);
             this.panelCadCategoriaLocal.Controls.Add(this.label2);
             this.panelCadCategoriaLocal.Controls.Add(this.label4);
             this.panelCadCategoriaLocal.Controls.Add(this.label5);
             this.panelCadCategoriaLocal.Controls.Add(this.button2);
-            this.panelCadCategoriaLocal.Controls.Add(this.button5);
+            this.panelCadCategoriaLocal.Controls.Add(this.btnCadastrarCategoriaLocal);
             this.panelCadCategoriaLocal.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadCategoriaLocal.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadCategoriaLocal.Location = new System.Drawing.Point(0, 283);
             this.panelCadCategoriaLocal.Name = "panelCadCategoriaLocal";
             this.panelCadCategoriaLocal.Size = new System.Drawing.Size(765, 137);
             this.panelCadCategoriaLocal.TabIndex = 122;
+            // 
+            // tbDescontoLocal
+            // 
+            this.tbDescontoLocal.Location = new System.Drawing.Point(278, 83);
+            this.tbDescontoLocal.Name = "tbDescontoLocal";
+            this.tbDescontoLocal.Size = new System.Drawing.Size(76, 20);
+            this.tbDescontoLocal.TabIndex = 11;
+            // 
+            // tbValorLocal
+            // 
+            this.tbValorLocal.Location = new System.Drawing.Point(55, 83);
+            this.tbValorLocal.Name = "tbValorLocal";
+            this.tbValorLocal.Size = new System.Drawing.Size(217, 20);
+            this.tbValorLocal.TabIndex = 10;
+            // 
+            // tbCategoriaLocal
+            // 
+            this.tbCategoriaLocal.Location = new System.Drawing.Point(55, 27);
+            this.tbCategoriaLocal.Name = "tbCategoriaLocal";
+            this.tbCategoriaLocal.Size = new System.Drawing.Size(217, 20);
+            this.tbCategoriaLocal.TabIndex = 8;
             // 
             // label6
             // 
@@ -249,12 +277,12 @@ namespace Telas {
             this.label6.TabIndex = 96;
             this.label6.Text = "Desconto Máx";
             // 
-            // numericUpDown1
+            // numericUpDownQuantidade
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(278, 28);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(76, 20);
-            this.numericUpDown1.TabIndex = 94;
+            this.numericUpDownQuantidade.Location = new System.Drawing.Point(278, 28);
+            this.numericUpDownQuantidade.Name = "numericUpDownQuantidade";
+            this.numericUpDownQuantidade.Size = new System.Drawing.Size(76, 20);
+            this.numericUpDownQuantidade.TabIndex = 9;
             // 
             // label2
             // 
@@ -294,21 +322,22 @@ namespace Telas {
             this.button2.Location = new System.Drawing.Point(618, 67);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 36);
-            this.button2.TabIndex = 87;
+            this.button2.TabIndex = 13;
             this.button2.Text = "Botão";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnCadastrarCategoriaLocal
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.Window;
-            this.button5.Location = new System.Drawing.Point(492, 67);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 36);
-            this.button5.TabIndex = 86;
-            this.button5.Text = "Cadastrar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCadastrarCategoriaLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrarCategoriaLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarCategoriaLocal.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrarCategoriaLocal.Location = new System.Drawing.Point(492, 67);
+            this.btnCadastrarCategoriaLocal.Name = "btnCadastrarCategoriaLocal";
+            this.btnCadastrarCategoriaLocal.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrarCategoriaLocal.TabIndex = 12;
+            this.btnCadastrarCategoriaLocal.Text = "Cadastrar";
+            this.btnCadastrarCategoriaLocal.UseVisualStyleBackColor = true;
+            this.btnCadastrarCategoriaLocal.Click += new System.EventHandler(this.btnCadastrarCategoriaLocal_Click);
             // 
             // btnListarLocais
             // 
@@ -321,37 +350,9 @@ namespace Telas {
             this.btnListarLocais.Location = new System.Drawing.Point(0, 420);
             this.btnListarLocais.Name = "btnListarLocais";
             this.btnListarLocais.Size = new System.Drawing.Size(765, 23);
-            this.btnListarLocais.TabIndex = 123;
+            this.btnListarLocais.TabIndex = 14;
             this.btnListarLocais.Text = "LISTAR LOCAIS";
             this.btnListarLocais.UseVisualStyleBackColor = false;
-            // 
-            // tbNomeLocal
-            // 
-            this.tbNomeLocal.Location = new System.Drawing.Point(55, 27);
-            this.tbNomeLocal.Name = "tbNomeLocal";
-            this.tbNomeLocal.Size = new System.Drawing.Size(161, 20);
-            this.tbNomeLocal.TabIndex = 94;
-            // 
-            // tbCategoriaLocal
-            // 
-            this.tbCategoriaLocal.Location = new System.Drawing.Point(55, 27);
-            this.tbCategoriaLocal.Name = "tbCategoriaLocal";
-            this.tbCategoriaLocal.Size = new System.Drawing.Size(217, 20);
-            this.tbCategoriaLocal.TabIndex = 95;
-            // 
-            // tbValorLocal
-            // 
-            this.tbValorLocal.Location = new System.Drawing.Point(55, 83);
-            this.tbValorLocal.Name = "tbValorLocal";
-            this.tbValorLocal.Size = new System.Drawing.Size(217, 20);
-            this.tbValorLocal.TabIndex = 98;
-            // 
-            // tbDescontoLocal
-            // 
-            this.tbDescontoLocal.Location = new System.Drawing.Point(278, 83);
-            this.tbDescontoLocal.Name = "tbDescontoLocal";
-            this.tbDescontoLocal.Size = new System.Drawing.Size(76, 20);
-            this.tbDescontoLocal.TabIndex = 99;
             // 
             // Form4
             // 
@@ -374,7 +375,7 @@ namespace Telas {
             this.panelCadLocal.PerformLayout();
             this.panelCadCategoriaLocal.ResumeLayout(false);
             this.panelCadCategoriaLocal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -396,12 +397,12 @@ namespace Telas {
         private System.Windows.Forms.Button btnShowCadCategoriaLocal;
         private System.Windows.Forms.Panel panelCadCategoriaLocal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownQuantidade;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCadastrarCategoriaLocal;
         private System.Windows.Forms.Button btnListarLocais;
         private System.Windows.Forms.TextBox tbNomeLocal;
         private System.Windows.Forms.TextBox tbDescontoLocal;

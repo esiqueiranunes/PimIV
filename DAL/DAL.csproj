@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BD.cs" />
     <Compile Include="DAOCategoria.cs" />
+    <Compile Include="DAOLocal.cs" />
     <Compile Include="DAOPessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

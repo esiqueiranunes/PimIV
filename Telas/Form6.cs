@@ -85,7 +85,7 @@ namespace Telas {
             categoria6.Classe = this.comboBoxCategoriaServico6.Text;
             categoria6.Nome = this.tbNomeCategoria6.Text;
 
-            if (Cadastros.salvarCategoria(categoria6.Classe, categoria6.Nome)) {
+            if (Cadastros.salvarCategoria(categoria6)) {
                 MessageBox.Show("Dados salvos com Sucesso!");
                 this.comboBoxCategoriaServico6.Text = "";
                 this.tbNomeCategoria6.Text = "";
