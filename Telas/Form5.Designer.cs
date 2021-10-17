@@ -38,14 +38,14 @@ namespace Telas {
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCadastrarServico = new System.Windows.Forms.Button();
             this.btnCadCategoria = new System.Windows.Forms.Button();
             this.panelCadCategoria = new System.Windows.Forms.Panel();
             this.tbNomeCategoria = new System.Windows.Forms.TextBox();
             this.comboBoxCategoriaServico = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnCadastrarCategoria = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.btnListarLocais = new System.Windows.Forms.Button();
             this.panelCadastrarServico.SuspendLayout();
@@ -102,7 +102,7 @@ namespace Telas {
             this.btnCadServico.Location = new System.Drawing.Point(0, 100);
             this.btnCadServico.Name = "btnCadServico";
             this.btnCadServico.Size = new System.Drawing.Size(765, 23);
-            this.btnCadServico.TabIndex = 124;
+            this.btnCadServico.TabIndex = 0;
             this.btnCadServico.Text = "CADASTRAR SERVIÇO";
             this.btnCadServico.UseVisualStyleBackColor = false;
             this.btnCadServico.Click += new System.EventHandler(this.btnCadServico_Click);
@@ -119,7 +119,7 @@ namespace Telas {
             this.panelCadServico.Controls.Add(this.label2);
             this.panelCadServico.Controls.Add(this.label5);
             this.panelCadServico.Controls.Add(this.button1);
-            this.panelCadServico.Controls.Add(this.button2);
+            this.panelCadServico.Controls.Add(this.btnCadastrarServico);
             this.panelCadServico.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadServico.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadServico.Location = new System.Drawing.Point(0, 123);
@@ -132,28 +132,28 @@ namespace Telas {
             this.tbDescricaoServico.Location = new System.Drawing.Point(313, 88);
             this.tbDescricaoServico.Name = "tbDescricaoServico";
             this.tbDescricaoServico.Size = new System.Drawing.Size(387, 20);
-            this.tbDescricaoServico.TabIndex = 107;
+            this.tbDescricaoServico.TabIndex = 3;
             // 
             // tbValorServico
             // 
             this.tbValorServico.Location = new System.Drawing.Point(60, 139);
             this.tbValorServico.Name = "tbValorServico";
             this.tbValorServico.Size = new System.Drawing.Size(234, 20);
-            this.tbValorServico.TabIndex = 106;
+            this.tbValorServico.TabIndex = 3;
             // 
             // tbNomeServico
             // 
             this.tbNomeServico.Location = new System.Drawing.Point(60, 88);
             this.tbNomeServico.Name = "tbNomeServico";
             this.tbNomeServico.Size = new System.Drawing.Size(234, 20);
-            this.tbNomeServico.TabIndex = 105;
+            this.tbNomeServico.TabIndex = 2;
             // 
             // tbCategoriaServico
             // 
             this.tbCategoriaServico.Location = new System.Drawing.Point(60, 36);
             this.tbCategoriaServico.Name = "tbCategoriaServico";
             this.tbCategoriaServico.Size = new System.Drawing.Size(234, 20);
-            this.tbCategoriaServico.TabIndex = 104;
+            this.tbCategoriaServico.TabIndex = 1;
             // 
             // label6
             // 
@@ -203,21 +203,21 @@ namespace Telas {
             this.button1.Location = new System.Drawing.Point(594, 130);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 36);
-            this.button1.TabIndex = 87;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Botão";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCadastrarServico
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(482, 130);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 36);
-            this.button2.TabIndex = 86;
-            this.button2.Text = "Cadastrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCadastrarServico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrarServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarServico.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrarServico.Location = new System.Drawing.Point(482, 130);
+            this.btnCadastrarServico.Name = "btnCadastrarServico";
+            this.btnCadastrarServico.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrarServico.TabIndex = 4;
+            this.btnCadastrarServico.Text = "Cadastrar";
+            this.btnCadastrarServico.UseVisualStyleBackColor = true;
             // 
             // btnCadCategoria
             // 
@@ -230,7 +230,7 @@ namespace Telas {
             this.btnCadCategoria.Location = new System.Drawing.Point(0, 327);
             this.btnCadCategoria.Name = "btnCadCategoria";
             this.btnCadCategoria.Size = new System.Drawing.Size(765, 23);
-            this.btnCadCategoria.TabIndex = 126;
+            this.btnCadCategoria.TabIndex = 6;
             this.btnCadCategoria.Text = "CADASTRAR CATEGORIA";
             this.btnCadCategoria.UseVisualStyleBackColor = false;
             this.btnCadCategoria.Click += new System.EventHandler(this.btnCadCategoria_Click);
@@ -242,7 +242,7 @@ namespace Telas {
             this.panelCadCategoria.Controls.Add(this.comboBoxCategoriaServico);
             this.panelCadCategoria.Controls.Add(this.button6);
             this.panelCadCategoria.Controls.Add(this.label8);
-            this.panelCadCategoria.Controls.Add(this.button7);
+            this.panelCadCategoria.Controls.Add(this.btnCadastrarCategoria);
             this.panelCadCategoria.Controls.Add(this.label10);
             this.panelCadCategoria.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadCategoria.Dock = System.Windows.Forms.DockStyle.Top;
@@ -256,7 +256,7 @@ namespace Telas {
             this.tbNomeCategoria.Location = new System.Drawing.Point(254, 42);
             this.tbNomeCategoria.Name = "tbNomeCategoria";
             this.tbNomeCategoria.Size = new System.Drawing.Size(203, 20);
-            this.tbNomeCategoria.TabIndex = 114;
+            this.tbNomeCategoria.TabIndex = 8;
             // 
             // comboBoxCategoriaServico
             // 
@@ -268,7 +268,7 @@ namespace Telas {
             this.comboBoxCategoriaServico.Location = new System.Drawing.Point(68, 41);
             this.comboBoxCategoriaServico.Name = "comboBoxCategoriaServico";
             this.comboBoxCategoriaServico.Size = new System.Drawing.Size(180, 21);
-            this.comboBoxCategoriaServico.TabIndex = 113;
+            this.comboBoxCategoriaServico.TabIndex = 7;
             // 
             // button6
             // 
@@ -278,7 +278,7 @@ namespace Telas {
             this.button6.Location = new System.Drawing.Point(594, 32);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(106, 36);
-            this.button6.TabIndex = 110;
+            this.button6.TabIndex = 10;
             this.button6.Text = "Botão";
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -292,17 +292,18 @@ namespace Telas {
             this.label8.TabIndex = 112;
             this.label8.Text = "Nome da categoria";
             // 
-            // button7
+            // btnCadastrarCategoria
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.Window;
-            this.button7.Location = new System.Drawing.Point(482, 32);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(106, 36);
-            this.button7.TabIndex = 109;
-            this.button7.Text = "Cadastrar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnCadastrarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarCategoria.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrarCategoria.Location = new System.Drawing.Point(482, 32);
+            this.btnCadastrarCategoria.Name = "btnCadastrarCategoria";
+            this.btnCadastrarCategoria.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrarCategoria.TabIndex = 9;
+            this.btnCadastrarCategoria.Text = "Cadastrar";
+            this.btnCadastrarCategoria.UseVisualStyleBackColor = true;
+            this.btnCadastrarCategoria.Click += new System.EventHandler(this.btnCadastrarCategoria_Click);
             // 
             // label10
             // 
@@ -325,7 +326,7 @@ namespace Telas {
             this.btnListarLocais.Location = new System.Drawing.Point(0, 443);
             this.btnListarLocais.Name = "btnListarLocais";
             this.btnListarLocais.Size = new System.Drawing.Size(765, 23);
-            this.btnListarLocais.TabIndex = 134;
+            this.btnListarLocais.TabIndex = 11;
             this.btnListarLocais.Text = "LISTAR SERVIÇOS";
             this.btnListarLocais.UseVisualStyleBackColor = false;
             // 
@@ -361,7 +362,7 @@ namespace Telas {
         private System.Windows.Forms.Button btnCadServico;
         private System.Windows.Forms.Panel panelCadServico;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCadastrarServico;
         private System.Windows.Forms.Button btnCadCategoria;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
@@ -376,7 +377,7 @@ namespace Telas {
         private System.Windows.Forms.ComboBox comboBoxCategoriaServico;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnCadastrarCategoria;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnListarLocais;
     }

@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Users;
+using Control;
+
+
+using Enums;
 
 namespace Telas {
     public partial class Form2 : Form {
@@ -15,6 +20,7 @@ namespace Telas {
             customizeDesign();
             // colocar o ponteiro no campo nome ao abrir o Form2 e demais tbm
         }
+        Pessoa pessoa = new Pessoa();
 
         private void customizeDesign() {
             panelEndereco.Visible = false;
@@ -35,7 +41,44 @@ namespace Telas {
             }
 
         }
+        private void limparTexbox() {
+            tbNome.Focus();
+            tbCpf.Clear();
+            tbEmail.Clear();
+            tbNascimento.Clear();
+            tbCelular.Clear();
+            tbBairro.Clear();
+            tbLogradouro.Clear();
+                    }
+        private int setarCategoria(string nome) {
+            if(nome == "Cliente") {
+                return 1;
+            }
+            else {
+                return 2;
+            }
+        }
+        private void btmCadPessoa_Click(object sender, EventArgs e) {
+            //"INSERT INTO PESSOA VALUES(@NOME,@CPF,@EMAIL,@NASCIMENTO,@FK_CATEGORIA,@SEXO, @TELEFONE)";
+            /*pessoa.nome = this.tbNome.Text;
+            pessoa.cpf = this.tbCpf.Text;
+            pessoa.nascimento = this.tbNascimento.Text;
+            pessoa.email = this.tbEmail.Text;
+            pessoa.categoria = setarCategoria(this.comboBoxCategoria.Text);
+            pessoa.sexo = Char.Parse(this.comboBoxSexo.Text);
+            pessoa.telefone = this.tbCelular.Text;*/
 
+
+            if (Cadastros.salvarPessoa(this.tbNome.Text, this.tbCpf.Text, this.tbNascimento.Text, this.tbEmail.Text,int.Parse(this.comboBoxCategoria.Text), Char.Parse(this.comboBoxSexo.Text), this.tbCelular.Text)) {
+                MessageBox.Show("Dados salvos com Sucesso!");
+                limparTexbox();
+            }
+
+
+            else {
+                MessageBox.Show("ERRO AO SALVAR DADOS");
+            }
+        }
         private void button4_Click(object sender, EventArgs e) {
             this.Close();
         }
@@ -63,5 +106,7 @@ namespace Telas {
         private void button4_Click_1(object sender, EventArgs e) {
             this.Close();
         }
+
+       
     }
 }

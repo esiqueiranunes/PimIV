@@ -211,6 +211,10 @@
       <Project>{c18ee3e2-f30d-473b-8ab8-75d3f34404e6}</Project>
       <Name>Control</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{7a8f0eed-924e-485c-8860-f645af4abbdf}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{974e3443-8e64-4730-b478-d76e5a30bf9c}</Project>
       <Name>Model</Name>

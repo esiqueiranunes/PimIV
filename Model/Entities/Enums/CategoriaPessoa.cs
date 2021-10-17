@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Enums {
     public enum CategoriaPessoa {
-        Cliente,
-        Funcionario
+        Cliente = 0,
+        Funcionario = 1
     }
 }

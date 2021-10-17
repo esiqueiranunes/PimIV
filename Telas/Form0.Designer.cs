@@ -77,6 +77,8 @@ namespace Telas
             // 
             // btnLogar
             // 
+            this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogar.Location = new System.Drawing.Point(147, 201);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(75, 23);
@@ -98,6 +100,8 @@ namespace Telas
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancelar.Location = new System.Drawing.Point(275, 201);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);

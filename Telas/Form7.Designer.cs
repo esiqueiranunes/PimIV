@@ -90,7 +90,7 @@ namespace Telas {
             this.panelCadCategoria.Location = new System.Drawing.Point(0, 100);
             this.panelCadCategoria.Name = "panelCadCategoria";
             this.panelCadCategoria.Size = new System.Drawing.Size(765, 85);
-            this.panelCadCategoria.TabIndex = 133;
+            this.panelCadCategoria.TabIndex = 135;
             // 
             // tbNomeCategoria
             // 
@@ -144,7 +144,7 @@ namespace Telas {
             this.button7.TabIndex = 86;
             this.button7.Text = "Cadastrar";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // label10
             // 
@@ -155,7 +155,6 @@ namespace Telas {
             this.label10.Size = new System.Drawing.Size(90, 13);
             this.label10.TabIndex = 101;
             this.label10.Text = "Tipo da categoria";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // Form7
             // 

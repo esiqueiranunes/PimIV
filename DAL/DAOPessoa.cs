@@ -4,22 +4,28 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Users;
 
 namespace DAL {
-    public class DAOCadastros {
+    public class DAOPessoa {
 
+         public static Boolean cadastrarPessoa(string nome, string cpf, string nascimento, string email, int categoria, char sexo, string telefone) {
+            
 
-        public static Boolean cadastrarCategoria(string classe, string nome) {
-            //abrir a conexao
             SqlConnection conn = BD.abrirConexao();
-            //string para inserção
-            string sql = "INSERT INTO CATEGORIA (CLASSE, NOME) VALUES (@CLASSE, @NOME)";
+
+            string sql = "INSERT INTO PESSOA(NOME, CPF, EMAIL, DATA_NASC, FK_CATEGORIA, SEXO, TELEFONE) VALUES('@NOME','@CPF','@EMAIL','@NASCIMENTO',@FK_CATEGORIA,'@SEXO', '@TELEFONE')";
             try {
                 //criar um objeto passando a conexao e a sql inserção
                 SqlCommand comando = new SqlCommand(sql, conn);
                 //adicionando os valores a sql
-                comando.Parameters.AddWithValue("@CLASSE", classe);
                 comando.Parameters.AddWithValue("@NOME", nome);
+                comando.Parameters.AddWithValue("@CPF", cpf);
+                comando.Parameters.AddWithValue("@EMAIL", email);
+                comando.Parameters.AddWithValue("@NASCIMENTO",nascimento);
+                comando.Parameters.AddWithValue("@FK_CATEGORIA", categoria);
+                comando.Parameters.AddWithValue("@SEXO", sexo);
+                comando.Parameters.AddWithValue("@TELEFONE", telefone);
 
                 //abrir a conexao
                 BD.abrirConexao();
@@ -36,7 +42,6 @@ namespace DAL {
             finally {
                 BD.fecharConexao();
             }
-
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Control;
+using M.Entities;
 
 namespace Telas {
     public partial class Form5 : Form {
@@ -16,6 +18,7 @@ namespace Telas {
             AplicarEventos(tbValorServico);
 
         }
+        CategoriaGeral categoria = new CategoriaGeral();
         private void customizeDesign() {
             panelCadServico.Visible = false;
             panelCadCategoria.Visible = false;
@@ -75,5 +78,20 @@ namespace Telas {
         private void btnCadCategoria_Click(object sender, EventArgs e) {
             showSubMenu(panelCadCategoria);
         }
+
+        private void btnCadastrarCategoria_Click(object sender, EventArgs e) {
+            categoria.Classe = this.comboBoxCategoriaServico.Text;
+            categoria.Nome = this.tbNomeCategoria.Text;
+
+            if (Cadastros.salvarCategoria(categoria.Classe, categoria.Nome)) {
+                MessageBox.Show("Dados salvos com Sucesso!");
+                this.comboBoxCategoriaServico.Text = "";
+                this.tbNomeCategoria.Text = "";
+            }
+            else {
+                MessageBox.Show("Erro ao salvar os dados!");
+            }
+        }
     }
-}
+    }
+
