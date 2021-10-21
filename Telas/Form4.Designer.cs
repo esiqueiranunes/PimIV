@@ -33,7 +33,7 @@ namespace Telas {
             this.label1 = new System.Windows.Forms.Label();
             this.tbDescricaoLocal = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxTipoLocal = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
@@ -117,7 +117,7 @@ namespace Telas {
             this.panelCadLocal.Controls.Add(this.label1);
             this.panelCadLocal.Controls.Add(this.tbDescricaoLocal);
             this.panelCadLocal.Controls.Add(this.label13);
-            this.panelCadLocal.Controls.Add(this.comboBox3);
+            this.panelCadLocal.Controls.Add(this.comboBoxTipoLocal);
             this.panelCadLocal.Controls.Add(this.label3);
             this.panelCadLocal.Controls.Add(this.button3);
             this.panelCadLocal.Controls.Add(this.btnCadastrar);
@@ -163,18 +163,18 @@ namespace Telas {
             this.label13.TabIndex = 91;
             this.label13.Text = "Tipo";
             // 
-            // comboBox3
+            // comboBoxTipoLocal
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxTipoLocal.FormattingEnabled = true;
+            this.comboBoxTipoLocal.Items.AddRange(new object[] {
             "Normal",
             "Duplo",
             "Triplo",
             "VIP"});
-            this.comboBox3.Location = new System.Drawing.Point(222, 26);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(132, 21);
-            this.comboBox3.TabIndex = 3;
+            this.comboBoxTipoLocal.Location = new System.Drawing.Point(222, 26);
+            this.comboBoxTipoLocal.Name = "comboBoxTipoLocal";
+            this.comboBoxTipoLocal.Size = new System.Drawing.Size(132, 21);
+            this.comboBoxTipoLocal.TabIndex = 3;
             // 
             // label3
             // 
@@ -209,6 +209,7 @@ namespace Telas {
             this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnShowCadCategoriaLocal
             // 
@@ -390,7 +391,7 @@ namespace Telas {
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbDescricaoLocal;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxTipoLocal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCadastrar;

@@ -1,5 +1,7 @@
 ﻿using M.Entities;
+using Entities;
 using System;
+using Enums;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,6 +68,27 @@ namespace Telas {
             categoria.descontoMax = double.Parse(this.tbDescontoLocal.Text);
 
             if (Cadastros.salvarCategoriaLocal(categoria)) {
+                MessageBox.Show("Dados salvos com Sucesso!");
+                this.tbCategoriaLocal.Text = "";
+                this.numericUpDownQuantidade.Text = "";
+                this.tbValorLocal.Text = "";
+                this.tbDescontoLocal.Text = "";
+            }
+            else {
+                MessageBox.Show("Erro ao salvar os dados!");
+            }
+        }
+        
+
+        private void btnCadastrar_Click(object sender, EventArgs e) {
+            Local local = new Local();
+            local.Nome = this.tbNomeLocal.Text;
+            local.Descricao = this.tbDescricaoLocal.Text;
+            /*local.Status = (StatusLocal)Enum.Parse(typeof(StatusLocal),this.comboBoxTipoLocal.Text);*/
+            local.Categoria = this.comboBoxTipoLocal.Text;
+            
+
+            if (Cadastros.salvarLocal(local)) {
                 MessageBox.Show("Dados salvos com Sucesso!");
                 this.tbCategoriaLocal.Text = "";
                 this.numericUpDownQuantidade.Text = "";
