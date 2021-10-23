@@ -18,7 +18,7 @@ namespace Telas {
             //AplicarEventos(tbValorServico);
 
         }
-        CategoriaGeral categoria = new CategoriaGeral();
+        
         private void customizeDesign() {
             panelCadServico.Visible = false;
             panelCadCategoria.Visible = false;
@@ -80,12 +80,14 @@ namespace Telas {
         }
 
         private void btnCadastrarCategoria_Click(object sender, EventArgs e) {
-            categoria.Classe = this.comboBoxCategoriaServico.Text;
+
+            CategoriaGeral categoria = new CategoriaGeral();
+            categoria.Classe = "Servico";
             categoria.Nome = this.tbNomeCategoria.Text;
 
-            if (Cadastros.salvarCategoria(categoria)) {
+            if (Cadastros.salvarCategoriaService(categoria)) {
                 MessageBox.Show("Dados salvos com Sucesso!");
-                this.comboBoxCategoriaServico.Text = "";
+                
                 this.tbNomeCategoria.Text = "";
             }
             else {

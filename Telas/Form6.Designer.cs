@@ -25,6 +25,8 @@ namespace Telas {
         /// </summary>
         private void InitializeComponent() {
             this.panelCadProduto = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbValidade = new System.Windows.Forms.TextBox();
             this.tbValorProduto = new System.Windows.Forms.TextBox();
             this.tbFornecedor = new System.Windows.Forms.TextBox();
             this.tbMarca = new System.Windows.Forms.TextBox();
@@ -33,7 +35,7 @@ namespace Telas {
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnidade = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,12 +49,10 @@ namespace Telas {
             this.btnCadProduto = new System.Windows.Forms.Button();
             this.btnCadCategoria = new System.Windows.Forms.Button();
             this.panelCadCategoria = new System.Windows.Forms.Panel();
-            this.tbNomeCategoria6 = new System.Windows.Forms.TextBox();
-            this.comboBoxCategoriaServico6 = new System.Windows.Forms.ComboBox();
+            this.tbNomeCategoria = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnListarProdutos = new System.Windows.Forms.Button();
             this.panelCadProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -63,6 +63,8 @@ namespace Telas {
             // panelCadProduto
             // 
             this.panelCadProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.panelCadProduto.Controls.Add(this.label11);
+            this.panelCadProduto.Controls.Add(this.tbValidade);
             this.panelCadProduto.Controls.Add(this.tbValorProduto);
             this.panelCadProduto.Controls.Add(this.tbFornecedor);
             this.panelCadProduto.Controls.Add(this.tbMarca);
@@ -71,7 +73,7 @@ namespace Telas {
             this.panelCadProduto.Controls.Add(this.label7);
             this.panelCadProduto.Controls.Add(this.numericUpDown1);
             this.panelCadProduto.Controls.Add(this.label6);
-            this.panelCadProduto.Controls.Add(this.comboBox1);
+            this.panelCadProduto.Controls.Add(this.comboBoxUnidade);
             this.panelCadProduto.Controls.Add(this.label4);
             this.panelCadProduto.Controls.Add(this.label3);
             this.panelCadProduto.Controls.Add(this.label1);
@@ -86,40 +88,57 @@ namespace Telas {
             this.panelCadProduto.Size = new System.Drawing.Size(765, 207);
             this.panelCadProduto.TabIndex = 130;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.Window;
+            this.label11.Location = new System.Drawing.Point(522, 72);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 13);
+            this.label11.TabIndex = 118;
+            this.label11.Text = "Data validade";
+            // 
+            // tbValidade
+            // 
+            this.tbValidade.Location = new System.Drawing.Point(522, 88);
+            this.tbValidade.Name = "tbValidade";
+            this.tbValidade.Size = new System.Drawing.Size(155, 20);
+            this.tbValidade.TabIndex = 6;
+            // 
             // tbValorProduto
             // 
             this.tbValorProduto.Location = new System.Drawing.Point(297, 138);
             this.tbValorProduto.Name = "tbValorProduto";
             this.tbValorProduto.Size = new System.Drawing.Size(152, 20);
-            this.tbValorProduto.TabIndex = 116;
+            this.tbValorProduto.TabIndex = 9;
             // 
             // tbFornecedor
             // 
-            this.tbFornecedor.Location = new System.Drawing.Point(522, 88);
+            this.tbFornecedor.Location = new System.Drawing.Point(522, 32);
             this.tbFornecedor.Name = "tbFornecedor";
             this.tbFornecedor.Size = new System.Drawing.Size(170, 20);
-            this.tbFornecedor.TabIndex = 115;
+            this.tbFornecedor.TabIndex = 4;
             // 
             // tbMarca
             // 
-            this.tbMarca.Location = new System.Drawing.Point(361, 88);
+            this.tbMarca.Location = new System.Drawing.Point(361, 32);
             this.tbMarca.Name = "tbMarca";
             this.tbMarca.Size = new System.Drawing.Size(155, 20);
-            this.tbMarca.TabIndex = 114;
+            this.tbMarca.TabIndex = 3;
             // 
             // tbNomeProduto
             // 
             this.tbNomeProduto.Location = new System.Drawing.Point(42, 88);
             this.tbNomeProduto.Name = "tbNomeProduto";
-            this.tbNomeProduto.Size = new System.Drawing.Size(313, 20);
-            this.tbNomeProduto.TabIndex = 113;
+            this.tbNomeProduto.Size = new System.Drawing.Size(474, 20);
+            this.tbNomeProduto.TabIndex = 5;
             // 
             // tbCategoriaProduto
             // 
             this.tbCategoriaProduto.Location = new System.Drawing.Point(42, 32);
             this.tbCategoriaProduto.Name = "tbCategoriaProduto";
             this.tbCategoriaProduto.Size = new System.Drawing.Size(313, 20);
-            this.tbCategoriaProduto.TabIndex = 112;
+            this.tbCategoriaProduto.TabIndex = 2;
             // 
             // label7
             // 
@@ -136,7 +155,7 @@ namespace Telas {
             this.numericUpDown1.Location = new System.Drawing.Point(181, 138);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown1.TabIndex = 109;
+            this.numericUpDown1.TabIndex = 8;
             // 
             // label6
             // 
@@ -148,10 +167,10 @@ namespace Telas {
             this.label6.TabIndex = 108;
             this.label6.Text = "Quantidade estoque";
             // 
-            // comboBox1
+            // comboBoxUnidade
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxUnidade.FormattingEnabled = true;
+            this.comboBoxUnidade.Items.AddRange(new object[] {
             "250ML",
             "500ML",
             "1L",
@@ -159,10 +178,10 @@ namespace Telas {
             "3L",
             "UNIDADE",
             "CAIXA"});
-            this.comboBox1.Location = new System.Drawing.Point(42, 137);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 106;
+            this.comboBoxUnidade.Location = new System.Drawing.Point(42, 137);
+            this.comboBoxUnidade.Name = "comboBoxUnidade";
+            this.comboBoxUnidade.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxUnidade.TabIndex = 7;
             // 
             // label4
             // 
@@ -178,7 +197,7 @@ namespace Telas {
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(519, 68);
+            this.label3.Location = new System.Drawing.Point(519, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 102;
@@ -188,7 +207,7 @@ namespace Telas {
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(358, 68);
+            this.label1.Location = new System.Drawing.Point(358, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 100;
@@ -222,9 +241,10 @@ namespace Telas {
             this.button1.Location = new System.Drawing.Point(586, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 36);
-            this.button1.TabIndex = 87;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Botão";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -234,7 +254,7 @@ namespace Telas {
             this.button2.Location = new System.Drawing.Point(474, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 36);
-            this.button2.TabIndex = 86;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Cadastrar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -288,7 +308,7 @@ namespace Telas {
             this.btnCadProduto.Location = new System.Drawing.Point(0, 100);
             this.btnCadProduto.Name = "btnCadProduto";
             this.btnCadProduto.Size = new System.Drawing.Size(765, 23);
-            this.btnCadProduto.TabIndex = 129;
+            this.btnCadProduto.TabIndex = 1;
             this.btnCadProduto.Text = "CADASTRAR PRODUTO";
             this.btnCadProduto.UseVisualStyleBackColor = false;
             this.btnCadProduto.Click += new System.EventHandler(this.btnCadServico_Click);
@@ -304,20 +324,18 @@ namespace Telas {
             this.btnCadCategoria.Location = new System.Drawing.Point(0, 330);
             this.btnCadCategoria.Name = "btnCadCategoria";
             this.btnCadCategoria.Size = new System.Drawing.Size(765, 23);
-            this.btnCadCategoria.TabIndex = 131;
-            this.btnCadCategoria.Text = "CADASTRAR CATEGORIA";
+            this.btnCadCategoria.TabIndex = 12;
+            this.btnCadCategoria.Text = "CADASTRAR CATEGORIA DE PRODUTO";
             this.btnCadCategoria.UseVisualStyleBackColor = false;
             this.btnCadCategoria.Click += new System.EventHandler(this.btnCadCategoria_Click);
             // 
             // panelCadCategoria
             // 
             this.panelCadCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.panelCadCategoria.Controls.Add(this.tbNomeCategoria6);
-            this.panelCadCategoria.Controls.Add(this.comboBoxCategoriaServico6);
+            this.panelCadCategoria.Controls.Add(this.tbNomeCategoria);
             this.panelCadCategoria.Controls.Add(this.button6);
             this.panelCadCategoria.Controls.Add(this.label8);
             this.panelCadCategoria.Controls.Add(this.button7);
-            this.panelCadCategoria.Controls.Add(this.label10);
             this.panelCadCategoria.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadCategoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadCategoria.Location = new System.Drawing.Point(0, 353);
@@ -325,24 +343,12 @@ namespace Telas {
             this.panelCadCategoria.Size = new System.Drawing.Size(765, 85);
             this.panelCadCategoria.TabIndex = 132;
             // 
-            // tbNomeCategoria6
+            // tbNomeCategoria
             // 
-            this.tbNomeCategoria6.Location = new System.Drawing.Point(228, 31);
-            this.tbNomeCategoria6.Name = "tbNomeCategoria6";
-            this.tbNomeCategoria6.Size = new System.Drawing.Size(221, 20);
-            this.tbNomeCategoria6.TabIndex = 108;
-            // 
-            // comboBoxCategoriaServico6
-            // 
-            this.comboBoxCategoriaServico6.FormattingEnabled = true;
-            this.comboBoxCategoriaServico6.Items.AddRange(new object[] {
-            "Produtos",
-            "Serviços",
-            "Pessoas"});
-            this.comboBoxCategoriaServico6.Location = new System.Drawing.Point(42, 30);
-            this.comboBoxCategoriaServico6.Name = "comboBoxCategoriaServico6";
-            this.comboBoxCategoriaServico6.Size = new System.Drawing.Size(180, 21);
-            this.comboBoxCategoriaServico6.TabIndex = 104;
+            this.tbNomeCategoria.Location = new System.Drawing.Point(44, 37);
+            this.tbNomeCategoria.Name = "tbNomeCategoria";
+            this.tbNomeCategoria.Size = new System.Drawing.Size(405, 20);
+            this.tbNomeCategoria.TabIndex = 13;
             // 
             // button6
             // 
@@ -352,7 +358,7 @@ namespace Telas {
             this.button6.Location = new System.Drawing.Point(586, 21);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(106, 36);
-            this.button6.TabIndex = 87;
+            this.button6.TabIndex = 15;
             this.button6.Text = "Botão";
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -360,7 +366,7 @@ namespace Telas {
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(228, 14);
+            this.label8.Location = new System.Drawing.Point(41, 21);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 13);
             this.label8.TabIndex = 102;
@@ -374,20 +380,10 @@ namespace Telas {
             this.button7.Location = new System.Drawing.Point(474, 21);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(106, 36);
-            this.button7.TabIndex = 86;
+            this.button7.TabIndex = 14;
             this.button7.Text = "Cadastrar";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.Window;
-            this.label10.Location = new System.Drawing.Point(57, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 13);
-            this.label10.TabIndex = 101;
-            this.label10.Text = "Tipo da categoria";
             // 
             // btnListarProdutos
             // 
@@ -400,7 +396,7 @@ namespace Telas {
             this.btnListarProdutos.Location = new System.Drawing.Point(0, 438);
             this.btnListarProdutos.Name = "btnListarProdutos";
             this.btnListarProdutos.Size = new System.Drawing.Size(765, 23);
-            this.btnListarProdutos.TabIndex = 133;
+            this.btnListarProdutos.TabIndex = 16;
             this.btnListarProdutos.Text = "LISTAR PRODUTOS ";
             this.btnListarProdutos.UseVisualStyleBackColor = false;
             // 
@@ -442,7 +438,7 @@ namespace Telas {
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxUnidade;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -454,12 +450,12 @@ namespace Telas {
         private System.Windows.Forms.Button btnCadProduto;
         private System.Windows.Forms.Button btnCadCategoria;
         private System.Windows.Forms.Panel panelCadCategoria;
-        private System.Windows.Forms.TextBox tbNomeCategoria6;
-        private System.Windows.Forms.ComboBox comboBoxCategoriaServico6;
+        private System.Windows.Forms.TextBox tbNomeCategoria;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnListarProdutos;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbValidade;
     }
 }

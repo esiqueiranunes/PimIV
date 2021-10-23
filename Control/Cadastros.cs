@@ -19,6 +19,22 @@ namespace Control {
                 return false;
             }
         }
+        public static Boolean salvarCategoriaService(CategoriaGeral categoria) {
+            if (DAOCategoria.cadastrarCategoriaService(categoria)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        public static Boolean salvarCategoriaProduto(CategoriaGeral categoria) {
+            if (DAOCategoria.cadastrarCategoriaProduto(categoria)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
         public static Boolean salvarPessoa(string nome, string cpf, string nascimento, string email, int categoria, char sexo, string telefone) {
             if (DAOPessoa.cadastrarPessoa(nome, cpf, nascimento, email, categoria, sexo, telefone)) {
                 return true;
@@ -47,6 +63,14 @@ namespace Control {
 
         public static Boolean salvarService(Service service) {
             if (DAOServico.cadastrarService(service)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        public static Boolean salvarProduto(Produto produto) {
+            if (DAOProduto.cadastrarProduto(produto)) {
                 return true;
             }
             else {

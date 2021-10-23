@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Control;
 using M.Entities;
+using Entities;
 
 namespace Telas {
     public partial class Form6 : Form {
         public Form6() {
             InitializeComponent();
             customizeDesign();
-            AplicarEventos(tbValorProduto);
+            //AplicarEventos(tbValorProduto);
         }
         CategoriaGeral categoria6 = new CategoriaGeral();
         
@@ -82,14 +83,14 @@ namespace Telas {
         }
 
         private void button7_Click(object sender, EventArgs e) {
-            CategoriaGeral categoria = new CategoriaGeral();
-            categoria.Classe = this.comboBoxCategoriaServico6.Text;
-            categoria.Nome = this.tbNomeCategoria6.Text;
+            CategoriaGeral produto = new CategoriaGeral();
+            produto.Classe = "Servico";
+            produto.Nome = this.tbNomeCategoria.Text;
 
-            if (Cadastros.salvarCategoria(categoria)) {
+            if (Cadastros.salvarCategoriaProduto(produto)) {
                 MessageBox.Show("Dados salvos com Sucesso!");
-                this.comboBoxCategoriaServico6.Text = "";
-                this.tbNomeCategoria6.Text = "";
+
+                this.tbNomeCategoria.Text = "";
             }
             else {
                 MessageBox.Show("Erro ao salvar os dados!");
@@ -97,6 +98,35 @@ namespace Telas {
         }
 
         private void button2_Click(object sender, EventArgs e) {
+            Produto produto = new Produto();
+            produto.Nome = this.tbNomeProduto.Text;
+            produto.Marca = this.tbMarca.Text;
+            produto.Fornecedor = this.tbFornecedor.Text;
+            produto.UnidMedida = this.comboBoxUnidade.Text;
+            produto.Validade = DateTime.Parse(this.tbValidade.Text);
+            produto.QteEstoque = int.Parse(this.numericUpDown1.Text);
+            produto.Valor = double.Parse(this.tbValorProduto.Text);
+            produto.Categoria = this.tbCategoriaProduto.Text;
+            
+
+
+            if (Cadastros.salvarProduto(produto)) {
+                MessageBox.Show("Dados salvos com Sucesso!");
+                this.tbNomeProduto.Text = "";
+                this.tbMarca.Text = "";
+                this.tbFornecedor.Text = "";
+                this.comboBoxUnidade.Text = "";
+                this.tbValidade.Text = "";
+                this.numericUpDown1.Text = "";
+                this.tbValorProduto.Text = "";
+                this.tbCategoriaProduto.Text = "";
+            }
+            else {
+                MessageBox.Show("Erro ao salvar os dados!");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
 
         }
     }
