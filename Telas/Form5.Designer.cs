@@ -218,6 +218,7 @@ namespace Telas {
             this.btnCadastrarServico.TabIndex = 4;
             this.btnCadastrarServico.Text = "Cadastrar";
             this.btnCadastrarServico.UseVisualStyleBackColor = true;
+            this.btnCadastrarServico.Click += new System.EventHandler(this.btnCadastrarServico_Click);
             // 
             // btnCadCategoria
             // 

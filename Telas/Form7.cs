@@ -45,8 +45,9 @@ namespace Telas {
         }
 
         private void button7_Click_1(object sender, EventArgs e) {
-            categoria.Classe = this.comboBoxCategoriaServico.Text;
+            categoria.Classe = this.comboBoxCategoriaServico.Text;           
             categoria.Nome = this.tbNomeCategoria.Text;
+            
 
             if (Cadastros.salvarCategoria(categoria)) {
                 MessageBox.Show("Dados salvos com Sucesso!");

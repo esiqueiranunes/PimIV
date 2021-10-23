@@ -15,7 +15,7 @@ namespace Telas {
         public Form5() {
             InitializeComponent();
             customizeDesign();
-            AplicarEventos(tbValorServico);
+            //AplicarEventos(tbValorServico);
 
         }
         CategoriaGeral categoria = new CategoriaGeral();
@@ -87,6 +87,26 @@ namespace Telas {
                 MessageBox.Show("Dados salvos com Sucesso!");
                 this.comboBoxCategoriaServico.Text = "";
                 this.tbNomeCategoria.Text = "";
+            }
+            else {
+                MessageBox.Show("Erro ao salvar os dados!");
+            }
+        }
+
+        private void btnCadastrarServico_Click(object sender, EventArgs e) {
+            Service service = new Service();
+            service.Nome = this.tbNomeServico.Text;
+            service.Descricao = this.tbDescricaoServico.Text;
+            service.Valor = double.Parse(this.tbValorServico.Text);
+            service.Categoria = this.tbCategoriaServico.Text;
+
+
+            if (Cadastros.salvarService(service)) {
+                MessageBox.Show("Dados salvos com Sucesso!");
+                this.tbNomeServico.Text= "";
+                this.tbDescricaoServico.Text = "";
+                this.tbValorServico.Text = "";
+                this.tbCategoriaServico.Text = "";
             }
             else {
                 MessageBox.Show("Erro ao salvar os dados!");

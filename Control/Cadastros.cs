@@ -44,5 +44,14 @@ namespace Control {
                 return false;
             }
         }
+
+        public static Boolean salvarService(Service service) {
+            if (DAOServico.cadastrarService(service)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
     }
 }

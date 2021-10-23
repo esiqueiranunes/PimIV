@@ -104,8 +104,9 @@ namespace Telas {
             this.comboBoxCategoriaServico.FormattingEnabled = true;
             this.comboBoxCategoriaServico.Items.AddRange(new object[] {
             "Produto",
-            "Serviço",
-            "Pessoa"});
+            "Servico",
+            "Pessoa",
+            "Conta"});
             this.comboBoxCategoriaServico.Location = new System.Drawing.Point(42, 30);
             this.comboBoxCategoriaServico.Name = "comboBoxCategoriaServico";
             this.comboBoxCategoriaServico.Size = new System.Drawing.Size(180, 21);

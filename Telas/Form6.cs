@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using M.Entities;
 using Control;
+using M.Entities;
 
 namespace Telas {
     public partial class Form6 : Form {
@@ -82,10 +82,11 @@ namespace Telas {
         }
 
         private void button7_Click(object sender, EventArgs e) {
-            categoria6.Classe = this.comboBoxCategoriaServico6.Text;
-            categoria6.Nome = this.tbNomeCategoria6.Text;
+            CategoriaGeral categoria = new CategoriaGeral();
+            categoria.Classe = this.comboBoxCategoriaServico6.Text;
+            categoria.Nome = this.tbNomeCategoria6.Text;
 
-            if (Cadastros.salvarCategoria(categoria6)) {
+            if (Cadastros.salvarCategoria(categoria)) {
                 MessageBox.Show("Dados salvos com Sucesso!");
                 this.comboBoxCategoriaServico6.Text = "";
                 this.tbNomeCategoria6.Text = "";
@@ -93,6 +94,10 @@ namespace Telas {
             else {
                 MessageBox.Show("Erro ao salvar os dados!");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+
         }
     }
 }
