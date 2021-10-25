@@ -9,23 +9,23 @@ using Users;
 namespace DAL {
     public class DAOPessoa {
 
-         public static Boolean cadastrarPessoa(string nome, string cpf, string nascimento, string email, int categoria, char sexo, string telefone) {
+         public static Boolean cadastrarPessoa(Pessoa pessoa) {
             
 
             SqlConnection conn = BD.abrirConexao();
 
-            string sql = "INSERT INTO PESSOA(NOME, CPF, EMAIL, DATA_NASC, FK_CATEGORIA, SEXO, TELEFONE) VALUES('@NOME','@CPF','@EMAIL','@NASCIMENTO',@FK_CATEGORIA,'@SEXO', '@TELEFONE')";
+            string sql = "INSERT INTO PESSOA VALUES(@NOME,@CPF,@EMAIL,@NASCIMENTO,(SELECT ID_CATEGORIA FROM CATEGORIA WHERE @CATEGORIA = NOME ),@SEXO, @TELEFONE)";
             try {
                 //criar um objeto passando a conexao e a sql inserção
                 SqlCommand comando = new SqlCommand(sql, conn);
                 //adicionando os valores a sql
-                comando.Parameters.AddWithValue("@NOME", nome);
-                comando.Parameters.AddWithValue("@CPF", cpf);
-                comando.Parameters.AddWithValue("@EMAIL", email);
-                comando.Parameters.AddWithValue("@NASCIMENTO",nascimento);
-                comando.Parameters.AddWithValue("@FK_CATEGORIA", categoria);
-                comando.Parameters.AddWithValue("@SEXO", sexo);
-                comando.Parameters.AddWithValue("@TELEFONE", telefone);
+                comando.Parameters.AddWithValue("@NOME", pessoa.Nome);
+                comando.Parameters.AddWithValue("@CPF", pessoa.Cpf);
+                comando.Parameters.AddWithValue("@EMAIL", pessoa.Email);
+                comando.Parameters.AddWithValue("@NASCIMENTO",pessoa.Nascimento);
+                comando.Parameters.AddWithValue("@CATEGORIA", pessoa.Categoria);
+                comando.Parameters.AddWithValue("@SEXO", pessoa.Sexo.ToString());
+                comando.Parameters.AddWithValue("@TELEFONE", pessoa.Telefone);
 
                 //abrir a conexao
                 BD.abrirConexao();

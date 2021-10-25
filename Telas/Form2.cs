@@ -13,6 +13,7 @@ using Control;
 
 
 using Enums;
+using System.Data.SqlClient;
 
 namespace Telas {
     public partial class Form2 : Form {
@@ -21,7 +22,7 @@ namespace Telas {
             customizeDesign();
             // colocar o ponteiro no campo nome ao abrir o Form2 e demais tbm
         }
-        Pessoa pessoa = new Pessoa();
+        
 
         private void customizeDesign() {
             panelEndereco.Visible = false;
@@ -44,41 +45,47 @@ namespace Telas {
         }
         private void limparTexbox() {
             tbNome.Focus();
+            tbNome.Clear();
             tbCpf.Clear();
             tbEmail.Clear();
             tbNascimento.Clear();
             tbCelular.Clear();
             tbBairro.Clear();
             tbLogradouro.Clear();
-                    }
-        private int setarCategoria(string nome) {
-            if(nome == "Cliente") {
-                return 1;
-            }
-            else {
-                return 2;
-            }
+            comboBoxSexo.Items.Clear();
+            comboBoxCategoria.Items.Clear();
         }
+        
         private void btmCadPessoa_Click(object sender, EventArgs e) {
-            //"INSERT INTO PESSOA VALUES(@NOME,@CPF,@EMAIL,@NASCIMENTO,@FK_CATEGORIA,@SEXO, @TELEFONE)";
-            /*pessoa.nome = this.tbNome.Text;
-            pessoa.cpf = this.tbCpf.Text;
-            pessoa.nascimento = this.tbNascimento.Text;
-            pessoa.email = this.tbEmail.Text;
-            pessoa.categoria = setarCategoria(this.comboBoxCategoria.Text);
-            pessoa.sexo = Char.Parse(this.comboBoxSexo.Text);
-            pessoa.telefone = this.tbCelular.Text;*/
+            Pessoa pessoa = new Pessoa();
+            pessoa.Nome = this.tbNome.Text;
+            pessoa.Cpf = this.tbCpf.Text;
+            pessoa.Nascimento = DateTime.Parse(this.tbNascimento.Text);
+            pessoa.Email = this.tbEmail.Text;
+            pessoa.Categoria = this.comboBoxCategoria.Text;
+            //pessoa.Sexo = char.Parse(this.comboBoxSexo.Text);
+            pessoa.Sexo = (Sexo)Enum.Parse(typeof(Sexo),this.comboBoxSexo.Text);            
+            pessoa.Telefone = this.tbCelular.Text;
 
-
-            if (Cadastros.salvarPessoa(this.tbNome.Text, this.tbCpf.Text, this.tbNascimento.Text, this.tbEmail.Text,int.Parse(this.comboBoxCategoria.Text), Char.Parse(this.comboBoxSexo.Text), this.tbCelular.Text)) {
+            if (Cadastros.salvarPessoa(pessoa)) {
                 MessageBox.Show("Dados salvos com Sucesso!");
                 limparTexbox();
             }
-
-
             else {
                 MessageBox.Show("ERRO AO SALVAR DADOS");
             }
+            /*try {
+                if (Cadastros.salvarPessoa(pessoa)) {
+                    MessageBox.Show("Dados salvos com Sucesso!");
+                    limparTexbox();
+                }
+            }
+            catch (SqlException erro) {
+
+                MessageBox.Show("ERRO AO SALVAR DADOS: " +  erro);
+            }*/
+
+
         }
         private void button4_Click(object sender, EventArgs e) {
             this.Close();

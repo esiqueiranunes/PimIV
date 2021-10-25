@@ -6,24 +6,33 @@ using Entities;
 
 namespace Users {
     public class Pessoa {
-        public string nome { get; set; }
-        public string cpf { get; set; }
-        public string email { get; set; }
-        public char sexo { get; set; }
-        public string nascimento { get; set; }
-        public int categoria { get; set; }
-        //public Endereco endereco { get; set; }
-        public string telefone { get; set; } 
+        private string nome;
+        private string cpf;
+        private string email;
+        private Sexo sexo;
+        private DateTime nascimento;
+        private string categoria;
+        private Endereco endereco;
+        private string telefone;
 
-        public Pessoa(string nome, string cpf, string email, char sexo, string nascimento, int categoria, /*Endereco endereco,*/ string telefone) {
-            this.nome = nome;
-            this.cpf = cpf;
-            this.email = email;
-            this.sexo = sexo;
-            this.nascimento = nascimento;
-            this.categoria = categoria;
-            //this.endereco = endereco;
-            this.telefone = telefone;
+        public string Nome { get => nome; set => nome = value; }
+        public string Cpf { get => cpf; set => cpf = value; }
+        public string Email { get => email; set => email = value; }
+        public Sexo Sexo { get => sexo; set => sexo = value; }
+        public DateTime Nascimento { get => nascimento; set => nascimento = value; }
+        public string Categoria { get => categoria; set => categoria = value; }
+        public Endereco Endereco { get => endereco; set => endereco = value; }
+        public string Telefone { get => telefone; set => telefone = value; }
+
+        public Pessoa(string nome, string cpf, string email, Sexo sexo, DateTime nascimento, string categoria, Endereco endereco, string telefone) {
+            this.Nome = nome;
+            this.Cpf = cpf;
+            this.Email = email;
+            this.Sexo = sexo;
+            this.Nascimento = nascimento;
+            this.Categoria = categoria;
+            this.Endereco = endereco;
+            this.Telefone = telefone;
         }
 
         public Pessoa() {

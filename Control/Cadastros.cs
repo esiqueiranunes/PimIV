@@ -10,7 +10,7 @@ using Entities;
 
 namespace Control {
     public class Cadastros {
-
+        #region Cadastro de Categorias
         public static Boolean salvarCategoria(CategoriaGeral categoria) {
             if(DAOCategoria.cadastrarCategoria(categoria)) {
                 return true;
@@ -35,14 +35,16 @@ namespace Control {
                 return false;
             }
         }
-        public static Boolean salvarPessoa(string nome, string cpf, string nascimento, string email, int categoria, char sexo, string telefone) {
-            if (DAOPessoa.cadastrarPessoa(nome, cpf, nascimento, email, categoria, sexo, telefone)) {
+        #endregion
+        public static Boolean salvarPessoa(Pessoa pessoa) {
+            if (DAOPessoa.cadastrarPessoa(pessoa)) {
                 return true;
             }
             else {
                 return false;
             }
         }
+        #region Cadastro de Local
         public static Boolean salvarLocal(Local local) {
             if (DAOLocal.cadastrarLocal(local)) {
                 return true;
@@ -60,7 +62,8 @@ namespace Control {
                 return false;
             }
         }
-
+        #endregion
+        #region Cadastro de produtos e serviços
         public static Boolean salvarService(Service service) {
             if (DAOServico.cadastrarService(service)) {
                 return true;
@@ -77,5 +80,6 @@ namespace Control {
                 return false;
             }
         }
+        #endregion
     }
 }

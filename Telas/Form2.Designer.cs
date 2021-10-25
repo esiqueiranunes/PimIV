@@ -217,8 +217,8 @@ namespace Telas {
             // 
             this.comboBoxCategoria.FormattingEnabled = true;
             this.comboBoxCategoria.Items.AddRange(new object[] {
-            "1",
-            "2"});
+            "Cliente",
+            "Funcionario"});
             this.comboBoxCategoria.Location = new System.Drawing.Point(365, 122);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(160, 21);
