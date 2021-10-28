@@ -14,6 +14,7 @@ using Control;
 
 using Enums;
 using System.Data.SqlClient;
+using Entities;
 
 namespace Telas {
     public partial class Form2 : Form {
@@ -52,10 +53,35 @@ namespace Telas {
             tbCelular.Clear();
             tbBairro.Clear();
             tbLogradouro.Clear();
-            comboBoxSexo.Items.Clear();
-            comboBoxCategoria.Items.Clear();
+            //comboBoxSexo.Items.Clear();
+            //comboBoxCategoria.Items.Clear();
         }
-        
+        private void btnCadastrar_Click(object sender, EventArgs e) {
+            Pessoa pessoa = new Pessoa();
+            Endereco endereco = new Endereco();
+            pessoa.Nome = this.tbNome.Text;
+            pessoa.Cpf = this.tbCpf.Text;
+            pessoa.Nascimento = DateTime.Parse(this.tbNascimento.Text);
+            pessoa.Email = this.tbEmail.Text;
+            pessoa.Categoria = this.comboBoxCategoria.Text;
+            pessoa.Sexo = (Sexo)Enum.Parse(typeof(Sexo), this.comboBoxSexo.Text);
+            pessoa.Telefone = this.tbCelular.Text;
+
+            endereco.Logradouro = this.tbLogradouro.Text;
+            endereco.Cidade = this.tbCidade.Text;
+            endereco.Bairro = this.tbBairro.Text;
+            //endereco.Uf = "GO";
+            endereco.Uf = (Estado)Enum.Parse(typeof(Estado), this.comboBoxUf.Text);
+
+            if (Cadastros.salvarPessoa(pessoa) && Cadastros.salvarEndereco(pessoa.Cpf,endereco)) {
+                MessageBox.Show("Dados salvos com Sucesso!");
+                limparTexbox();
+            }
+            else {
+                MessageBox.Show("ERRO AO SALVAR DADOS");
+            }
+        }
+
         private void btmCadPessoa_Click(object sender, EventArgs e) {
             Pessoa pessoa = new Pessoa();
             pessoa.Nome = this.tbNome.Text;
@@ -87,6 +113,23 @@ namespace Telas {
 
 
         }
+        private void btnCadEndereco_Click(object sender, EventArgs e) {
+            Endereco endereco = new Endereco();
+            string cpf = this.tbCpf.Text;
+            endereco.Logradouro = this.tbLogradouro.Text;
+            endereco.Cidade = this.tbCidade.Text;
+            endereco.Bairro = this.tbBairro.Text;
+            //endereco.Uf = "GO";
+            endereco.Uf = (Estado)Enum.Parse(typeof(Estado), this.comboBoxUf.Text);
+
+            if (Cadastros.salvarEndereco(cpf, endereco)) {
+                MessageBox.Show("Dados salvos com Sucesso!");
+                limparTexbox();
+            }
+            else {
+                MessageBox.Show("ERRO AO SALVAR DADOS");
+            }
+        }
         private void button4_Click(object sender, EventArgs e) {
             this.Close();
         }
@@ -103,9 +146,7 @@ namespace Telas {
             showSubMenu(panelEndereco);
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e) {
-
-        }
+    
 
         private void label2_Click(object sender, EventArgs e) {
 
@@ -115,6 +156,6 @@ namespace Telas {
             this.Close();
         }
 
-       
+        
     }
 }

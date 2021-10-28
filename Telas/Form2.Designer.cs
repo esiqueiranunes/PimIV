@@ -47,14 +47,15 @@ namespace Telas {
             this.label9 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panelEndereco = new System.Windows.Forms.Panel();
-            this.tbUF = new System.Windows.Forms.TextBox();
+            this.btnCadEndereco = new System.Windows.Forms.Button();
             this.tbBairro = new System.Windows.Forms.TextBox();
-            this.Cidade = new System.Windows.Forms.TextBox();
+            this.tbCidade = new System.Windows.Forms.TextBox();
             this.tbLogradouro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxUf = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelEndereco.SuspendLayout();
@@ -131,7 +132,7 @@ namespace Telas {
             this.btmCadPessoa.Name = "btmCadPessoa";
             this.btmCadPessoa.Size = new System.Drawing.Size(121, 36);
             this.btmCadPessoa.TabIndex = 119;
-            this.btmCadPessoa.Text = "Cadastrar";
+            this.btmCadPessoa.Text = "Cadastrar pessoa";
             this.btmCadPessoa.UseVisualStyleBackColor = true;
             this.btmCadPessoa.Click += new System.EventHandler(this.btmCadPessoa_Click);
             // 
@@ -305,9 +306,10 @@ namespace Telas {
             // panelEndereco
             // 
             this.panelEndereco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.panelEndereco.Controls.Add(this.tbUF);
+            this.panelEndereco.Controls.Add(this.comboBoxUf);
+            this.panelEndereco.Controls.Add(this.btnCadEndereco);
             this.panelEndereco.Controls.Add(this.tbBairro);
-            this.panelEndereco.Controls.Add(this.Cidade);
+            this.panelEndereco.Controls.Add(this.tbCidade);
             this.panelEndereco.Controls.Add(this.tbLogradouro);
             this.panelEndereco.Controls.Add(this.label1);
             this.panelEndereco.Controls.Add(this.label2);
@@ -316,15 +318,21 @@ namespace Telas {
             this.panelEndereco.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEndereco.Location = new System.Drawing.Point(0, 283);
             this.panelEndereco.Name = "panelEndereco";
-            this.panelEndereco.Size = new System.Drawing.Size(765, 118);
+            this.panelEndereco.Size = new System.Drawing.Size(765, 166);
             this.panelEndereco.TabIndex = 118;
             // 
-            // tbUF
+            // btnCadEndereco
             // 
-            this.tbUF.Location = new System.Drawing.Point(542, 80);
-            this.tbUF.Name = "tbUF";
-            this.tbUF.Size = new System.Drawing.Size(121, 20);
-            this.tbUF.TabIndex = 13;
+            this.btnCadEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadEndereco.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCadEndereco.Location = new System.Drawing.Point(542, 115);
+            this.btnCadEndereco.Name = "btnCadEndereco";
+            this.btnCadEndereco.Size = new System.Drawing.Size(121, 36);
+            this.btnCadEndereco.TabIndex = 120;
+            this.btnCadEndereco.Text = "Cadastrar endereço";
+            this.btnCadEndereco.UseVisualStyleBackColor = true;
+            this.btnCadEndereco.Click += new System.EventHandler(this.btnCadEndereco_Click);
             // 
             // tbBairro
             // 
@@ -333,12 +341,12 @@ namespace Telas {
             this.tbBairro.Size = new System.Drawing.Size(190, 20);
             this.tbBairro.TabIndex = 12;
             // 
-            // Cidade
+            // tbCidade
             // 
-            this.Cidade.Location = new System.Drawing.Point(71, 80);
-            this.Cidade.Name = "Cidade";
-            this.Cidade.Size = new System.Drawing.Size(251, 20);
-            this.Cidade.TabIndex = 11;
+            this.tbCidade.Location = new System.Drawing.Point(71, 80);
+            this.tbCidade.Name = "tbCidade";
+            this.tbCidade.Size = new System.Drawing.Size(251, 20);
+            this.tbCidade.TabIndex = 11;
             // 
             // tbLogradouro
             // 
@@ -387,6 +395,42 @@ namespace Telas {
             this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 80;
             this.label10.Text = "Bairro";
+            // 
+            // comboBoxUf
+            // 
+            this.comboBoxUf.FormattingEnabled = true;
+            this.comboBoxUf.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AM",
+            "AP",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MG",
+            "MS",
+            "MT",
+            "PA",
+            "PB",
+            "PE",
+            "PI",
+            "PR",
+            "RJ",
+            "RN",
+            "RO",
+            "RR",
+            "RS",
+            "SC",
+            "SE",
+            "SP",
+            "TO"});
+            this.comboBoxUf.Location = new System.Drawing.Point(542, 79);
+            this.comboBoxUf.Name = "comboBoxUf";
+            this.comboBoxUf.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxUf.TabIndex = 121;
             // 
             // Form2
             // 
@@ -442,9 +486,10 @@ namespace Telas {
         private System.Windows.Forms.TextBox tbCpf;
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.TextBox tbBairro;
-        private System.Windows.Forms.TextBox Cidade;
+        private System.Windows.Forms.TextBox tbCidade;
         private System.Windows.Forms.TextBox tbLogradouro;
-        private System.Windows.Forms.TextBox tbUF;
         private System.Windows.Forms.Button btmCadPessoa;
+        private System.Windows.Forms.Button btnCadEndereco;
+        private System.Windows.Forms.ComboBox comboBoxUf;
     }
 }

@@ -36,6 +36,7 @@ namespace Control {
             }
         }
         #endregion
+        #region Cadastro de Pessoa
         public static Boolean salvarPessoa(Pessoa pessoa) {
             if (DAOPessoa.cadastrarPessoa(pessoa)) {
                 return true;
@@ -44,6 +45,18 @@ namespace Control {
                 return false;
             }
         }
+        
+
+        public static Boolean salvarEndereco(string cpf, Endereco endereco) {
+            if (DAOPessoa.cadastrarEndereco(cpf, endereco)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        #endregion
         #region Cadastro de Local
         public static Boolean salvarLocal(Local local) {
             if (DAOLocal.cadastrarLocal(local)) {
