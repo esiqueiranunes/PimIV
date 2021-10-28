@@ -23,7 +23,7 @@ namespace Telas {
             customizeDesign();
             // colocar o ponteiro no campo nome ao abrir o Form2 e demais tbm
         }
-        
+
 
         private void customizeDesign() {
             panelEndereco.Visible = false;
@@ -32,7 +32,7 @@ namespace Telas {
             if (panelEndereco.Visible == true) {
                 panelEndereco.Visible = false;
             }
-         
+
         }
         private void showSubMenu(Panel subMenu) {
             if (subMenu.Visible == false) {
@@ -57,59 +57,109 @@ namespace Telas {
             //comboBoxCategoria.Items.Clear();
         }
         private void btnCadastrar_Click(object sender, EventArgs e) {
+            bool teste = true;
             Pessoa pessoa = new Pessoa();
             Endereco endereco = new Endereco();
             pessoa.Nome = this.tbNome.Text;
             pessoa.Cpf = this.tbCpf.Text;
-            pessoa.Nascimento = DateTime.Parse(this.tbNascimento.Text);
+            
             pessoa.Email = this.tbEmail.Text;
             pessoa.Categoria = this.comboBoxCategoria.Text;
-            pessoa.Sexo = (Sexo)Enum.Parse(typeof(Sexo), this.comboBoxSexo.Text);
+            
             pessoa.Telefone = this.tbCelular.Text;
 
             endereco.Logradouro = this.tbLogradouro.Text;
             endereco.Cidade = this.tbCidade.Text;
             endereco.Bairro = this.tbBairro.Text;
-            //endereco.Uf = "GO";
-            endereco.Uf = (Estado)Enum.Parse(typeof(Estado), this.comboBoxUf.Text);
 
-            if (Cadastros.salvarPessoa(pessoa) && Cadastros.salvarEndereco(pessoa.Cpf,endereco)) {
-                MessageBox.Show("Dados salvos com Sucesso!");
-                limparTexbox();
+            if (teste == true) {
+                try {
+                    pessoa.Sexo = (Sexo)Enum.Parse(typeof(Sexo), this.comboBoxSexo.Text);
+                }
+                catch {
+                    MessageBox.Show("Sexo inválido");
+                    teste = false;
+                }
+                finally {
+                    this.comboBoxSexo.Focus();
+                }
             }
-            else {
-                MessageBox.Show("ERRO AO SALVAR DADOS");
+            if (teste == true) {
+                try {
+                    pessoa.Nascimento = DateTime.Parse(this.tbNascimento.Text);
+                }
+                catch {
+                    MessageBox.Show("Data de nascimento inválida");
+                    teste = false;
+                }
+                finally {
+                    this.tbNascimento.Focus();
+                }
+            }
+            if (teste == true) {
+                try {
+                    endereco.Uf = (Estado)Enum.Parse(typeof(Estado), this.comboBoxUf.Text);
+                }
+                catch {
+                    MessageBox.Show("UF inválida");
+                    teste = false;
+                }
+                finally {
+                    this.comboBoxUf.Focus();
+                }
+            }
+
+            
+            if (teste == true) {
+                if (Cadastros.salvarPessoa(pessoa) && Cadastros.salvarEndereco(pessoa.Cpf, endereco)) {
+                    MessageBox.Show("Dados salvos com Sucesso!");
+                    limparTexbox();
+                }
+                
             }
         }
 
         private void btmCadPessoa_Click(object sender, EventArgs e) {
+            bool teste = true;
             Pessoa pessoa = new Pessoa();
             pessoa.Nome = this.tbNome.Text;
             pessoa.Cpf = this.tbCpf.Text;
-            pessoa.Nascimento = DateTime.Parse(this.tbNascimento.Text);
+            if (teste == true) {
+                try {
+                    pessoa.Sexo = (Sexo)Enum.Parse(typeof(Sexo), this.comboBoxSexo.Text);
+                }
+                catch {
+                    MessageBox.Show("Sexo inválido");
+                    teste = false;
+                }
+                finally {
+                    this.comboBoxSexo.Focus();
+                }
+            }
+            if (teste == true) {
+                try {
+                    pessoa.Nascimento = DateTime.Parse(this.tbNascimento.Text);
+                }
+                catch {
+                    MessageBox.Show("Data de nascimento inválida");
+                    teste = false;
+                }
+                finally {
+                    this.tbNascimento.Focus();
+                }
+            }
+
             pessoa.Email = this.tbEmail.Text;
             pessoa.Categoria = this.comboBoxCategoria.Text;
-            //pessoa.Sexo = char.Parse(this.comboBoxSexo.Text);
-            pessoa.Sexo = (Sexo)Enum.Parse(typeof(Sexo),this.comboBoxSexo.Text);            
+            
             pessoa.Telefone = this.tbCelular.Text;
-
-            if (Cadastros.salvarPessoa(pessoa)) {
-                MessageBox.Show("Dados salvos com Sucesso!");
-                limparTexbox();
-            }
-            else {
-                MessageBox.Show("ERRO AO SALVAR DADOS");
-            }
-            /*try {
+            if (teste == true) {
                 if (Cadastros.salvarPessoa(pessoa)) {
                     MessageBox.Show("Dados salvos com Sucesso!");
                     limparTexbox();
                 }
             }
-            catch (SqlException erro) {
 
-                MessageBox.Show("ERRO AO SALVAR DADOS: " +  erro);
-            }*/
 
 
         }
@@ -119,15 +169,24 @@ namespace Telas {
             endereco.Logradouro = this.tbLogradouro.Text;
             endereco.Cidade = this.tbCidade.Text;
             endereco.Bairro = this.tbBairro.Text;
-            //endereco.Uf = "GO";
-            endereco.Uf = (Estado)Enum.Parse(typeof(Estado), this.comboBoxUf.Text);
-
-            if (Cadastros.salvarEndereco(cpf, endereco)) {
-                MessageBox.Show("Dados salvos com Sucesso!");
-                limparTexbox();
+            bool teste = true;
+            if (teste == true) {
+                try {
+                    endereco.Uf = (Estado)Enum.Parse(typeof(Estado), this.comboBoxUf.Text);
+                }
+                catch {
+                    MessageBox.Show("UF inválida");
+                    teste = false;
+                }
+                finally {
+                    this.comboBoxUf.Focus();
+                }
             }
-            else {
-                MessageBox.Show("ERRO AO SALVAR DADOS");
+            if (teste == true) {
+                if (Cadastros.salvarEndereco(cpf, endereco)) {
+                    MessageBox.Show("Dados salvos com Sucesso!");
+                    limparTexbox();
+                }
             }
         }
         private void button4_Click(object sender, EventArgs e) {
@@ -146,7 +205,7 @@ namespace Telas {
             showSubMenu(panelEndereco);
         }
 
-    
+
 
         private void label2_Click(object sender, EventArgs e) {
 
@@ -156,6 +215,6 @@ namespace Telas {
             this.Close();
         }
 
-        
+
     }
 }
