@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using M.Entities;
 using Entities;
+using System.Windows.Forms;
+
 namespace DAL {
     public class DAOServico {
 
@@ -33,7 +35,7 @@ namespace DAL {
                 return true;
             }
             catch (SqlException erro) {
-                Console.WriteLine("Erro ao inserir dados no banco" + erro);
+                MessageBox.Show(erro.Message);
                 return false;
             }
             finally {

@@ -57,6 +57,16 @@ namespace Control {
         }
 
         #endregion
+        #region Cadastro de Usuário
+        public static Boolean salvarUsuario(Usuario user) {
+            if (DAOUser.cadastrarUsuario(user)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        #endregion
         #region Cadastro de Local
         public static Boolean salvarLocal(Local local) {
             if (DAOLocal.cadastrarLocal(local)) {

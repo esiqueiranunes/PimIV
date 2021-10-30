@@ -66,6 +66,19 @@ namespace Telas {
             txt.Leave += RetornarMascara;
             txt.KeyPress += ApenasValorNumerico;
         }
+
+        private void limparTexbox() {
+            this.tbNomeProduto.Clear();
+            this.tbMarca.Clear();
+            this.tbFornecedor.Clear();
+            this.comboBoxUnidade.Text = "";
+            this.tbValidade.Clear();
+            this.numericUpDown1.Text = "";
+            this.tbValorProduto.Clear();
+            this.tbCategoriaProduto.Clear();
+            this.tbNomeCategoria.Clear();
+
+        }
         private void button4_Click(object sender, EventArgs e) {
             this.Close();
         }
@@ -90,39 +103,48 @@ namespace Telas {
             if (Cadastros.salvarCategoriaProduto(produto)) {
                 MessageBox.Show("Dados salvos com Sucesso!");
 
-                this.tbNomeCategoria.Text = "";
+                limparTexbox();
             }
-            else {
-                MessageBox.Show("Erro ao salvar os dados!");
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e) {
             Produto produto = new Produto();
+            bool teste = true;
             produto.Nome = this.tbNomeProduto.Text;
             produto.Marca = this.tbMarca.Text;
             produto.Fornecedor = this.tbFornecedor.Text;
-            produto.UnidMedida = this.comboBoxUnidade.Text;
-            produto.Validade = DateTime.Parse(this.tbValidade.Text);
-            produto.QteEstoque = int.Parse(this.numericUpDown1.Text);
-            produto.Valor = double.Parse(this.tbValorProduto.Text);
+            produto.UnidMedida = this.comboBoxUnidade.Text;        
             produto.Categoria = this.tbCategoriaProduto.Text;
+
+            if (teste == true) {
+                try {
+                    produto.Validade = DateTime.Parse(this.tbValidade.Text);
+
+                }
+                catch {
+                    MessageBox.Show("Informe uma data válida");
+                    teste = false;
+                }
+            }
             
+            if (teste == true) {
+                try {
+                    produto.Valor = double.Parse(this.tbValorProduto.Text);
 
+                }
+                catch {
+                    MessageBox.Show("Informe um valor válido");
+                    this.tbValorProduto.Focus();
+                    teste = false;
+                }
+            }
 
+            if(teste == true) { 
             if (Cadastros.salvarProduto(produto)) {
                 MessageBox.Show("Dados salvos com Sucesso!");
-                this.tbNomeProduto.Text = "";
-                this.tbMarca.Text = "";
-                this.tbFornecedor.Text = "";
-                this.comboBoxUnidade.Text = "";
-                this.tbValidade.Text = "";
-                this.numericUpDown1.Text = "";
-                this.tbValorProduto.Text = "";
-                this.tbCategoriaProduto.Text = "";
-            }
-            else {
-                MessageBox.Show("Erro ao salvar os dados!");
+                    limparTexbox();
+            }            
             }
         }
 

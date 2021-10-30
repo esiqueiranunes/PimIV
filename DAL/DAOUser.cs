@@ -4,33 +4,28 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using M.Entities;
-using Entities;
+using Enums;
+using Users;
 using System.Windows.Forms;
 
-namespace DAL {
-    public class DAOProduto {
 
-        public static Boolean cadastrarProduto(Produto produto) {
+namespace DAL {
+    public class DAOUser {
+
+        public static Boolean cadastrarUsuario(Usuario user) {
             //abrir a conexao
             SqlConnection conn = BD.abrirConexao();
             //string para inserção
-            string sql = "INSERT INTO PRODUTOS VALUES(@NOME, @MARCA, @FORNECEDOR, @UNI_MEDIDA, @VALIDADE, @ESTOQUE, @VALOR, (SELECT ID_CATEGORIA FROM CATEGORIA WHERE @CATEGORIA = NOME AND CLASSE = 'PRODUTO'))";
+            string sql = "INSERT INTO USUARIO VALUES(@LOGIN, @SENHA, (SELECT ID_PESSOA FROM PESSOA WHERE EMAIL = @LOGIN ), @NIVEL)";
             try {
                 //criar um objeto passando a conexao e a sql inserção
                 SqlCommand comando = new SqlCommand(sql, conn);
                 //adicionando os valores a sql
-                comando.Parameters.AddWithValue("@NOME", produto.Nome);
-                comando.Parameters.AddWithValue("@MARCA", produto.Marca);
-                comando.Parameters.AddWithValue("@FORNECEDOR", produto.Fornecedor);
-                comando.Parameters.AddWithValue("@UNI_MEDIDA", produto.UnidMedida);
-                comando.Parameters.AddWithValue("@VALIDADE", produto.Validade);
-                comando.Parameters.AddWithValue("@ESTOQUE", produto.QteEstoque);
-                comando.Parameters.AddWithValue("@VALOR", produto.Valor);
-                comando.Parameters.AddWithValue("@CATEGORIA", produto.Categoria);
+                comando.Parameters.AddWithValue("@LOGIN", user.Login);                
+                comando.Parameters.AddWithValue("@SENHA", user.Senha);
+                //comando.Parameters.AddWithValue("@EMAIL", user.Login);
+                comando.Parameters.AddWithValue("@NIVEL", user.Nivel.ToString());
                 
-
-
 
                 //abrir a conexao
                 BD.abrirConexao();
@@ -47,11 +42,6 @@ namespace DAL {
             finally {
                 BD.fecharConexao();
             }
-
         }
-
-        
-
-        
     }
 }

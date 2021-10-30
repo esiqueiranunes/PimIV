@@ -52,6 +52,7 @@
     <Compile Include="Entities\Endereco.cs" />
     <Compile Include="Entities\Enums\CategoriaPessoa.cs" />
     <Compile Include="Entities\Enums\Estado.cs" />
+    <Compile Include="Entities\Enums\NivelUser.cs" />
     <Compile Include="Entities\Enums\Sexo.cs" />
     <Compile Include="Entities\Enums\StatusConta.cs" />
     <Compile Include="Entities\Enums\StatusHospedagem.cs" />

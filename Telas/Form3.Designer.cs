@@ -28,12 +28,12 @@ namespace Telas {
             this.label9 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.panelCadServico = new System.Windows.Forms.Panel();
+            this.comboBoxNivel = new System.Windows.Forms.ComboBox();
             this.tbEmailUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCadastrarUser = new System.Windows.Forms.Button();
             this.panelCadastrarServico.SuspendLayout();
             this.panelCadServico.SuspendLayout();
             this.SuspendLayout();
@@ -79,12 +79,12 @@ namespace Telas {
             // panelCadServico
             // 
             this.panelCadServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.panelCadServico.Controls.Add(this.comboBox1);
+            this.panelCadServico.Controls.Add(this.comboBoxNivel);
             this.panelCadServico.Controls.Add(this.tbEmailUser);
             this.panelCadServico.Controls.Add(this.label2);
             this.panelCadServico.Controls.Add(this.label5);
             this.panelCadServico.Controls.Add(this.button1);
-            this.panelCadServico.Controls.Add(this.button2);
+            this.panelCadServico.Controls.Add(this.btnCadastrarUser);
             this.panelCadServico.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadServico.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadServico.Location = new System.Drawing.Point(0, 100);
@@ -92,12 +92,24 @@ namespace Telas {
             this.panelCadServico.Size = new System.Drawing.Size(765, 146);
             this.panelCadServico.TabIndex = 126;
             // 
+            // comboBoxNivel
+            // 
+            this.comboBoxNivel.FormattingEnabled = true;
+            this.comboBoxNivel.Items.AddRange(new object[] {
+            "Administrador",
+            "Funcionário",
+            "Cliente"});
+            this.comboBoxNivel.Location = new System.Drawing.Point(60, 84);
+            this.comboBoxNivel.Name = "comboBoxNivel";
+            this.comboBoxNivel.Size = new System.Drawing.Size(234, 21);
+            this.comboBoxNivel.TabIndex = 2;
+            // 
             // tbEmailUser
             // 
             this.tbEmailUser.Location = new System.Drawing.Point(60, 36);
             this.tbEmailUser.Name = "tbEmailUser";
             this.tbEmailUser.Size = new System.Drawing.Size(234, 20);
-            this.tbEmailUser.TabIndex = 104;
+            this.tbEmailUser.TabIndex = 1;
             // 
             // label2
             // 
@@ -127,33 +139,22 @@ namespace Telas {
             this.button1.Location = new System.Drawing.Point(594, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 36);
-            this.button1.TabIndex = 87;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Botão";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCadastrarUser
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(473, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 36);
-            this.button2.TabIndex = 86;
-            this.button2.Text = "Cadastrar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Administrador",
-            "Funcionário",
-            "Cliente"});
-            this.comboBox1.Location = new System.Drawing.Point(60, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(234, 21);
-            this.comboBox1.TabIndex = 107;
+            this.btnCadastrarUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrarUser.Location = new System.Drawing.Point(473, 45);
+            this.btnCadastrarUser.Name = "btnCadastrarUser";
+            this.btnCadastrarUser.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrarUser.TabIndex = 3;
+            this.btnCadastrarUser.Text = "Cadastrar";
+            this.btnCadastrarUser.UseVisualStyleBackColor = true;
+            this.btnCadastrarUser.Click += new System.EventHandler(this.btnCadastrarUser_Click);
             // 
             // Form3
             // 
@@ -180,11 +181,11 @@ namespace Telas {
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Panel panelCadServico;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxNivel;
         private System.Windows.Forms.TextBox tbEmailUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCadastrarUser;
     }
 }

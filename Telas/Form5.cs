@@ -67,6 +67,15 @@ namespace Telas {
             txt.KeyPress += ApenasValorNumerico;
         }
 
+        private void limparTexbox() {
+            this.tbNomeServico.Clear();
+            this.tbDescricaoServico.Clear();
+            this.tbValorServico.Clear();
+            this.tbCategoriaServico.Clear();
+            this.tbNomeCategoria.Clear();
+
+        }
+
         private void button4_Click(object sender, EventArgs e) {
             this.Close();
         }
@@ -82,36 +91,46 @@ namespace Telas {
         private void btnCadastrarCategoria_Click(object sender, EventArgs e) {
 
             CategoriaGeral categoria = new CategoriaGeral();
+           
             categoria.Classe = "Servico";
             categoria.Nome = this.tbNomeCategoria.Text;
 
-            if (Cadastros.salvarCategoriaService(categoria)) {
-                MessageBox.Show("Dados salvos com Sucesso!");
+            
+                if (Cadastros.salvarCategoriaService(categoria)) {
+                    MessageBox.Show("Dados salvos com Sucesso!");
+                    limparTexbox();
+
+
+                }
                 
-                this.tbNomeCategoria.Text = "";
-            }
-            else {
-                MessageBox.Show("Erro ao salvar os dados!");
-            }
-        }
+            }        
 
         private void btnCadastrarServico_Click(object sender, EventArgs e) {
             Service service = new Service();
+            bool teste = true;
             service.Nome = this.tbNomeServico.Text;
             service.Descricao = this.tbDescricaoServico.Text;
-            service.Valor = double.Parse(this.tbValorServico.Text);
+            
             service.Categoria = this.tbCategoriaServico.Text;
 
-
-            if (Cadastros.salvarService(service)) {
-                MessageBox.Show("Dados salvos com Sucesso!");
-                this.tbNomeServico.Text= "";
-                this.tbDescricaoServico.Text = "";
-                this.tbValorServico.Text = "";
-                this.tbCategoriaServico.Text = "";
+            try {
+                service.Valor = double.Parse(this.tbValorServico.Text);
             }
-            else {
-                MessageBox.Show("Erro ao salvar os dados!");
+            catch {
+                MessageBox.Show("Corrija o valor do Serviço");
+                teste = false;
+            }
+            finally {
+                this.tbValorServico.Focus();
+            }
+            if (teste == true) {
+                if (Cadastros.salvarService(service)) {
+                    MessageBox.Show("Dados salvos com Sucesso!");
+                    limparTexbox();
+
+
+                }
+                
             }
         }
     }
