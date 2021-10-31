@@ -48,12 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD.cs" />
-    <Compile Include="DAOCategoria.cs" />
-    <Compile Include="DAOLocal.cs" />
-    <Compile Include="DAOPessoa.cs" />
-    <Compile Include="DAOProduto.cs" />
-    <Compile Include="DAOServico.cs" />
-    <Compile Include="DAOUser.cs" />
+    <Compile Include="Cadastros\DAOCategoria.cs" />
+    <Compile Include="Cadastros\DAOLocal.cs" />
+    <Compile Include="Cadastros\DAOPessoa.cs" />
+    <Compile Include="Cadastros\DAOProduto.cs" />
+    <Compile Include="Cadastros\DAOServico.cs" />
+    <Compile Include="Cadastros\DAOUser.cs" />
+    <Compile Include="DAOReserva.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

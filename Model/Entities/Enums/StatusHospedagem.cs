@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Enums {
-    enum StatusHospedagem {
+    public enum StatusHospedagem {
         Reservada,
         Checkin,
         Checkout,
-        Cancelada
+        Cancelada,
+        Pendente
     }
 }
