@@ -114,8 +114,9 @@ namespace Telas {
             produto.Nome = this.tbNomeProduto.Text;
             produto.Marca = this.tbMarca.Text;
             produto.Fornecedor = this.tbFornecedor.Text;
-            produto.UnidMedida = this.comboBoxUnidade.Text;        
-            produto.Categoria = this.tbCategoriaProduto.Text;
+            produto.Uni_medida = this.comboBoxUnidade.Text;        
+            produto.Nome_categoria = this.tbCategoriaProduto.Text;
+            produto.Estoque = int.Parse(this.numericUpDown1.Text);
 
             if (teste == true) {
                 try {

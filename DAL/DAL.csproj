@@ -54,6 +54,7 @@
     <Compile Include="Cadastros\DAOProduto.cs" />
     <Compile Include="Cadastros\DAOServico.cs" />
     <Compile Include="Cadastros\DAOUser.cs" />
+    <Compile Include="DAOEstoque.cs" />
     <Compile Include="DAOReserva.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

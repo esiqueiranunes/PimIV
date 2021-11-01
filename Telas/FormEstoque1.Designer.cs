@@ -28,21 +28,21 @@ namespace Telas {
             this.label9 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.panelListar = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbNomeProduto = new System.Windows.Forms.TextBox();
-            this.btnFiltrar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.tbNomeProduto = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_PRODUTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UNIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UNI_MEDIDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTOQUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FORNECEDOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelEstoque.SuspendLayout();
             this.panelListar.SuspendLayout();
@@ -103,32 +103,18 @@ namespace Telas {
             this.panelListar.Size = new System.Drawing.Size(765, 75);
             this.panelListar.TabIndex = 128;
             // 
-            // label5
+            // comboBox1
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(57, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "Tipo de Produto";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(178, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 101;
-            this.label1.Text = "Nome produto";
-            // 
-            // tbNomeProduto
-            // 
-            this.tbNomeProduto.Location = new System.Drawing.Point(181, 33);
-            this.tbNomeProduto.Name = "tbNomeProduto";
-            this.tbNomeProduto.Size = new System.Drawing.Size(205, 20);
-            this.tbNomeProduto.TabIndex = 102;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Bebidas",
+            "Comida",
+            "Limpeza",
+            "Higiene"});
+            this.comboBox1.Location = new System.Drawing.Point(60, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(115, 21);
+            this.comboBox1.TabIndex = 104;
             // 
             // btnFiltrar
             // 
@@ -142,18 +128,32 @@ namespace Telas {
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // tbNomeProduto
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Bebidas",
-            "Comida",
-            "Limpeza",
-            "Higiene"});
-            this.comboBox1.Location = new System.Drawing.Point(60, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
-            this.comboBox1.TabIndex = 104;
+            this.tbNomeProduto.Location = new System.Drawing.Point(181, 33);
+            this.tbNomeProduto.Name = "tbNomeProduto";
+            this.tbNomeProduto.Size = new System.Drawing.Size(205, 20);
+            this.tbNomeProduto.TabIndex = 102;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(178, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 101;
+            this.label1.Text = "Nome produto";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(57, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 97;
+            this.label5.Text = "Tipo de Produto";
             // 
             // panel1
             // 
@@ -172,14 +172,14 @@ namespace Telas {
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
+            this.ID_PRODUTO,
             this.NOME,
             this.MARCA,
-            this.UNIDADE,
+            this.UNI_MEDIDA,
             this.VALIDADE,
             this.ESTOQUE,
             this.VALOR,
-            this.CATEGORIA,
+            this.FK_CATEGORIA,
             this.FORNECEDOR});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
@@ -188,48 +188,62 @@ namespace Telas {
             this.dataGridView1.Size = new System.Drawing.Size(700, 322);
             this.dataGridView1.TabIndex = 0;
             // 
-            // ID
+            // ID_PRODUTO
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
+            this.ID_PRODUTO.DataPropertyName = "id_produto";
+            this.ID_PRODUTO.HeaderText = "ID";
+            this.ID_PRODUTO.Name = "ID_PRODUTO";
+            this.ID_PRODUTO.Width = 40;
             // 
             // NOME
             // 
+            this.NOME.DataPropertyName = "nome";
             this.NOME.HeaderText = "NOME";
             this.NOME.Name = "NOME";
             // 
             // MARCA
             // 
+            this.MARCA.DataPropertyName = "marca";
             this.MARCA.HeaderText = "MARCA";
             this.MARCA.Name = "MARCA";
+            this.MARCA.Width = 60;
             // 
-            // UNIDADE
+            // UNI_MEDIDA
             // 
-            this.UNIDADE.HeaderText = "UNIDADE";
-            this.UNIDADE.Name = "UNIDADE";
+            this.UNI_MEDIDA.DataPropertyName = "uni_medida";
+            this.UNI_MEDIDA.HeaderText = "UNIDADE";
+            this.UNI_MEDIDA.Name = "UNI_MEDIDA";
+            this.UNI_MEDIDA.Width = 60;
             // 
             // VALIDADE
             // 
+            this.VALIDADE.DataPropertyName = "validade";
             this.VALIDADE.HeaderText = "VALIDADE";
             this.VALIDADE.Name = "VALIDADE";
             // 
             // ESTOQUE
             // 
+            this.ESTOQUE.DataPropertyName = "estoque";
             this.ESTOQUE.HeaderText = "ESTOQUE";
             this.ESTOQUE.Name = "ESTOQUE";
+            this.ESTOQUE.Width = 50;
             // 
             // VALOR
             // 
+            this.VALOR.DataPropertyName = "valor";
             this.VALOR.HeaderText = "VALOR";
             this.VALOR.Name = "VALOR";
+            this.VALOR.Width = 60;
             // 
-            // CATEGORIA
+            // FK_CATEGORIA
             // 
-            this.CATEGORIA.HeaderText = "CATEGORIA";
-            this.CATEGORIA.Name = "CATEGORIA";
+            this.FK_CATEGORIA.DataPropertyName = "nome_categoria";
+            this.FK_CATEGORIA.HeaderText = "CATEGORIA";
+            this.FK_CATEGORIA.Name = "FK_CATEGORIA";
             // 
             // FORNECEDOR
             // 
+            this.FORNECEDOR.DataPropertyName = "fornecedor";
             this.FORNECEDOR.HeaderText = "FORNECEDOR";
             this.FORNECEDOR.Name = "FORNECEDOR";
             // 
@@ -268,14 +282,14 @@ namespace Telas {
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UNI_MEDIDA;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALIDADE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTOQUE;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FK_CATEGORIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn FORNECEDOR;
     }
 }

@@ -23,13 +23,12 @@ namespace DAL {
                 comando.Parameters.AddWithValue("@NOME", produto.Nome);
                 comando.Parameters.AddWithValue("@MARCA", produto.Marca);
                 comando.Parameters.AddWithValue("@FORNECEDOR", produto.Fornecedor);
-                comando.Parameters.AddWithValue("@UNI_MEDIDA", produto.UnidMedida);
+                comando.Parameters.AddWithValue("@UNI_MEDIDA", produto.Uni_medida);
                 comando.Parameters.AddWithValue("@VALIDADE", produto.Validade);
-                comando.Parameters.AddWithValue("@ESTOQUE", produto.QteEstoque);
+                comando.Parameters.AddWithValue("@ESTOQUE", produto.Estoque);
                 comando.Parameters.AddWithValue("@VALOR", produto.Valor);
-                comando.Parameters.AddWithValue("@CATEGORIA", produto.Categoria);
+                comando.Parameters.AddWithValue("@CATEGORIA", produto.Nome_categoria);
                 
-
 
 
                 //abrir a conexao

@@ -30,6 +30,14 @@ namespace Telas {
             this.btnSair = new System.Windows.Forms.Button();
             this.btnCadReserva = new System.Windows.Forms.Button();
             this.panelCadReserva = new System.Windows.Forms.Panel();
+            this.tbHoraSaida = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbHoraEntrada = new System.Windows.Forms.TextBox();
+            this.numericUpDownHospedes = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxLocal = new System.Windows.Forms.ComboBox();
+            this.lOCALBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELDataSet = new Telas.HOTELDataSet();
             this.tbDataSaida = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,31 +52,23 @@ namespace Telas {
             this.btnReservar = new System.Windows.Forms.Button();
             this.btnListarReservas = new System.Windows.Forms.Button();
             this.panelListarReserva = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.tbCpfTitular = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.comboBoxSituacao = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.hOTELDataSet = new Telas.HOTELDataSet();
             this.lOCALBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOCALTableAdapter = new Telas.HOTELDataSetTableAdapters.LOCALTableAdapter();
-            this.comboBoxLocal = new System.Windows.Forms.ComboBox();
-            this.lOCALBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.numericUpDownHospedes = new System.Windows.Forms.NumericUpDown();
-            this.tbCpfTitular = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbID = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.hotelDataSet1 = new Telas.HOTELDataSet();
-            this.tbHoraSaida = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tbHoraEntrada = new System.Windows.Forms.TextBox();
             this.panelHospedagem.SuspendLayout();
             this.panelCadReserva.SuspendLayout();
-            this.panelListarReserva.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).BeginInit();
+            this.panelListarReserva.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,6 +153,68 @@ namespace Telas {
             this.panelCadReserva.Name = "panelCadReserva";
             this.panelCadReserva.Size = new System.Drawing.Size(765, 196);
             this.panelCadReserva.TabIndex = 126;
+            // 
+            // tbHoraSaida
+            // 
+            this.tbHoraSaida.Location = new System.Drawing.Point(543, 110);
+            this.tbHoraSaida.Name = "tbHoraSaida";
+            this.tbHoraSaida.Size = new System.Drawing.Size(147, 20);
+            this.tbHoraSaida.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.Window;
+            this.label11.Location = new System.Drawing.Point(540, 94);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.TabIndex = 116;
+            this.label11.Text = "Hora saída";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.Window;
+            this.label12.Location = new System.Drawing.Point(223, 94);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 13);
+            this.label12.TabIndex = 115;
+            this.label12.Text = "Hora entrada";
+            // 
+            // tbHoraEntrada
+            // 
+            this.tbHoraEntrada.Location = new System.Drawing.Point(226, 110);
+            this.tbHoraEntrada.Name = "tbHoraEntrada";
+            this.tbHoraEntrada.Size = new System.Drawing.Size(144, 20);
+            this.tbHoraEntrada.TabIndex = 7;
+            // 
+            // numericUpDownHospedes
+            // 
+            this.numericUpDownHospedes.Location = new System.Drawing.Point(570, 66);
+            this.numericUpDownHospedes.Name = "numericUpDownHospedes";
+            this.numericUpDownHospedes.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownHospedes.TabIndex = 5;
+            // 
+            // comboBoxLocal
+            // 
+            this.comboBoxLocal.DataSource = this.lOCALBindingSource1;
+            this.comboBoxLocal.DisplayMember = "NOME";
+            this.comboBoxLocal.FormattingEnabled = true;
+            this.comboBoxLocal.Location = new System.Drawing.Point(236, 67);
+            this.comboBoxLocal.Name = "comboBoxLocal";
+            this.comboBoxLocal.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxLocal.TabIndex = 3;
+            this.comboBoxLocal.ValueMember = "NOME";
+            // 
+            // lOCALBindingSource1
+            // 
+            this.lOCALBindingSource1.DataMember = "LOCAL";
+            this.lOCALBindingSource1.DataSource = this.hOTELDataSet;
+            // 
+            // hOTELDataSet
+            // 
+            this.hOTELDataSet.DataSetName = "HOTELDataSet";
+            this.hOTELDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbDataSaida
             // 
@@ -307,6 +369,40 @@ namespace Telas {
             this.panelListarReserva.Size = new System.Drawing.Size(765, 75);
             this.panelListarReserva.TabIndex = 128;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.Window;
+            this.label10.Location = new System.Drawing.Point(362, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 13);
+            this.label10.TabIndex = 117;
+            this.label10.Text = "ID Hospedagem";
+            // 
+            // tbID
+            // 
+            this.tbID.Location = new System.Drawing.Point(363, 38);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(82, 20);
+            this.tbID.TabIndex = 15;
+            // 
+            // tbCpfTitular
+            // 
+            this.tbCpfTitular.Location = new System.Drawing.Point(190, 38);
+            this.tbCpfTitular.Name = "tbCpfTitular";
+            this.tbCpfTitular.Size = new System.Drawing.Size(167, 20);
+            this.tbCpfTitular.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(187, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 103;
+            this.label5.Text = "CPF Titular";
+            // 
             // comboBoxSituacao
             // 
             this.comboBoxSituacao.FormattingEnabled = true;
@@ -342,11 +438,6 @@ namespace Telas {
             this.button5.Text = "Listar";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // hOTELDataSet
-            // 
-            this.hOTELDataSet.DataSetName = "HOTELDataSet";
-            this.hOTELDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // lOCALBindingSource
             // 
             this.lOCALBindingSource.DataMember = "LOCAL";
@@ -356,101 +447,10 @@ namespace Telas {
             // 
             this.lOCALTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBoxLocal
-            // 
-            this.comboBoxLocal.DataSource = this.lOCALBindingSource1;
-            this.comboBoxLocal.DisplayMember = "NOME";
-            this.comboBoxLocal.FormattingEnabled = true;
-            this.comboBoxLocal.Location = new System.Drawing.Point(236, 67);
-            this.comboBoxLocal.Name = "comboBoxLocal";
-            this.comboBoxLocal.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxLocal.TabIndex = 3;
-            this.comboBoxLocal.ValueMember = "NOME";
-            // 
-            // lOCALBindingSource1
-            // 
-            this.lOCALBindingSource1.DataMember = "LOCAL";
-            this.lOCALBindingSource1.DataSource = this.hOTELDataSet;
-            // 
-            // numericUpDownHospedes
-            // 
-            this.numericUpDownHospedes.Location = new System.Drawing.Point(570, 66);
-            this.numericUpDownHospedes.Name = "numericUpDownHospedes";
-            this.numericUpDownHospedes.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownHospedes.TabIndex = 5;
-            // 
-            // tbCpfTitular
-            // 
-            this.tbCpfTitular.Location = new System.Drawing.Point(190, 38);
-            this.tbCpfTitular.Name = "tbCpfTitular";
-            this.tbCpfTitular.Size = new System.Drawing.Size(167, 20);
-            this.tbCpfTitular.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(187, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "CPF Titular";
-            // 
-            // tbID
-            // 
-            this.tbID.Location = new System.Drawing.Point(363, 38);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(82, 20);
-            this.tbID.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.Window;
-            this.label10.Location = new System.Drawing.Point(362, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 13);
-            this.label10.TabIndex = 117;
-            this.label10.Text = "ID Hospedagem";
-            // 
             // hotelDataSet1
             // 
             this.hotelDataSet1.DataSetName = "HOTELDataSet";
             this.hotelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbHoraSaida
-            // 
-            this.tbHoraSaida.Location = new System.Drawing.Point(543, 110);
-            this.tbHoraSaida.Name = "tbHoraSaida";
-            this.tbHoraSaida.Size = new System.Drawing.Size(147, 20);
-            this.tbHoraSaida.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.Window;
-            this.label11.Location = new System.Drawing.Point(540, 94);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
-            this.label11.TabIndex = 116;
-            this.label11.Text = "Hora saída";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.Window;
-            this.label12.Location = new System.Drawing.Point(223, 94);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 13);
-            this.label12.TabIndex = 115;
-            this.label12.Text = "Hora entrada";
-            // 
-            // tbHoraEntrada
-            // 
-            this.tbHoraEntrada.Location = new System.Drawing.Point(226, 110);
-            this.tbHoraEntrada.Name = "tbHoraEntrada";
-            this.tbHoraEntrada.Size = new System.Drawing.Size(144, 20);
-            this.tbHoraEntrada.TabIndex = 7;
             // 
             // FormHospedagem1
             // 
@@ -471,12 +471,12 @@ namespace Telas {
             this.panelHospedagem.PerformLayout();
             this.panelCadReserva.ResumeLayout(false);
             this.panelCadReserva.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).EndInit();
             this.panelListarReserva.ResumeLayout(false);
             this.panelListarReserva.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).EndInit();
             this.ResumeLayout(false);
 

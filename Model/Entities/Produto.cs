@@ -4,36 +4,40 @@ using System.Text;
 
 namespace Entities {
     public class Produto {
+        private int id_produto;
         private string nome;
         private string marca;
         private string fornecedor;
-        private string unidMedida;
+        private string uni_medida;
         private DateTime validade;
-        private int qteEstoque;
+        private int estoque;
         private double valor;
-        private string categoria;
+        private string nome_categoria;
 
+        public int Id_produto { get => id_produto; set => id_produto = value; }
         public string Nome { get => nome; set => nome = value; }
         public string Marca { get => marca; set => marca = value; }
-        public string Fornecedor { get => fornecedor; set => fornecedor = value; }
-        public string UnidMedida { get => unidMedida; set => unidMedida = value; }
-        public DateTime Validade { get => validade; set => validade = value; }
-        public int QteEstoque { get => qteEstoque; set => qteEstoque = value; }
+        public string Fornecedor { get => fornecedor; set => fornecedor = value; }        
+        public DateTime Validade { get => validade; set => validade = value; }      
         public double Valor { get => valor; set => valor = value; }
-        public string Categoria { get => categoria; set => categoria = value; }
+            
+        public string Uni_medida { get => uni_medida; set => uni_medida = value; }
+        public int Estoque { get => estoque; set => estoque = value; }
+        public string Nome_categoria { get => nome_categoria; set => nome_categoria = value; }
 
         public Produto() {
         }
 
-        public Produto(string nome, string marca, string fornecedor, string unidMedida, DateTime validade, int qteEstoque, double valor, string categoria) {
+        public Produto(int id,string nome, string marca, string fornecedor, string unidMedida, DateTime validade, int qteEstoque, double valor, string categoria) {
             Nome = nome;
             Marca = marca;
             Fornecedor = fornecedor;
-            UnidMedida = unidMedida;
+            Uni_medida = unidMedida;
             Validade = validade;
-            QteEstoque = qteEstoque;
+            Estoque = qteEstoque;
             Valor = valor;
-            Categoria = categoria;
+            Nome_categoria = categoria;
+            Id_produto = id;
 
         }
     }
