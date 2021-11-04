@@ -24,22 +24,50 @@ namespace Telas {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.panelHospedagem = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnAtualizarHospedagem = new System.Windows.Forms.Button();
             this.panelAtualizarHospedagem = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.tbCPF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbIDHospedagem = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.hOTELDataSet = new Telas.HOTELDataSet();
+            this.hOTELDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELDataSet1 = new Telas.HOTELDataSet1();
+            this.hOTELDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELDataSet2 = new Telas.HOTELDataSet2();
+            this.hOSPEDAGEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOSPEDAGEMTableAdapter = new Telas.HOTELDataSet2TableAdapters.HOSPEDAGEMTableAdapter();
+            this.hOSPEDAGEMBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID_HOSPEDAGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME_LOCAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_ENTRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_ENTRADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_SAIDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HORA_SAIDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUANT_PESSOAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelHospedagem.SuspendLayout();
             this.panelAtualizarHospedagem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHospedagem
@@ -115,6 +143,52 @@ namespace Telas {
             this.panelAtualizarHospedagem.Size = new System.Drawing.Size(765, 139);
             this.panelAtualizarHospedagem.TabIndex = 127;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkBox1.Location = new System.Drawing.Point(267, 82);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(125, 17);
+            this.checkBox1.TabIndex = 106;
+            this.checkBox1.Text = "Pagamento realizado";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.button2.ForeColor = System.Drawing.SystemColors.Window;
+            this.button2.Location = new System.Drawing.Point(462, 82);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 27);
+            this.button2.TabIndex = 105;
+            this.button2.Text = "Excluir";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(60, 80);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 104;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Chocolate;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.button1.ForeColor = System.Drawing.SystemColors.Window;
+            this.button1.Location = new System.Drawing.Point(462, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 27);
+            this.button1.TabIndex = 103;
+            this.button1.Text = "Check-out";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // tbCPF
             // 
             this.tbCPF.Location = new System.Drawing.Point(150, 43);
@@ -139,16 +213,6 @@ namespace Telas {
             this.tbIDHospedagem.Size = new System.Drawing.Size(81, 20);
             this.tbIDHospedagem.TabIndex = 100;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(57, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 13);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "ID Hospedagem";
-            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -162,52 +226,137 @@ namespace Telas {
             this.button4.TabIndex = 99;
             this.button4.Text = "Check-in";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button1
+            // label5
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Chocolate;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(462, 49);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 27);
-            this.button1.TabIndex = 103;
-            this.button1.Text = "Check-out";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(57, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 13);
+            this.label5.TabIndex = 97;
+            this.label5.Text = "ID Hospedagem";
             // 
-            // dateTimePicker1
+            // hOTELDataSet
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(60, 80);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 104;
+            this.hOTELDataSet.DataSetName = "HOTELDataSet";
+            this.hOTELDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button2
+            // hOTELDataSetBindingSource
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Crimson;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(462, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 27);
-            this.button2.TabIndex = 105;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.hOTELDataSetBindingSource.DataSource = this.hOTELDataSet;
+            this.hOTELDataSetBindingSource.Position = 0;
             // 
-            // checkBox1
+            // hOTELDataSet1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBox1.Location = new System.Drawing.Point(267, 82);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(125, 17);
-            this.checkBox1.TabIndex = 106;
-            this.checkBox1.Text = "Pagamento realizado";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.hOTELDataSet1.DataSetName = "HOTELDataSet1";
+            this.hOTELDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hOTELDataSet1BindingSource
+            // 
+            this.hOTELDataSet1BindingSource.DataSource = this.hOTELDataSet1;
+            this.hOTELDataSet1BindingSource.Position = 0;
+            // 
+            // hOTELDataSet2
+            // 
+            this.hOTELDataSet2.DataSetName = "HOTELDataSet2";
+            this.hOTELDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hOSPEDAGEMBindingSource
+            // 
+            this.hOSPEDAGEMBindingSource.DataMember = "HOSPEDAGEM";
+            this.hOSPEDAGEMBindingSource.DataSource = this.hOTELDataSet2;
+            // 
+            // hOSPEDAGEMTableAdapter
+            // 
+            this.hOSPEDAGEMTableAdapter.ClearBeforeFill = true;
+            // 
+            // hOSPEDAGEMBindingSource1
+            // 
+            this.hOSPEDAGEMBindingSource1.DataMember = "HOSPEDAGEM";
+            this.hOSPEDAGEMBindingSource1.DataSource = this.hOTELDataSet2;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_HOSPEDAGEM,
+            this.NOME,
+            this.CPF,
+            this.NOME_LOCAL,
+            this.STATUS,
+            this.DATA_ENTRADA,
+            this.HORA_ENTRADA,
+            this.DATA_SAIDA,
+            this.HORA_SAIDA,
+            this.QUANT_PESSOAS});
+            this.dataGridView1.Location = new System.Drawing.Point(26, 290);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(707, 240);
+            this.dataGridView1.TabIndex = 128;
+            // 
+            // ID_HOSPEDAGEM
+            // 
+            this.ID_HOSPEDAGEM.DataPropertyName = "ID_HOSPEDAGEM";
+            this.ID_HOSPEDAGEM.HeaderText = "ID";
+            this.ID_HOSPEDAGEM.Name = "ID_HOSPEDAGEM";
+            this.ID_HOSPEDAGEM.Width = 35;
+            // 
+            // NOME
+            // 
+            this.NOME.DataPropertyName = "NOME";
+            this.NOME.HeaderText = "TITULAR";
+            this.NOME.Name = "NOME";
+            // 
+            // CPF
+            // 
+            this.CPF.DataPropertyName = "CPF";
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            // 
+            // NOME_LOCAL
+            // 
+            this.NOME_LOCAL.DataPropertyName = "LOCAL";
+            this.NOME_LOCAL.HeaderText = "LOCAL";
+            this.NOME_LOCAL.Name = "NOME_LOCAL";
+            // 
+            // STATUS
+            // 
+            this.STATUS.DataPropertyName = "STATUS";
+            this.STATUS.HeaderText = "STATUS";
+            this.STATUS.Name = "STATUS";
+            // 
+            // DATA_ENTRADA
+            // 
+            this.DATA_ENTRADA.DataPropertyName = "DATA_ENTRADA";
+            this.DATA_ENTRADA.HeaderText = "DATA ENTRADA";
+            this.DATA_ENTRADA.Name = "DATA_ENTRADA";
+            // 
+            // HORA_ENTRADA
+            // 
+            this.HORA_ENTRADA.DataPropertyName = "HORA_ENTRADA";
+            this.HORA_ENTRADA.HeaderText = "HORA ENTRADA";
+            this.HORA_ENTRADA.Name = "HORA_ENTRADA";
+            // 
+            // DATA_SAIDA
+            // 
+            this.DATA_SAIDA.DataPropertyName = "DATA_SAIDA";
+            this.DATA_SAIDA.HeaderText = "DATA SAIDA";
+            this.DATA_SAIDA.Name = "DATA_SAIDA";
+            // 
+            // HORA_SAIDA
+            // 
+            this.HORA_SAIDA.DataPropertyName = "HORA_SAIDA";
+            this.HORA_SAIDA.HeaderText = "HORA SAIDA";
+            this.HORA_SAIDA.Name = "HORA_SAIDA";
+            // 
+            // QUANT_PESSOAS
+            // 
+            this.QUANT_PESSOAS.DataPropertyName = "QUANT_PESSOAS";
+            this.QUANT_PESSOAS.HeaderText = "PESSOAS";
+            this.QUANT_PESSOAS.Name = "QUANT_PESSOAS";
             // 
             // FormHospedagem2
             // 
@@ -215,16 +364,26 @@ namespace Telas {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(765, 561);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelAtualizarHospedagem);
             this.Controls.Add(this.btnAtualizarHospedagem);
             this.Controls.Add(this.panelHospedagem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHospedagem2";
             this.Text = "FormHospedagem2";
+            this.Load += new System.EventHandler(this.FormHospedagem2_Load);
             this.panelHospedagem.ResumeLayout(false);
             this.panelHospedagem.PerformLayout();
             this.panelAtualizarHospedagem.ResumeLayout(false);
             this.panelAtualizarHospedagem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,5 +404,24 @@ namespace Telas {
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.BindingSource hOTELDataSet1BindingSource;
+        private HOTELDataSet1 hOTELDataSet1;
+        private HOTELDataSet hOTELDataSet;
+        private System.Windows.Forms.BindingSource hOTELDataSetBindingSource;
+        private HOTELDataSet2 hOTELDataSet2;
+        private System.Windows.Forms.BindingSource hOSPEDAGEMBindingSource;
+        private HOTELDataSet2TableAdapters.HOSPEDAGEMTableAdapter hOSPEDAGEMTableAdapter;
+        private System.Windows.Forms.BindingSource hOSPEDAGEMBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_HOSPEDAGEM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOME_LOCAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_ENTRADA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HORA_ENTRADA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_SAIDA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HORA_SAIDA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QUANT_PESSOAS;
     }
 }

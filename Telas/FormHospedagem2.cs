@@ -1,7 +1,11 @@
-﻿using System;
+﻿using Control;
+using DAL;
+using Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +17,35 @@ namespace Telas {
         public FormHospedagem2() {
             InitializeComponent();
             customizeDesign();
+            listaGrid();
+                    }
+
+        
+
+        public void  listaGrid() {
+                     
+
+            try {
+                StringBuilder sb = new StringBuilder();
+                sb.Append("SELECT H.ID_HOSPEDAGEM, P.NOME, P.CPF, L.NOME_LOCAL AS LOCAL, H.STATUS, H.DATA_ENTRADA ,H.HORA_ENTRADA, H.DATA_SAIDA , H.HORA_SAIDA, H.QUANT_PESSOAS ")
+                    .Append(" FROM HOSPEDAGEM H ")
+                    .Append("INNER JOIN PESSOA P ON P.ID_PESSOA = H.FK_PESSOA ")
+                    .Append("INNER JOIN LOCAL L ON L.ID_LOCAL = H.FK_LOCAL");
+
+                dataGridView1.DataSource = BD.listarGrid(sb.ToString());
+                
+            }
+            catch {
+
+                MessageBox.Show("ERRO AO LISTAR");
+            }
+            
         }
+        private void DataGridView2_Load(object sender, EventArgs e) {
+            dataGridView1.DataSource = GetDataHospedagem();
+        }
+
+
 
         private void customizeDesign() {
             panelAtualizarHospedagem.Visible = false;
@@ -36,12 +68,50 @@ namespace Telas {
 
         }
 
+       
+        private  DataTable GetDataHospedagem() {
+            DataTable dtHospedagem = new DataTable();
+
+            
+
+            using (SqlConnection con = BD.abrirConexao()) {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM HOSPEDAGEM", con)) {
+                    con.Open();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    dtHospedagem.Load(reader);
+                }
+            }
+            return dtHospedagem;
+
+        }
+      
+
         private void btnSair_Click(object sender, EventArgs e) {
             this.Close();
         }
 
         private void btnAtualizarHospedagem_Click(object sender, EventArgs e) {
             showSubMenu(panelAtualizarHospedagem);
+        }
+
+        private void FormHospedagem2_Load(object sender, EventArgs e) {
+            // TODO: esta linha de código carrega dados na tabela 'hOTELDataSet2.HOSPEDAGEM'. Você pode movê-la ou removê-la conforme necessário.
+            this.hOSPEDAGEMTableAdapter.Fill(this.hOTELDataSet2.HOSPEDAGEM);
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            listaGrid();
+        }
+
+        private void btnListarReservas_Click(object sender, EventArgs e) {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e) {
+            listaGrid();
         }
     }
 }

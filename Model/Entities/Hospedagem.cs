@@ -6,7 +6,7 @@ using Users;
 
 namespace Entities {
     public class Hospedagem {
-
+        private int idHospedagem;
         private StatusHospedagem status;
         private DateTime dataEntrada;
         private TimeSpan horarioEntrada;
@@ -15,7 +15,9 @@ namespace Entities {
         private int qtePessoas;
         private string titular;
         private string localHospedagem;
-
+        private double valor;
+        
+        
         public StatusHospedagem Status { get => status; set => status = value; }
         public DateTime DataEntrada { get => dataEntrada; set => dataEntrada = value; }
         public TimeSpan HorarioEntrada { get => horarioEntrada; set => horarioEntrada = value; }
@@ -24,6 +26,9 @@ namespace Entities {
         public int QtePessoas { get => qtePessoas; set => qtePessoas = value; }
         public string Titular { get => titular; set => titular = value; }
         public string LocalHospedagem { get => localHospedagem; set => localHospedagem = value; }
+        public double Valor { get => valor; set => valor = value; }
+        public int IdHospedagem { get => idHospedagem; set => idHospedagem = value; }
+
         public Hospedagem() {
            
         }
@@ -37,6 +42,8 @@ namespace Entities {
             QtePessoas = qtePessoas;
             Titular = titular;
             LocalHospedagem = localHospedagem;
+            Valor = 0.0;
+
         }
     }
 }

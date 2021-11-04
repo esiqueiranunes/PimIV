@@ -11,23 +11,7 @@ using System.Windows.Forms;
 
 namespace DAL {
     public class DAOEstoque {
-       /* public DataTable CarregarDados(string strWhere) {
-            List<Produto> listaProdutos = new List<Produto>();
-            Produto produtos = null;
-
-            if (!string.IsNullOrWhiteSpace(strWhere)) {
-                strWhere = " WHERE " + strWhere;
-            }
-
-            StringBuilder sb = new StringBuilder();
-            sb.Append("SELECT id, nome, telefone, cpf, sexo, endereco FROM clientes ")
-              .Append("" + strWhere + " ")
-              .Append("ORDER BY id");
-
-            SqlConnection conn = BD.abrirConexao();
-            SqlCommand cmd = new SqlCommand(sb.ToString(), conn);
-        }*/
-
+       
 
         public List<Produto> CarregarGridDao(string strWhere) {
             List<Produto> listaProdutos = new List<Produto>();

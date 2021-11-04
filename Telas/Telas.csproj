@@ -142,6 +142,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HOTELDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HOTELDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HOTELDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HOTELDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HOTELDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form0.resx">
@@ -208,6 +218,28 @@
     </None>
     <None Include="HOTELDataSet.xss">
       <DependentUpon>HOTELDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HOTELDataSet1.xsc">
+      <DependentUpon>HOTELDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HOTELDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HOTELDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HOTELDataSet1.xss">
+      <DependentUpon>HOTELDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HOTELDataSet2.xsc">
+      <DependentUpon>HOTELDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HOTELDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HOTELDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HOTELDataSet2.xss">
+      <DependentUpon>HOTELDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
