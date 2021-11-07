@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Cadastros.cs" />
     <Compile Include="Estoque.cs" />
+    <Compile Include="GridActions.cs" />
     <Compile Include="Hospedagens.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

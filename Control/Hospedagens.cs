@@ -28,9 +28,10 @@ namespace Control {
         public static DataTable CarregarHospedagem(string query) {
             return new DAL.DAOReserva().directQuery(query);
 
+                    }
 
-
+        public static int RealizarCheck(int id, string query) {
+            return new DAL.DAOReserva().Check(id, query);
         }
-
     }
 }

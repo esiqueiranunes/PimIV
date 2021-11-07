@@ -36,7 +36,7 @@ namespace DAL {
                     conn.Close();
                 }
                 catch (SqlException sqle) {
-                    Console.WriteLine("Erro ao Realizar a conexao!" + sqle);
+                    Console.WriteLine("Erro ao fechar conexão com o banco de dados" + sqle);
                 }
             }
         }
@@ -63,5 +63,26 @@ namespace DAL {
             return null;
 
         }
+        public  int ExcluirRegistro(int id, string query) {
+            /*StringBuilder sb = new StringBuilder();
+            sb.Append("DELETE FROM HOSPEDAGEM ")
+              .Append("WHERE [ID_HOSPEDAGEM] = 8");*/
+
+            SqlConnection conn = BD.abrirConexao();
+
+            try {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ID", id);
+                return Convert.ToInt32(cmd.ExecuteNonQuery());
+            }
+            catch (SqlException erro) {
+                MessageBox.Show(erro.Message);
+            }
+            catch (Exception erro) {
+                MessageBox.Show(erro.Message);
+            }
+            return 0;
+        }
+
     }
 }

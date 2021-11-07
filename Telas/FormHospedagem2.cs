@@ -16,11 +16,13 @@ namespace Telas {
     public partial class FormHospedagem2 : Form {
         public FormHospedagem2() {
             InitializeComponent();
-            customizeDesign();
+           // customizeDesign();
             listaGrid();
-                    }
+            
 
-        
+        }
+
+
 
         public void  listaGrid() {
                      
@@ -39,7 +41,6 @@ namespace Telas {
 
                 MessageBox.Show("ERRO AO LISTAR");
             }
-            
         }
         private void DataGridView2_Load(object sender, EventArgs e) {
             dataGridView1.DataSource = GetDataHospedagem();
@@ -111,7 +112,39 @@ namespace Telas {
         }
 
         private void button4_Click(object sender, EventArgs e) {
+            string query = "UPDATE HOSPEDAGEM SET DATA_ENTRADA = CONVERT (date, GETDATE()), HORA_ENTRADA = CONVERT (time, GETDATE()), STATUS = 'CHECKIN' WHERE ID_HOSPEDAGEM = @ID";
+            
+            int id;
+            
+            id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());       
+                       
+         
+            if (Hospedagens.RealizarCheck(Convert.ToInt32(id), query) != 0) {
+                MessageBox.Show("Check-in realizado com sucesso!");
+            }
+            
+
+
             listaGrid();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e) {
+            
+                StringBuilder sb = new StringBuilder();
+                sb.Append("DELETE FROM HOSPEDAGEM")
+                  .Append("WHERE ID_HOSPEDAGEM = @ID");
+
+            string query = "DELETE FROM HOSPEDAGEM WHERE ID_HOSPEDAGEM = @ID";
+
+            int id= int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            new BD().ExcluirRegistro(Convert.ToInt32(id), query);
+            listaGrid();
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            this.tbIDHospedagem.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }

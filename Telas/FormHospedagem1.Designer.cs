@@ -62,6 +62,9 @@ namespace Telas {
             this.lOCALBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOCALTableAdapter = new Telas.HOTELDataSetTableAdapters.LOCALTableAdapter();
             this.hotelDataSet1 = new Telas.HOTELDataSet();
+            this.hOTELDataSet4 = new Telas.HOTELDataSet4();
+            this.lOCALBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.lOCALTableAdapter1 = new Telas.HOTELDataSet4TableAdapters.LOCALTableAdapter();
             this.panelHospedagem.SuspendLayout();
             this.panelCadReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).BeginInit();
@@ -70,6 +73,8 @@ namespace Telas {
             this.panelListarReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHospedagem
@@ -197,14 +202,13 @@ namespace Telas {
             // 
             // comboBoxLocal
             // 
-            this.comboBoxLocal.DataSource = this.lOCALBindingSource1;
-            this.comboBoxLocal.DisplayMember = "NOME";
+            this.comboBoxLocal.DataSource = this.lOCALBindingSource2;
+            this.comboBoxLocal.DisplayMember = "NOME_LOCAL";
             this.comboBoxLocal.FormattingEnabled = true;
             this.comboBoxLocal.Location = new System.Drawing.Point(236, 67);
             this.comboBoxLocal.Name = "comboBoxLocal";
             this.comboBoxLocal.Size = new System.Drawing.Size(121, 21);
             this.comboBoxLocal.TabIndex = 3;
-            this.comboBoxLocal.ValueMember = "NOME";
             // 
             // lOCALBindingSource1
             // 
@@ -452,6 +456,20 @@ namespace Telas {
             this.hotelDataSet1.DataSetName = "HOTELDataSet";
             this.hotelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // hOTELDataSet4
+            // 
+            this.hOTELDataSet4.DataSetName = "HOTELDataSet4";
+            this.hOTELDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lOCALBindingSource2
+            // 
+            this.lOCALBindingSource2.DataMember = "LOCAL";
+            this.lOCALBindingSource2.DataSource = this.hOTELDataSet4;
+            // 
+            // lOCALTableAdapter1
+            // 
+            this.lOCALTableAdapter1.ClearBeforeFill = true;
+            // 
             // FormHospedagem1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +496,8 @@ namespace Telas {
             this.panelListarReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,5 +541,8 @@ namespace Telas {
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tbHoraEntrada;
         private HOTELDataSet hotelDataSet1;
+        private HOTELDataSet4 hOTELDataSet4;
+        private System.Windows.Forms.BindingSource lOCALBindingSource2;
+        private HOTELDataSet4TableAdapters.LOCALTableAdapter lOCALTableAdapter1;
     }
 }

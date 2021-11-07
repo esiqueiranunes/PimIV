@@ -31,7 +31,7 @@ namespace Telas {
             this.btnAtualizarHospedagem = new System.Windows.Forms.Button();
             this.panelAtualizarHospedagem = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.tbCPF = new System.Windows.Forms.TextBox();
@@ -128,7 +128,7 @@ namespace Telas {
             // 
             this.panelAtualizarHospedagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.panelAtualizarHospedagem.Controls.Add(this.checkBox1);
-            this.panelAtualizarHospedagem.Controls.Add(this.button2);
+            this.panelAtualizarHospedagem.Controls.Add(this.btnExcluir);
             this.panelAtualizarHospedagem.Controls.Add(this.dateTimePicker1);
             this.panelAtualizarHospedagem.Controls.Add(this.button1);
             this.panelAtualizarHospedagem.Controls.Add(this.tbCPF);
@@ -154,19 +154,20 @@ namespace Telas {
             this.checkBox1.Text = "Pagamento realizado";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnExcluir
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Crimson;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(462, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 27);
-            this.button2.TabIndex = 105;
-            this.button2.Text = "Excluir";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.Color.Crimson;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnExcluir.Location = new System.Drawing.Point(462, 82);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(123, 27);
+            this.btnExcluir.TabIndex = 105;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // dateTimePicker1
             // 
@@ -296,6 +297,7 @@ namespace Telas {
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(707, 240);
             this.dataGridView1.TabIndex = 128;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ID_HOSPEDAGEM
             // 
@@ -400,7 +402,7 @@ namespace Telas {
         private System.Windows.Forms.TextBox tbIDHospedagem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;

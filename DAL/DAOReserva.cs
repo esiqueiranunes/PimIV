@@ -28,7 +28,7 @@ namespace DAL {
 
             try {
                 SqlDataAdapter objAdp = new SqlDataAdapter(objCommand);
-                                
+
 
                 objAdp.Fill(dtLista);
 
@@ -40,7 +40,7 @@ namespace DAL {
             }
             return dtLista;
         }
-        public  DataTable directQuery(string query) {
+        public DataTable directQuery(string query) {
 
             SqlConnection conn = BD.abrirConexao();
             string sql = query; // aqui vai o "SELECT * FROM CLIENTES""
@@ -61,31 +61,31 @@ namespace DAL {
             return data; // Retorna um datatable com todos dados      
         }
 
-        
+
         public static Boolean reservar(Hospedagem hospedagem) {
 
 
             SqlConnection conn = BD.abrirConexao();
 
-            string sql = "INSERT INTO HOSPEDAGEM VALUES((SELECT ID_PESSOA FROM PESSOA WHERE @CPF = CPF), (SELECT ID_LOCAL FROM LOCAL WHERE @LOCAL = NOME),@STATUS,@DATA_ENTRADA,@HORA_ENTRADA, @DATA_SAIDA, @HORA_SAIDA,@QUANT_PESSOAS)";
+            string sql = "INSERT INTO HOSPEDAGEM VALUES((SELECT ID_PESSOA FROM PESSOA WHERE @CPF = CPF), (SELECT ID_LOCAL FROM LOCAL WHERE @LOCAL = NOME_LOCAL),@STATUS,@DATA_ENTRADA,@HORA_ENTRADA, @DATA_SAIDA, @HORA_SAIDA,@QUANT_PESSOAS)";
             try {
-                
+
                 SqlCommand comando = new SqlCommand(sql, conn);
-                
+
                 comando.Parameters.AddWithValue("@CPF", hospedagem.Titular);
                 comando.Parameters.AddWithValue("@LOCAL", hospedagem.LocalHospedagem);
                 comando.Parameters.AddWithValue("@STATUS", hospedagem.Status.ToString());
                 comando.Parameters.AddWithValue("@DATA_ENTRADA", hospedagem.DataEntrada);
                 comando.Parameters.AddWithValue("@HORA_ENTRADA", hospedagem.HorarioEntrada);
-                comando.Parameters.AddWithValue("@DATA_SAIDA",hospedagem.DataSaida);
+                comando.Parameters.AddWithValue("@DATA_SAIDA", hospedagem.DataSaida);
                 comando.Parameters.AddWithValue("@HORA_SAIDA", hospedagem.HorarioSaida);
                 comando.Parameters.AddWithValue("@QUANT_PESSOAS", hospedagem.QtePessoas);
 
 
                 BD.abrirConexao();
-                
+
                 comando.ExecuteNonQuery();
-               
+
                 BD.fecharConexao();
                 return true;
             }
@@ -144,8 +144,8 @@ namespace DAL {
                     if (dr["DATA_SAIDA"] != DBNull.Value)
                         hospedagem.DataSaida = Convert.ToDateTime(dr["data_saida"].ToString());
 
-                   /* if (dr["HORA_SAIDA"] != DBNull.Value)
-                        hospedagem.HorarioSaida = TimeSpan.Parse((string)dr["hora_saida"]); */
+                    /* if (dr["HORA_SAIDA"] != DBNull.Value)
+                         hospedagem.HorarioSaida = TimeSpan.Parse((string)dr["hora_saida"]); */
 
                     if (dr["QUANT_PESSOAS"] != DBNull.Value)
                         hospedagem.QtePessoas = Convert.ToInt32(dr["qtePessoas"].ToString()); ;
@@ -162,10 +162,28 @@ namespace DAL {
                 MessageBox.Show(erro.Message);
                 return listaHospedagem;
             }
-            
+
             finally {
                 BD.fecharConexao();
             }
+        }
+        public  int Check(int id, string query) {
+
+            /* UPDATE HOSPEDAGEM SET DATA_ENTRADA = CONVERT (date, GETDATE()), HORA_ENTRADA = CONVERT (time, GETDATE()) WHERE ID_HOSPEDAGEM = @ID*/
+            SqlConnection conn = BD.abrirConexao();
+
+            try {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ID", id);
+                return Convert.ToInt32(cmd.ExecuteNonQuery());
+            }
+            catch (SqlException erro) {
+                MessageBox.Show(erro.Message);
+            }
+            catch (Exception erro) {
+                MessageBox.Show(erro.Message);
+            }
+            return 0;
         }
     }
 }

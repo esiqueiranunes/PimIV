@@ -70,8 +70,9 @@ namespace Telas {
         }
 
         private void FormHospedagem1_Load(object sender, EventArgs e) {
-            // TODO: esta linha de código carrega dados na tabela 'hOTELDataSet.LOCAL'. Você pode movê-la ou removê-la conforme necessário.
-            this.lOCALTableAdapter.Fill(this.hOTELDataSet.LOCAL);
+            // TODO: esta linha de código carrega dados na tabela 'hOTELDataSet4.LOCAL'. Você pode movê-la ou removê-la conforme necessário.
+            this.lOCALTableAdapter1.Fill(this.hOTELDataSet4.LOCAL);
+
 
         }
 
