@@ -25,7 +25,8 @@ namespace Telas {
 
 
         public void  listaGrid() {
-                     
+            dataGridView1.RowsDefaultCellStyle.BackColor = Color.White;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Lavender;
 
             try {
                 StringBuilder sb = new StringBuilder();
@@ -34,7 +35,7 @@ namespace Telas {
                     .Append("INNER JOIN PESSOA P ON P.ID_PESSOA = H.FK_PESSOA ")
                     .Append("INNER JOIN LOCAL L ON L.ID_LOCAL = H.FK_LOCAL");
 
-                dataGridView1.DataSource = BD.listarGrid(sb.ToString());
+                dataGridView1.DataSource = GridActions.Listar(sb.ToString());
                 
             }
             catch {
@@ -43,7 +44,7 @@ namespace Telas {
             }
         }
         private void DataGridView2_Load(object sender, EventArgs e) {
-            dataGridView1.DataSource = GetDataHospedagem();
+            //dataGridView1.DataSource = GetDataHospedagem();
         }
 
 
@@ -70,7 +71,7 @@ namespace Telas {
         }
 
        
-        private  DataTable GetDataHospedagem() {
+        /*private  DataTable GetDataHospedagem() {
             DataTable dtHospedagem = new DataTable();
 
             
@@ -86,7 +87,7 @@ namespace Telas {
             }
             return dtHospedagem;
 
-        }
+        }*/
       
 
         private void btnSair_Click(object sender, EventArgs e) {
@@ -137,7 +138,7 @@ namespace Telas {
             string query = "DELETE FROM HOSPEDAGEM WHERE ID_HOSPEDAGEM = @ID";
 
             int id= int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            new BD().ExcluirRegistro(Convert.ToInt32(id), query);
+            GridActions.Excluir(Convert.ToInt32(id), query);
             listaGrid();
 
 
@@ -145,6 +146,20 @@ namespace Telas {
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             this.tbIDHospedagem.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e) {
+            string query = "UPDATE HOSPEDAGEM SET DATA_SAIDA = CONVERT (date, GETDATE()), HORA_SAIDA = CONVERT (time, GETDATE()), STATUS = 'CHECKOUT' WHERE ID_HOSPEDAGEM = @ID";
+
+            
+
+            int id= int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+
+
+            if (Hospedagens.RealizarCheck(Convert.ToInt32(id), query) != 0) {
+                MessageBox.Show("Check-out realizado com sucesso!");
+            }
+            listaGrid();
         }
     }
 }

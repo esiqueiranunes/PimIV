@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HOTELnomeProdutos" targetNamespace="http://tempuri.org/HOTELnomeProdutos.xsd" xmlns:mstns="http://tempuri.org/HOTELnomeProdutos.xsd" xmlns="http://tempuri.org/HOTELnomeProdutos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HOTELConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HOTELConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Telas.Properties.Settings.GlobalReference.Default.HOTELConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PRODUTOSTableAdapter" GeneratorDataComponentClassName="PRODUTOSTableAdapter" Name="PRODUTOS" UserDataComponentName="PRODUTOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HOTELConnectionString (Settings)" DbObjectName="HOTEL.dbo.PRODUTOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT NOME FROM dbo.PRODUTOS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="HOTELConnectionString (Settings)" DbObjectName="HOTEL.dbo.PRODUTOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT NOME FROM dbo.PRODUTOS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HOTELnomeProdutos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="HOTELnomeProdutos" msprop:Generator_UserDSName="HOTELnomeProdutos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PRODUTOS" msprop:Generator_TableClassName="PRODUTOSDataTable" msprop:Generator_TableVarName="tablePRODUTOS" msprop:Generator_RowChangedName="PRODUTOSRowChanged" msprop:Generator_TablePropName="PRODUTOS" msprop:Generator_RowDeletingName="PRODUTOSRowDeleting" msprop:Generator_RowChangingName="PRODUTOSRowChanging" msprop:Generator_RowEvHandlerName="PRODUTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="PRODUTOSRowDeleted" msprop:Generator_RowClassName="PRODUTOSRow" msprop:Generator_UserTableName="PRODUTOS" msprop:Generator_RowEvArgName="PRODUTOSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" msprop:Generator_UserColumnName="NOME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

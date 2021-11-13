@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Control;
+using Entities;
 using M.Entities;
 
 
@@ -65,6 +66,11 @@ namespace Telas {
 
         private void btnCadCategoria_Click(object sender, EventArgs e) {
 
+        }
+
+        private void panelCadCategoria_Paint(object sender, PaintEventArgs e) {
+
+            
         }
     }
 }

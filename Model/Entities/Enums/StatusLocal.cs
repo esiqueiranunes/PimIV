@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Enums {
-    public enum StatusLocal {
+     public enum StatusLocal {
         Ocupado,
         Desocupado
         

@@ -29,17 +29,17 @@ namespace Telas {
             this.btnSair = new System.Windows.Forms.Button();
             this.tbTitulo = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbDescricao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.tbValor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbIdHospedagem = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelFinanceiro.SuspendLayout();
             this.SuspendLayout();
@@ -99,16 +99,16 @@ namespace Telas {
             this.label13.TabIndex = 132;
             this.label13.Text = "Descrição";
             // 
-            // comboBox3
+            // comboBoxCategoria
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxCategoria.FormattingEnabled = true;
+            this.comboBoxCategoria.Items.AddRange(new object[] {
             "Entrada",
             "Saída"});
-            this.comboBox3.Location = new System.Drawing.Point(62, 193);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(127, 21);
-            this.comboBox3.TabIndex = 131;
+            this.comboBoxCategoria.Location = new System.Drawing.Point(62, 193);
+            this.comboBoxCategoria.Name = "comboBoxCategoria";
+            this.comboBoxCategoria.Size = new System.Drawing.Size(127, 21);
+            this.comboBoxCategoria.TabIndex = 131;
             // 
             // label3
             // 
@@ -147,16 +147,16 @@ namespace Telas {
             this.label2.TabIndex = 136;
             this.label2.Text = "Status";
             // 
-            // comboBox1
+            // comboBoxStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Fechada",
-            "Aberta"});
-            this.comboBox1.Location = new System.Drawing.Point(195, 193);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(114, 21);
-            this.comboBox1.TabIndex = 137;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Items.AddRange(new object[] {
+            "A",
+            "F"});
+            this.comboBoxStatus.Location = new System.Drawing.Point(195, 193);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(114, 21);
+            this.comboBoxStatus.TabIndex = 137;
             // 
             // tbValor
             // 
@@ -198,13 +198,14 @@ namespace Telas {
             this.btnCadastrar.TabIndex = 140;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // textBox1
+            // tbIdHospedagem
             // 
-            this.textBox1.Location = new System.Drawing.Point(448, 193);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 20);
-            this.textBox1.TabIndex = 142;
+            this.tbIdHospedagem.Location = new System.Drawing.Point(448, 193);
+            this.tbIdHospedagem.Name = "tbIdHospedagem";
+            this.tbIdHospedagem.Size = new System.Drawing.Size(142, 20);
+            this.tbIdHospedagem.TabIndex = 142;
             // 
             // label5
             // 
@@ -223,18 +224,18 @@ namespace Telas {
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(765, 561);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbIdHospedagem);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbValor);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbDescricao);
             this.Controls.Add(this.tbTitulo);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBoxCategoria);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panelFinanceiro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -255,17 +256,17 @@ namespace Telas {
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.TextBox tbTitulo;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxCategoria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbDescricao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.TextBox tbValor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbIdHospedagem;
         private System.Windows.Forms.Label label5;
     }
 }

@@ -24,38 +24,51 @@ namespace Telas {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.panelContagemEstoque = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pRODUTOSBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELnomeProdutos1 = new Telas.HOTELnomeProdutos();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnListarGeral = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UNIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UNI_MEDIDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTOQUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FORNECEDOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ID_PRODUTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnListarProdutos = new System.Windows.Forms.Button();
+            this.hOTELDataSet3 = new Telas.HOTELDataSet3();
+            this.pRODUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUTOSTableAdapter = new Telas.HOTELDataSet3TableAdapters.PRODUTOSTableAdapter();
+            this.hOTELnomeProdutos = new Telas.HOTELnomeProdutos();
+            this.pRODUTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUTOSTableAdapter1 = new Telas.HOTELnomeProdutosTableAdapters.PRODUTOSTableAdapter();
+            this.pRODUTOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELnomeProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELnomeProdutosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUTOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.panelContagemEstoque.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELnomeProdutos1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELnomeProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELnomeProdutosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELnomeProdutosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContagemEstoque
@@ -99,62 +112,89 @@ namespace Telas {
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.btnListar);
+            this.panel1.Controls.Add(this.btnAtualizar);
+            this.panel1.Controls.Add(this.btnListarGeral);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 369);
+            this.panel1.Size = new System.Drawing.Size(765, 384);
             this.panel1.TabIndex = 131;
             // 
-            // label3
+            // comboBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(202, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 106;
-            this.label3.Text = "Quantidade";
+            this.comboBox1.DataSource = this.pRODUTOSBindingSource4;
+            this.comboBox1.DisplayMember = "NOME";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(48, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 21);
+            this.comboBox1.TabIndex = 115;
             // 
-            // textBox1
+            // pRODUTOSBindingSource4
             // 
-            this.textBox1.Location = new System.Drawing.Point(196, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 105;
+            this.pRODUTOSBindingSource4.DataMember = "PRODUTOS";
+            this.pRODUTOSBindingSource4.DataSource = this.hOTELnomeProdutos1;
+            // 
+            // hOTELnomeProdutos1
+            // 
+            this.hOTELnomeProdutos1.DataSetName = "HOTELnomeProdutos";
+            this.hOTELnomeProdutos1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnListar
+            // 
+            this.btnListar.BackColor = System.Drawing.Color.Teal;
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnListar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListar.Location = new System.Drawing.Point(208, 35);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(123, 27);
+            this.btnListar.TabIndex = 114;
+            this.btnListar.Text = "Filtrar";
+            this.btnListar.UseVisualStyleBackColor = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnAtualizar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAtualizar.Location = new System.Drawing.Point(48, 337);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(673, 27);
+            this.btnAtualizar.TabIndex = 113;
+            this.btnAtualizar.Text = "Atualizar produto selecionado";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // btnListarGeral
+            // 
+            this.btnListarGeral.BackColor = System.Drawing.Color.Teal;
+            this.btnListarGeral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnListarGeral.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListarGeral.Location = new System.Drawing.Point(337, 35);
+            this.btnListarGeral.Name = "btnListarGeral";
+            this.btnListarGeral.Size = new System.Drawing.Size(384, 27);
+            this.btnListarGeral.TabIndex = 109;
+            this.btnListarGeral.Text = "Listar";
+            this.btnListarGeral.UseVisualStyleBackColor = false;
+            this.btnListarGeral.Click += new System.EventHandler(this.btnListarGeral_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(45, 17);
+            this.label2.Location = new System.Drawing.Point(45, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 105;
             this.label2.Text = "Nome Produto";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Bebidas",
-            "Comida",
-            "Limpeza",
-            "Higiene"});
-            this.comboBox2.Location = new System.Drawing.Point(48, 33);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(142, 21);
-            this.comboBox2.TabIndex = 105;
             // 
             // dataGridView1
             // 
@@ -165,150 +205,68 @@ namespace Telas {
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NOME,
             this.MARCA,
-            this.UNIDADE,
+            this.UNI_MEDIDA,
             this.VALIDADE,
             this.ESTOQUE,
-            this.FORNECEDOR});
+            this.VALOR,
+            this.FORNECEDOR,
+            this.ID_PRODUTO});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(48, 78);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(673, 82);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(673, 253);
             this.dataGridView1.TabIndex = 0;
             // 
             // NOME
             // 
+            this.NOME.DataPropertyName = "NOME";
             this.NOME.HeaderText = "NOME";
             this.NOME.Name = "NOME";
             // 
             // MARCA
             // 
+            this.MARCA.DataPropertyName = "MARCA";
             this.MARCA.HeaderText = "MARCA";
             this.MARCA.Name = "MARCA";
             // 
-            // UNIDADE
+            // UNI_MEDIDA
             // 
-            this.UNIDADE.HeaderText = "UNIDADE";
-            this.UNIDADE.Name = "UNIDADE";
+            this.UNI_MEDIDA.DataPropertyName = "UNI_MEDIDA";
+            this.UNI_MEDIDA.HeaderText = "UNIDADE";
+            this.UNI_MEDIDA.Name = "UNI_MEDIDA";
             // 
             // VALIDADE
             // 
+            this.VALIDADE.DataPropertyName = "VALIDADE";
             this.VALIDADE.HeaderText = "VALIDADE";
             this.VALIDADE.Name = "VALIDADE";
             // 
             // ESTOQUE
             // 
+            this.ESTOQUE.DataPropertyName = "ESTOQUE";
             this.ESTOQUE.HeaderText = "ESTOQUE";
             this.ESTOQUE.Name = "ESTOQUE";
             // 
+            // VALOR
+            // 
+            this.VALOR.DataPropertyName = "VALOR";
+            this.VALOR.HeaderText = "VALOR";
+            this.VALOR.Name = "VALOR";
+            // 
             // FORNECEDOR
             // 
+            this.FORNECEDOR.DataPropertyName = "FORNECEDOR";
             this.FORNECEDOR.HeaderText = "FORNECEDOR";
             this.FORNECEDOR.Name = "FORNECEDOR";
             // 
-            // label4
+            // ID_PRODUTO
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(270, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 107;
-            this.label4.Text = "Validade";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(273, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(68, 20);
-            this.textBox2.TabIndex = 108;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Teal;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.button4.ForeColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(598, 33);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 27);
-            this.button4.TabIndex = 109;
-            this.button4.Text = "Adicionar";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView2.Location = new System.Drawing.Point(48, 208);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(673, 112);
-            this.dataGridView2.TabIndex = 110;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "NOME";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "MARCA";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "UNIDADE";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "VALIDADE";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "ESTOQUE";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "FORNECEDOR";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(270, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(256, 17);
-            this.label6.TabIndex = 111;
-            this.label6.Text = "CONTAGEM DE ESTOQUE ATUAL";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(598, 326);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 27);
-            this.button2.TabIndex = 113;
-            this.button2.Text = "Finalizar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.ID_PRODUTO.DataPropertyName = "ID_PRODUTO";
+            this.ID_PRODUTO.HeaderText = "ID";
+            this.ID_PRODUTO.Name = "ID_PRODUTO";
             // 
             // btnListarProdutos
             // 
@@ -318,17 +276,66 @@ namespace Telas {
             this.btnListarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarProdutos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListarProdutos.Location = new System.Drawing.Point(0, 469);
+            this.btnListarProdutos.Location = new System.Drawing.Point(0, 484);
             this.btnListarProdutos.Name = "btnListarProdutos";
             this.btnListarProdutos.Size = new System.Drawing.Size(765, 23);
             this.btnListarProdutos.TabIndex = 134;
             this.btnListarProdutos.Text = "LISTAR PRODUTOS ";
             this.btnListarProdutos.UseVisualStyleBackColor = false;
             // 
+            // hOTELDataSet3
+            // 
+            this.hOTELDataSet3.DataSetName = "HOTELDataSet3";
+            this.hOTELDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pRODUTOSBindingSource
+            // 
+            this.pRODUTOSBindingSource.DataMember = "PRODUTOS";
+            this.pRODUTOSBindingSource.DataSource = this.hOTELDataSet3;
+            // 
+            // pRODUTOSTableAdapter
+            // 
+            this.pRODUTOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // hOTELnomeProdutos
+            // 
+            this.hOTELnomeProdutos.DataSetName = "HOTELnomeProdutos";
+            this.hOTELnomeProdutos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pRODUTOSBindingSource1
+            // 
+            this.pRODUTOSBindingSource1.DataMember = "PRODUTOS";
+            this.pRODUTOSBindingSource1.DataSource = this.hOTELnomeProdutos;
+            // 
+            // pRODUTOSTableAdapter1
+            // 
+            this.pRODUTOSTableAdapter1.ClearBeforeFill = true;
+            // 
+            // pRODUTOSBindingSource2
+            // 
+            this.pRODUTOSBindingSource2.DataMember = "PRODUTOS";
+            this.pRODUTOSBindingSource2.DataSource = this.hOTELnomeProdutos;
+            // 
+            // hOTELnomeProdutosBindingSource
+            // 
+            this.hOTELnomeProdutosBindingSource.DataSource = this.hOTELnomeProdutos;
+            this.hOTELnomeProdutosBindingSource.Position = 0;
+            // 
+            // hOTELnomeProdutosBindingSource1
+            // 
+            this.hOTELnomeProdutosBindingSource1.DataSource = this.hOTELnomeProdutos;
+            this.hOTELnomeProdutosBindingSource1.Position = 0;
+            // 
+            // pRODUTOSBindingSource3
+            // 
+            this.pRODUTOSBindingSource3.DataMember = "PRODUTOS";
+            this.pRODUTOSBindingSource3.DataSource = this.hOTELnomeProdutos;
+            // 
             // FormEstoque2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(765, 561);
             this.Controls.Add(this.btnListarProdutos);
@@ -337,12 +344,22 @@ namespace Telas {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEstoque2";
             this.Text = "FormEstoque2";
+            this.Load += new System.EventHandler(this.FormEstoque2_Load);
             this.panelContagemEstoque.ResumeLayout(false);
             this.panelContagemEstoque.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELnomeProdutos1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELnomeProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELnomeProdutosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELnomeProdutosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,29 +370,32 @@ namespace Telas {
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnListarGeral;
+        private System.Windows.Forms.Button btnListarProdutos;
+        private System.Windows.Forms.Button btnListar;
+        private HOTELDataSet3 hOTELDataSet3;
+        private System.Windows.Forms.BindingSource pRODUTOSBindingSource;
+        private HOTELDataSet3TableAdapters.PRODUTOSTableAdapter pRODUTOSTableAdapter;
+        private HOTELnomeProdutos hOTELnomeProdutos;
+        private System.Windows.Forms.BindingSource pRODUTOSBindingSource1;
+        private HOTELnomeProdutosTableAdapters.PRODUTOSTableAdapter pRODUTOSTableAdapter1;
+        private System.Windows.Forms.BindingSource pRODUTOSBindingSource2;
+        private System.Windows.Forms.BindingSource hOTELnomeProdutosBindingSource;
+        private System.Windows.Forms.BindingSource hOTELnomeProdutosBindingSource1;
+        private System.Windows.Forms.BindingSource pRODUTOSBindingSource3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private HOTELnomeProdutos hOTELnomeProdutos1;
+        private System.Windows.Forms.BindingSource pRODUTOSBindingSource4;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UNI_MEDIDA;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALIDADE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTOQUE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn FORNECEDOR;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnListarProdutos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUTO;
     }
 }

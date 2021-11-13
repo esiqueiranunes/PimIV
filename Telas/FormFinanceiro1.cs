@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Enums;
+using Control;
 
 namespace Telas {
     public partial class FormFinanceiro1 : Form {
         public FormFinanceiro1() {
             InitializeComponent();
-            AplicarEventos(tbValor);
+            
         }
         private void RetornarMascara(object sender, EventArgs e) {
             TextBox txt = (TextBox)sender;
@@ -45,6 +48,32 @@ namespace Telas {
 
         private void btnSair_Click(object sender, EventArgs e) {
             this.Close();
+        }
+        private void Limpar() {
+            this.tbTitulo.Clear();
+           this.tbDescricao.Clear();
+            this.comboBoxCategoria.Text = "";
+            this.comboBoxStatus.Text = "";
+            this.tbValor.Clear();
+            this.tbIdHospedagem.Clear();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e) {
+            Conta conta = new Conta();
+
+            conta.TituloConta = this.tbTitulo.Text;
+            conta.Descricao = this.tbDescricao.Text;
+            conta.Categoria = this.comboBoxCategoria.Text;              
+            conta.Status = (StatusConta)Enum.Parse(typeof(StatusConta), this.comboBoxStatus.Text);
+            conta.Valor = double.Parse(this.tbValor.Text);
+            conta.Hospedagem = int.Parse(this.tbIdHospedagem.Text);
+
+            if (Contas.SalvarConta(conta)) {
+                MessageBox.Show("Dados salvos com Sucesso!");
+                Limpar();
+            }
+
+
         }
     }
 }

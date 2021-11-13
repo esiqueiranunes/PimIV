@@ -15,7 +15,7 @@ namespace DAL {
             //abrir a conexao
             SqlConnection conn = BD.abrirConexao();
             //string para inserção
-            string sql = "INSERT INTO CATEGORIA(CLASSE, NOME) VALUES(@CLASSE, @NOME)";
+            string sql = "INSERT INTO CATEGORIA(CLASSE, NOME_CATEGORIA) VALUES(@CLASSE, @NOME)";
             try {
                 //criar um objeto passando a conexao e a sql inserção
                 SqlCommand comando = new SqlCommand(sql, conn);
@@ -44,7 +44,7 @@ namespace DAL {
             //abrir a conexao
             SqlConnection conn = BD.abrirConexao();
             //string para inserção
-            string sql = "INSERT INTO CATEGORIA(CLASSE, NOME) VALUES(@CLASSE, @NOME)";
+            string sql = "INSERT INTO CATEGORIA(CLASSE, NOME_CATEGORIA) VALUES(@CLASSE, @NOME)";
             try {
                 //criar um objeto passando a conexao e a sql inserção
                 SqlCommand comando = new SqlCommand(sql, conn);
@@ -72,7 +72,7 @@ namespace DAL {
             //abrir a conexao
             SqlConnection conn = BD.abrirConexao();
             //string para inserção
-            string sql = "INSERT INTO CATEGORIA(CLASSE, NOME) VALUES(@CLASSE, @NOME)";
+            string sql = "INSERT INTO CATEGORIA(CLASSE, NOME_CATEGORIA) VALUES(@CLASSE, @NOME)";
             try {
                 //criar um objeto passando a conexao e a sql inserção
                 SqlCommand comando = new SqlCommand(sql, conn);

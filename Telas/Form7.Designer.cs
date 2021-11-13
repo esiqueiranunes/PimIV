@@ -91,6 +91,7 @@ namespace Telas {
             this.panelCadCategoria.Name = "panelCadCategoria";
             this.panelCadCategoria.Size = new System.Drawing.Size(765, 85);
             this.panelCadCategoria.TabIndex = 135;
+            this.panelCadCategoria.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadCategoria_Paint);
             // 
             // tbNomeCategoria
             // 

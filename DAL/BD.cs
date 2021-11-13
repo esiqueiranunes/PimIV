@@ -40,7 +40,7 @@ namespace DAL {
                 }
             }
         }
-        public static DataTable listarGrid(string query) {
+        public  DataTable ListarGrid(string query) {
             
 
             objConect = new SqlConnection(connString);

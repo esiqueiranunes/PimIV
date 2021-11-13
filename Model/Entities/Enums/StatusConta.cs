@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Enums {
-    enum StatusConta {
+    public enum StatusConta {
         A,
         P
     }

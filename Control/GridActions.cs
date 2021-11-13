@@ -10,9 +10,15 @@ using Entities;
 using System.Data;
 
 namespace Control {
-    class GridActions {
+    public class GridActions {
 
-        
+        public static int Excluir(int id, string query) {
+            return new DAL.BD().ExcluirRegistro(id, query);
+        }
+
+        public static DataTable Listar(string query) {
+            return new DAL.BD().ListarGrid(query);
+        }
     }
 
 }
