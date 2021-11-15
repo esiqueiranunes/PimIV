@@ -24,28 +24,32 @@ namespace Telas {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.panelEstoque = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.panelListar = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_CONTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRICAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HOSPEDAGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME_CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_HOSPEDAGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hOTELDataSet2 = new Telas.HOTELDataSet2();
+            this.hOSPEDAGEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOSPEDAGEMTableAdapter = new Telas.HOTELDataSet2TableAdapters.HOSPEDAGEMTableAdapter();
             this.panelEstoque.SuspendLayout();
             this.panelListar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEstoque
@@ -91,10 +95,8 @@ namespace Telas {
             // 
             this.panelListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.panelListar.Controls.Add(this.comboBox2);
-            this.panelListar.Controls.Add(this.comboBox1);
             this.panelListar.Controls.Add(this.btnFiltrar);
             this.panelListar.Controls.Add(this.label1);
-            this.panelListar.Controls.Add(this.label5);
             this.panelListar.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelListar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelListar.Location = new System.Drawing.Point(0, 100);
@@ -102,48 +104,38 @@ namespace Telas {
             this.panelListar.Size = new System.Drawing.Size(765, 75);
             this.panelListar.TabIndex = 129;
             // 
-            // comboBox1
+            // comboBox2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Entrada",
-            "Saida"});
-            this.comboBox1.Location = new System.Drawing.Point(60, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
-            this.comboBox1.TabIndex = 104;
+            this.comboBox2.DataSource = this.hOSPEDAGEMBindingSource;
+            this.comboBox2.DisplayMember = "ID_HOSPEDAGEM";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(33, 33);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(115, 21);
+            this.comboBox2.TabIndex = 105;
             // 
             // btnFiltrar
             // 
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnFiltrar.Location = new System.Drawing.Point(424, 18);
+            this.btnFiltrar.Location = new System.Drawing.Point(154, 24);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(106, 36);
             this.btnFiltrar.TabIndex = 103;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(178, 17);
+            this.label1.Location = new System.Drawing.Point(30, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 101;
-            this.label1.Text = "Status";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(57, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "Tipo de Conta";
+            this.label1.Text = "Hospedagem";
             // 
             // panel1
             // 
@@ -162,13 +154,13 @@ namespace Telas {
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
+            this.ID_CONTA,
             this.NOME,
             this.VALOR,
             this.STATUS,
             this.DESCRICAO,
-            this.CATEGORIA,
-            this.HOSPEDAGEM});
+            this.NOME_CATEGORIA,
+            this.ID_HOSPEDAGEM});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(33, 18);
@@ -176,51 +168,61 @@ namespace Telas {
             this.dataGridView1.Size = new System.Drawing.Size(700, 322);
             this.dataGridView1.TabIndex = 0;
             // 
-            // comboBox2
+            // ID_CONTA
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Aberta",
-            "Fechada"});
-            this.comboBox2.Location = new System.Drawing.Point(181, 33);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(115, 21);
-            this.comboBox2.TabIndex = 105;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
+            this.ID_CONTA.DataPropertyName = "ID_CONTA";
+            this.ID_CONTA.HeaderText = "ID";
+            this.ID_CONTA.Name = "ID_CONTA";
             // 
             // NOME
             // 
+            this.NOME.DataPropertyName = "NOME";
             this.NOME.HeaderText = "NOME";
             this.NOME.Name = "NOME";
             // 
             // VALOR
             // 
+            this.VALOR.DataPropertyName = "VALOR";
             this.VALOR.HeaderText = "VALOR";
             this.VALOR.Name = "VALOR";
             // 
             // STATUS
             // 
+            this.STATUS.DataPropertyName = "STATUS";
             this.STATUS.HeaderText = "STATUS";
             this.STATUS.Name = "STATUS";
             // 
             // DESCRICAO
             // 
+            this.DESCRICAO.DataPropertyName = "DESCRICAO";
             this.DESCRICAO.HeaderText = "DESCRIÇÃO";
             this.DESCRICAO.Name = "DESCRICAO";
             // 
-            // CATEGORIA
+            // NOME_CATEGORIA
             // 
-            this.CATEGORIA.HeaderText = "CATEGORIA";
-            this.CATEGORIA.Name = "CATEGORIA";
+            this.NOME_CATEGORIA.DataPropertyName = "NOME_CATEGORIA";
+            this.NOME_CATEGORIA.HeaderText = "CATEGORIA";
+            this.NOME_CATEGORIA.Name = "NOME_CATEGORIA";
             // 
-            // HOSPEDAGEM
+            // ID_HOSPEDAGEM
             // 
-            this.HOSPEDAGEM.HeaderText = "HOSPEDAGEM";
-            this.HOSPEDAGEM.Name = "HOSPEDAGEM";
+            this.ID_HOSPEDAGEM.DataPropertyName = "ID_HOSPEDAGEM";
+            this.ID_HOSPEDAGEM.HeaderText = "HOSPEDAGEM";
+            this.ID_HOSPEDAGEM.Name = "ID_HOSPEDAGEM";
+            // 
+            // hOTELDataSet2
+            // 
+            this.hOTELDataSet2.DataSetName = "HOTELDataSet2";
+            this.hOTELDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hOSPEDAGEMBindingSource
+            // 
+            this.hOSPEDAGEMBindingSource.DataMember = "HOSPEDAGEM";
+            this.hOSPEDAGEMBindingSource.DataSource = this.hOTELDataSet2;
+            // 
+            // hOSPEDAGEMTableAdapter
+            // 
+            this.hOSPEDAGEMTableAdapter.ClearBeforeFill = true;
             // 
             // FormFinanceiro2
             // 
@@ -234,12 +236,15 @@ namespace Telas {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormFinanceiro2";
             this.Text = "FormFinanceiro2";
+            this.Load += new System.EventHandler(this.FormFinanceiro2_Load);
             this.panelEstoque.ResumeLayout(false);
             this.panelEstoque.PerformLayout();
             this.panelListar.ResumeLayout(false);
             this.panelListar.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,19 +255,20 @@ namespace Telas {
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Panel panelListar;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_CONTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRICAO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORIA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HOSPEDAGEM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOME_CATEGORIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_HOSPEDAGEM;
+        private HOTELDataSet2 hOTELDataSet2;
+        private System.Windows.Forms.BindingSource hOSPEDAGEMBindingSource;
+        private HOTELDataSet2TableAdapters.HOSPEDAGEMTableAdapter hOSPEDAGEMTableAdapter;
     }
 }
