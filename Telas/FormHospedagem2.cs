@@ -70,25 +70,7 @@ namespace Telas {
 
         }
 
-       
-        /*private  DataTable GetDataHospedagem() {
-            DataTable dtHospedagem = new DataTable();
-
             
-
-            using (SqlConnection con = BD.abrirConexao()) {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM HOSPEDAGEM", con)) {
-                    con.Open();
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    dtHospedagem.Load(reader);
-                }
-            }
-            return dtHospedagem;
-
-        }*/
-      
 
         private void btnSair_Click(object sender, EventArgs e) {
             this.Close();

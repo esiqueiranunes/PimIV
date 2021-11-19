@@ -45,7 +45,6 @@ namespace Telas {
             this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FORNECEDOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PRODUTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnListarProdutos = new System.Windows.Forms.Button();
             this.hOTELDataSet3 = new Telas.HOTELDataSet3();
             this.pRODUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pRODUTOSTableAdapter = new Telas.HOTELDataSet3TableAdapters.PRODUTOSTableAdapter();
@@ -268,21 +267,6 @@ namespace Telas {
             this.ID_PRODUTO.HeaderText = "ID";
             this.ID_PRODUTO.Name = "ID_PRODUTO";
             // 
-            // btnListarProdutos
-            // 
-            this.btnListarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(37)))), ((int)(((byte)(76)))));
-            this.btnListarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListarProdutos.FlatAppearance.BorderSize = 0;
-            this.btnListarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarProdutos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListarProdutos.Location = new System.Drawing.Point(0, 484);
-            this.btnListarProdutos.Name = "btnListarProdutos";
-            this.btnListarProdutos.Size = new System.Drawing.Size(765, 23);
-            this.btnListarProdutos.TabIndex = 134;
-            this.btnListarProdutos.Text = "LISTAR PRODUTOS ";
-            this.btnListarProdutos.UseVisualStyleBackColor = false;
-            // 
             // hOTELDataSet3
             // 
             this.hOTELDataSet3.DataSetName = "HOTELDataSet3";
@@ -338,7 +322,6 @@ namespace Telas {
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(765, 561);
-            this.Controls.Add(this.btnListarProdutos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContagemEstoque);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -373,7 +356,6 @@ namespace Telas {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnListarGeral;
-        private System.Windows.Forms.Button btnListarProdutos;
         private System.Windows.Forms.Button btnListar;
         private HOTELDataSet3 hOTELDataSet3;
         private System.Windows.Forms.BindingSource pRODUTOSBindingSource;

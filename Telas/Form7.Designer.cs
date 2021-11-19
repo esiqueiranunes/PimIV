@@ -30,7 +30,6 @@ namespace Telas {
             this.panelCadCategoria = new System.Windows.Forms.Panel();
             this.tbNomeCategoria = new System.Windows.Forms.TextBox();
             this.comboBoxCategoriaServico = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -81,7 +80,6 @@ namespace Telas {
             this.panelCadCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.panelCadCategoria.Controls.Add(this.tbNomeCategoria);
             this.panelCadCategoria.Controls.Add(this.comboBoxCategoriaServico);
-            this.panelCadCategoria.Controls.Add(this.button6);
             this.panelCadCategoria.Controls.Add(this.label8);
             this.panelCadCategoria.Controls.Add(this.button7);
             this.panelCadCategoria.Controls.Add(this.label10);
@@ -113,18 +111,6 @@ namespace Telas {
             this.comboBoxCategoriaServico.Size = new System.Drawing.Size(180, 21);
             this.comboBoxCategoriaServico.TabIndex = 104;
             // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.Window;
-            this.button6.Location = new System.Drawing.Point(586, 21);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(106, 36);
-            this.button6.TabIndex = 87;
-            this.button6.Text = "Botão";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -140,9 +126,9 @@ namespace Telas {
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.SystemColors.Window;
-            this.button7.Location = new System.Drawing.Point(474, 21);
+            this.button7.Location = new System.Drawing.Point(505, 22);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(106, 36);
+            this.button7.Size = new System.Drawing.Size(187, 36);
             this.button7.TabIndex = 86;
             this.button7.Text = "Cadastrar";
             this.button7.UseVisualStyleBackColor = true;
@@ -185,7 +171,6 @@ namespace Telas {
         private System.Windows.Forms.Panel panelCadCategoria;
         private System.Windows.Forms.TextBox tbNomeCategoria;
         private System.Windows.Forms.ComboBox comboBoxCategoriaServico;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label10;

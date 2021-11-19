@@ -26,7 +26,6 @@ namespace Telas {
         private void InitializeComponent() {
             this.btnShowCadEndereco = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btmCadPessoa = new System.Windows.Forms.Button();
             this.tbCelular = new System.Windows.Forms.TextBox();
@@ -47,6 +46,7 @@ namespace Telas {
             this.label9 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panelEndereco = new System.Windows.Forms.Panel();
+            this.comboBoxUf = new System.Windows.Forms.ComboBox();
             this.btnCadEndereco = new System.Windows.Forms.Button();
             this.tbBairro = new System.Windows.Forms.TextBox();
             this.tbCidade = new System.Windows.Forms.TextBox();
@@ -55,7 +55,6 @@ namespace Telas {
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBoxUf = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelEndereco.SuspendLayout();
@@ -80,25 +79,13 @@ namespace Telas {
             this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCadastrar.Location = new System.Drawing.Point(445, 471);
+            this.btnCadastrar.Location = new System.Drawing.Point(473, 472);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrar.Size = new System.Drawing.Size(190, 36);
             this.btnCadastrar.TabIndex = 14;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(557, 471);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 36);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Botão";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -321,6 +308,42 @@ namespace Telas {
             this.panelEndereco.Size = new System.Drawing.Size(765, 166);
             this.panelEndereco.TabIndex = 118;
             // 
+            // comboBoxUf
+            // 
+            this.comboBoxUf.FormattingEnabled = true;
+            this.comboBoxUf.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AM",
+            "AP",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MG",
+            "MS",
+            "MT",
+            "PA",
+            "PB",
+            "PE",
+            "PI",
+            "PR",
+            "RJ",
+            "RN",
+            "RO",
+            "RR",
+            "RS",
+            "SC",
+            "SE",
+            "SP",
+            "TO"});
+            this.comboBoxUf.Location = new System.Drawing.Point(542, 79);
+            this.comboBoxUf.Name = "comboBoxUf";
+            this.comboBoxUf.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxUf.TabIndex = 121;
+            // 
             // btnCadEndereco
             // 
             this.btnCadEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -396,42 +419,6 @@ namespace Telas {
             this.label10.TabIndex = 80;
             this.label10.Text = "Bairro";
             // 
-            // comboBoxUf
-            // 
-            this.comboBoxUf.FormattingEnabled = true;
-            this.comboBoxUf.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AM",
-            "AP",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MG",
-            "MS",
-            "MT",
-            "PA",
-            "PB",
-            "PE",
-            "PI",
-            "PR",
-            "RJ",
-            "RN",
-            "RO",
-            "RR",
-            "RS",
-            "SC",
-            "SE",
-            "SP",
-            "TO"});
-            this.comboBoxUf.Location = new System.Drawing.Point(542, 79);
-            this.comboBoxUf.Name = "comboBoxUf";
-            this.comboBoxUf.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxUf.TabIndex = 121;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,7 +429,6 @@ namespace Telas {
             this.Controls.Add(this.panelEndereco);
             this.Controls.Add(this.btnShowCadEndereco);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -461,7 +447,6 @@ namespace Telas {
         #endregion
         private System.Windows.Forms.Button btnShowCadEndereco;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBoxSexo;

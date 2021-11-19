@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 namespace Control {
     public class Estoque {
 
-        public List<Produto> CarregarGridEstoque(string strWhere) {
-            return new DAL.DAOEstoque().CarregarGridDao(strWhere);
-        }
+        
         public int AlterarProduto(Produto produto) {
             return new DAL.DAOEstoque().AlterarProduto(produto);
         }

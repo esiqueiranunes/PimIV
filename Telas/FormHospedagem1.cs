@@ -19,8 +19,7 @@ namespace Telas {
         }
 
         private void customizeDesign() {
-            panelCadReserva.Visible = false;
-            panelListarReserva.Visible = false;
+            panelCadReserva.Visible = false;           
 
 
         }
@@ -28,9 +27,7 @@ namespace Telas {
             if (panelCadReserva.Visible == true) {
                 panelCadReserva.Visible = false;
             }
-            if (panelListarReserva.Visible == true) {
-                panelListarReserva.Visible = false;
-            }
+            
         }
         private void showSubMenu(Panel subMenu) {
             if (subMenu.Visible == false) {
@@ -45,14 +42,11 @@ namespace Telas {
         private void limparTexbox() {
             tbCPF.Focus();
             tbCPF.Clear();
-            tbCpfTitular.Clear();
             tbDataEntrada.Clear();
             tbDataSaida.Clear();
             tbHoraSaida.Clear();
             tbHoraEntrada.Clear();
-            tbID.Clear();
-            comboBoxLocal.Text="";
-            comboBoxSituacao.Text = "";
+            comboBoxLocal.Text = "";
             comboBoxStatus.Text = "";
             numericUpDownHospedes.Value = 0;
         }
@@ -61,9 +55,7 @@ namespace Telas {
             showSubMenu(panelCadReserva);
         }
 
-        private void button3_Click(object sender, EventArgs e) {
-            showSubMenu(panelListarReserva);
-        }
+
 
         private void btnSair_Click(object sender, EventArgs e) {
             this.Close();
@@ -79,7 +71,7 @@ namespace Telas {
         private void btnReservar_Click(object sender, EventArgs e) {
             bool teste = true;
             Hospedagem hospedagem = new Hospedagem();
-            hospedagem.Titular= this.tbCPF.Text;
+            hospedagem.Titular = this.tbCPF.Text;
             hospedagem.LocalHospedagem = this.comboBoxLocal.Text;
             hospedagem.QtePessoas = int.Parse(this.numericUpDownHospedes.Text);
 

@@ -37,12 +37,10 @@ namespace Telas {
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrarServico = new System.Windows.Forms.Button();
             this.btnCadCategoria = new System.Windows.Forms.Button();
             this.panelCadCategoria = new System.Windows.Forms.Panel();
             this.tbNomeCategoria = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCadastrarCategoria = new System.Windows.Forms.Button();
             this.btnListarLocais = new System.Windows.Forms.Button();
@@ -116,7 +114,6 @@ namespace Telas {
             this.panelCadServico.Controls.Add(this.label4);
             this.panelCadServico.Controls.Add(this.label2);
             this.panelCadServico.Controls.Add(this.label5);
-            this.panelCadServico.Controls.Add(this.button1);
             this.panelCadServico.Controls.Add(this.btnCadastrarServico);
             this.panelCadServico.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadServico.Dock = System.Windows.Forms.DockStyle.Top;
@@ -193,18 +190,6 @@ namespace Telas {
             this.label5.TabIndex = 97;
             this.label5.Text = "Categoria";
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(594, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 36);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Botão";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnCadastrarServico
             // 
             this.btnCadastrarServico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -212,7 +197,7 @@ namespace Telas {
             this.btnCadastrarServico.ForeColor = System.Drawing.SystemColors.Window;
             this.btnCadastrarServico.Location = new System.Drawing.Point(482, 130);
             this.btnCadastrarServico.Name = "btnCadastrarServico";
-            this.btnCadastrarServico.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrarServico.Size = new System.Drawing.Size(218, 36);
             this.btnCadastrarServico.TabIndex = 4;
             this.btnCadastrarServico.Text = "Cadastrar";
             this.btnCadastrarServico.UseVisualStyleBackColor = true;
@@ -238,7 +223,6 @@ namespace Telas {
             // 
             this.panelCadCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.panelCadCategoria.Controls.Add(this.tbNomeCategoria);
-            this.panelCadCategoria.Controls.Add(this.button6);
             this.panelCadCategoria.Controls.Add(this.label8);
             this.panelCadCategoria.Controls.Add(this.btnCadastrarCategoria);
             this.panelCadCategoria.Cursor = System.Windows.Forms.Cursors.Default;
@@ -254,18 +238,6 @@ namespace Telas {
             this.tbNomeCategoria.Name = "tbNomeCategoria";
             this.tbNomeCategoria.Size = new System.Drawing.Size(394, 20);
             this.tbNomeCategoria.TabIndex = 8;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.Window;
-            this.button6.Location = new System.Drawing.Point(594, 32);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(106, 36);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Botão";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -284,7 +256,7 @@ namespace Telas {
             this.btnCadastrarCategoria.ForeColor = System.Drawing.SystemColors.Window;
             this.btnCadastrarCategoria.Location = new System.Drawing.Point(482, 32);
             this.btnCadastrarCategoria.Name = "btnCadastrarCategoria";
-            this.btnCadastrarCategoria.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrarCategoria.Size = new System.Drawing.Size(218, 36);
             this.btnCadastrarCategoria.TabIndex = 9;
             this.btnCadastrarCategoria.Text = "Cadastrar";
             this.btnCadastrarCategoria.UseVisualStyleBackColor = true;
@@ -336,7 +308,6 @@ namespace Telas {
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnCadServico;
         private System.Windows.Forms.Panel panelCadServico;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCadastrarServico;
         private System.Windows.Forms.Button btnCadCategoria;
         private System.Windows.Forms.Label label2;
@@ -349,7 +320,6 @@ namespace Telas {
         private System.Windows.Forms.TextBox tbCategoriaServico;
         private System.Windows.Forms.Panel panelCadCategoria;
         private System.Windows.Forms.TextBox tbNomeCategoria;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnCadastrarCategoria;
         private System.Windows.Forms.Button btnListarLocais;

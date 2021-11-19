@@ -35,7 +35,6 @@ namespace Telas {
             this.label13 = new System.Windows.Forms.Label();
             this.comboBoxTipoLocal = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnShowCadCategoriaLocal = new System.Windows.Forms.Button();
             this.panelCadCategoriaLocal = new System.Windows.Forms.Panel();
@@ -47,9 +46,7 @@ namespace Telas {
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnCadastrarCategoriaLocal = new System.Windows.Forms.Button();
-            this.btnListarLocais = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelCadLocal.SuspendLayout();
             this.panelCadCategoriaLocal.SuspendLayout();
@@ -119,7 +116,6 @@ namespace Telas {
             this.panelCadLocal.Controls.Add(this.label13);
             this.panelCadLocal.Controls.Add(this.comboBoxTipoLocal);
             this.panelCadLocal.Controls.Add(this.label3);
-            this.panelCadLocal.Controls.Add(this.button3);
             this.panelCadLocal.Controls.Add(this.btnCadastrar);
             this.panelCadLocal.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadLocal.Dock = System.Windows.Forms.DockStyle.Top;
@@ -186,26 +182,14 @@ namespace Telas {
             this.label3.TabIndex = 89;
             this.label3.Text = "Nome local";
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(618, 67);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 36);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Botão";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastrar.Location = new System.Drawing.Point(492, 67);
+            this.btnCadastrar.Location = new System.Drawing.Point(451, 27);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrar.Size = new System.Drawing.Size(185, 36);
             this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -238,7 +222,6 @@ namespace Telas {
             this.panelCadCategoriaLocal.Controls.Add(this.label2);
             this.panelCadCategoriaLocal.Controls.Add(this.label4);
             this.panelCadCategoriaLocal.Controls.Add(this.label5);
-            this.panelCadCategoriaLocal.Controls.Add(this.button2);
             this.panelCadCategoriaLocal.Controls.Add(this.btnCadastrarCategoriaLocal);
             this.panelCadCategoriaLocal.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadCategoriaLocal.Dock = System.Windows.Forms.DockStyle.Top;
@@ -315,45 +298,18 @@ namespace Telas {
             this.label5.TabIndex = 89;
             this.label5.Text = "Nome categoria";
             // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(618, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 36);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Botão";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // btnCadastrarCategoriaLocal
             // 
             this.btnCadastrarCategoriaLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrarCategoriaLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarCategoriaLocal.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastrarCategoriaLocal.Location = new System.Drawing.Point(492, 67);
+            this.btnCadastrarCategoriaLocal.Location = new System.Drawing.Point(451, 27);
             this.btnCadastrarCategoriaLocal.Name = "btnCadastrarCategoriaLocal";
-            this.btnCadastrarCategoriaLocal.Size = new System.Drawing.Size(106, 36);
+            this.btnCadastrarCategoriaLocal.Size = new System.Drawing.Size(185, 36);
             this.btnCadastrarCategoriaLocal.TabIndex = 12;
             this.btnCadastrarCategoriaLocal.Text = "Cadastrar";
             this.btnCadastrarCategoriaLocal.UseVisualStyleBackColor = true;
             this.btnCadastrarCategoriaLocal.Click += new System.EventHandler(this.btnCadastrarCategoriaLocal_Click);
-            // 
-            // btnListarLocais
-            // 
-            this.btnListarLocais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(37)))), ((int)(((byte)(76)))));
-            this.btnListarLocais.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListarLocais.FlatAppearance.BorderSize = 0;
-            this.btnListarLocais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarLocais.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarLocais.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListarLocais.Location = new System.Drawing.Point(0, 420);
-            this.btnListarLocais.Name = "btnListarLocais";
-            this.btnListarLocais.Size = new System.Drawing.Size(765, 23);
-            this.btnListarLocais.TabIndex = 14;
-            this.btnListarLocais.Text = "LISTAR LOCAIS";
-            this.btnListarLocais.UseVisualStyleBackColor = false;
             // 
             // Form4
             // 
@@ -361,7 +317,6 @@ namespace Telas {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(765, 561);
-            this.Controls.Add(this.btnListarLocais);
             this.Controls.Add(this.panelCadCategoriaLocal);
             this.Controls.Add(this.btnShowCadCategoriaLocal);
             this.Controls.Add(this.panelCadLocal);
@@ -393,7 +348,6 @@ namespace Telas {
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBoxTipoLocal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnShowCadCategoriaLocal;
         private System.Windows.Forms.Panel panelCadCategoriaLocal;
@@ -402,9 +356,7 @@ namespace Telas {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnCadastrarCategoriaLocal;
-        private System.Windows.Forms.Button btnListarLocais;
         private System.Windows.Forms.TextBox tbNomeLocal;
         private System.Windows.Forms.TextBox tbDescontoLocal;
         private System.Windows.Forms.TextBox tbValorLocal;

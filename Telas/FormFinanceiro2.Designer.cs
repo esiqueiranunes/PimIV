@@ -30,6 +30,8 @@ namespace Telas {
             this.btnSair = new System.Windows.Forms.Button();
             this.panelListar = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.hOSPEDAGEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELDataSet2 = new Telas.HOTELDataSet2();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,15 +43,13 @@ namespace Telas {
             this.DESCRICAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME_CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_HOSPEDAGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hOTELDataSet2 = new Telas.HOTELDataSet2();
-            this.hOSPEDAGEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOSPEDAGEMTableAdapter = new Telas.HOTELDataSet2TableAdapters.HOSPEDAGEMTableAdapter();
             this.panelEstoque.SuspendLayout();
             this.panelListar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEstoque
@@ -114,6 +114,16 @@ namespace Telas {
             this.comboBox2.Size = new System.Drawing.Size(115, 21);
             this.comboBox2.TabIndex = 105;
             // 
+            // hOSPEDAGEMBindingSource
+            // 
+            this.hOSPEDAGEMBindingSource.DataMember = "HOSPEDAGEM";
+            this.hOSPEDAGEMBindingSource.DataSource = this.hOTELDataSet2;
+            // 
+            // hOTELDataSet2
+            // 
+            this.hOTELDataSet2.DataSetName = "HOTELDataSet2";
+            this.hOTELDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -121,7 +131,7 @@ namespace Telas {
             this.btnFiltrar.ForeColor = System.Drawing.SystemColors.Window;
             this.btnFiltrar.Location = new System.Drawing.Point(154, 24);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(106, 36);
+            this.btnFiltrar.Size = new System.Drawing.Size(198, 36);
             this.btnFiltrar.TabIndex = 103;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -210,16 +220,6 @@ namespace Telas {
             this.ID_HOSPEDAGEM.HeaderText = "HOSPEDAGEM";
             this.ID_HOSPEDAGEM.Name = "ID_HOSPEDAGEM";
             // 
-            // hOTELDataSet2
-            // 
-            this.hOTELDataSet2.DataSetName = "HOTELDataSet2";
-            this.hOTELDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hOSPEDAGEMBindingSource
-            // 
-            this.hOSPEDAGEMBindingSource.DataMember = "HOSPEDAGEM";
-            this.hOSPEDAGEMBindingSource.DataSource = this.hOTELDataSet2;
-            // 
             // hOSPEDAGEMTableAdapter
             // 
             this.hOSPEDAGEMTableAdapter.ClearBeforeFill = true;
@@ -241,10 +241,10 @@ namespace Telas {
             this.panelEstoque.PerformLayout();
             this.panelListar.ResumeLayout(false);
             this.panelListar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

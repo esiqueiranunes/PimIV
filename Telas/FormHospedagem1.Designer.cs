@@ -36,8 +36,8 @@ namespace Telas {
             this.tbHoraEntrada = new System.Windows.Forms.TextBox();
             this.numericUpDownHospedes = new System.Windows.Forms.NumericUpDown();
             this.comboBoxLocal = new System.Windows.Forms.ComboBox();
-            this.lOCALBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.hOTELDataSet = new Telas.HOTELDataSet();
+            this.lOCALBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELDataSet4 = new Telas.HOTELDataSet4();
             this.tbDataSaida = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,33 +48,22 @@ namespace Telas {
             this.label3 = new System.Windows.Forms.Label();
             this.tbCPF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnReservar = new System.Windows.Forms.Button();
-            this.btnListarReservas = new System.Windows.Forms.Button();
-            this.panelListarReserva = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbID = new System.Windows.Forms.TextBox();
-            this.tbCpfTitular = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxSituacao = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.lOCALBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELDataSet = new Telas.HOTELDataSet();
             this.lOCALBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOCALTableAdapter = new Telas.HOTELDataSetTableAdapters.LOCALTableAdapter();
             this.hotelDataSet1 = new Telas.HOTELDataSet();
-            this.hOTELDataSet4 = new Telas.HOTELDataSet4();
-            this.lOCALBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.lOCALTableAdapter1 = new Telas.HOTELDataSet4TableAdapters.LOCALTableAdapter();
             this.panelHospedagem.SuspendLayout();
             this.panelCadReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).BeginInit();
-            this.panelListarReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHospedagem
@@ -150,7 +139,6 @@ namespace Telas {
             this.panelCadReserva.Controls.Add(this.label3);
             this.panelCadReserva.Controls.Add(this.tbCPF);
             this.panelCadReserva.Controls.Add(this.label2);
-            this.panelCadReserva.Controls.Add(this.button1);
             this.panelCadReserva.Controls.Add(this.btnReservar);
             this.panelCadReserva.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelCadReserva.Dock = System.Windows.Forms.DockStyle.Top;
@@ -210,15 +198,15 @@ namespace Telas {
             this.comboBoxLocal.Size = new System.Drawing.Size(121, 21);
             this.comboBoxLocal.TabIndex = 3;
             // 
-            // lOCALBindingSource1
+            // lOCALBindingSource2
             // 
-            this.lOCALBindingSource1.DataMember = "LOCAL";
-            this.lOCALBindingSource1.DataSource = this.hOTELDataSet;
+            this.lOCALBindingSource2.DataMember = "LOCAL";
+            this.lOCALBindingSource2.DataSource = this.hOTELDataSet4;
             // 
-            // hOTELDataSet
+            // hOTELDataSet4
             // 
-            this.hOTELDataSet.DataSetName = "HOTELDataSet";
-            this.hOTELDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.hOTELDataSet4.DataSetName = "HOTELDataSet4";
+            this.hOTELDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbDataSaida
             // 
@@ -315,18 +303,6 @@ namespace Telas {
             this.label2.TabIndex = 101;
             this.label2.Text = "CPF Titular";
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(584, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 36);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Botão";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnReservar
             // 
             this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -334,113 +310,21 @@ namespace Telas {
             this.btnReservar.ForeColor = System.Drawing.SystemColors.Window;
             this.btnReservar.Location = new System.Drawing.Point(472, 145);
             this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(106, 36);
+            this.btnReservar.Size = new System.Drawing.Size(218, 36);
             this.btnReservar.TabIndex = 10;
             this.btnReservar.Text = "Reservar";
             this.btnReservar.UseVisualStyleBackColor = true;
             this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
             // 
-            // btnListarReservas
+            // lOCALBindingSource1
             // 
-            this.btnListarReservas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(37)))), ((int)(((byte)(76)))));
-            this.btnListarReservas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListarReservas.FlatAppearance.BorderSize = 0;
-            this.btnListarReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarReservas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListarReservas.Location = new System.Drawing.Point(0, 319);
-            this.btnListarReservas.Name = "btnListarReservas";
-            this.btnListarReservas.Size = new System.Drawing.Size(765, 23);
-            this.btnListarReservas.TabIndex = 12;
-            this.btnListarReservas.Text = "LISTAR RESERVAS";
-            this.btnListarReservas.UseVisualStyleBackColor = false;
-            this.btnListarReservas.Click += new System.EventHandler(this.button3_Click);
+            this.lOCALBindingSource1.DataMember = "LOCAL";
+            this.lOCALBindingSource1.DataSource = this.hOTELDataSet;
             // 
-            // panelListarReserva
+            // hOTELDataSet
             // 
-            this.panelListarReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.panelListarReserva.Controls.Add(this.label10);
-            this.panelListarReserva.Controls.Add(this.tbID);
-            this.panelListarReserva.Controls.Add(this.tbCpfTitular);
-            this.panelListarReserva.Controls.Add(this.label5);
-            this.panelListarReserva.Controls.Add(this.comboBoxSituacao);
-            this.panelListarReserva.Controls.Add(this.label1);
-            this.panelListarReserva.Controls.Add(this.button5);
-            this.panelListarReserva.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelListarReserva.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelListarReserva.Location = new System.Drawing.Point(0, 342);
-            this.panelListarReserva.Name = "panelListarReserva";
-            this.panelListarReserva.Size = new System.Drawing.Size(765, 75);
-            this.panelListarReserva.TabIndex = 128;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.Window;
-            this.label10.Location = new System.Drawing.Point(362, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 13);
-            this.label10.TabIndex = 117;
-            this.label10.Text = "ID Hospedagem";
-            // 
-            // tbID
-            // 
-            this.tbID.Location = new System.Drawing.Point(363, 38);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(82, 20);
-            this.tbID.TabIndex = 15;
-            // 
-            // tbCpfTitular
-            // 
-            this.tbCpfTitular.Location = new System.Drawing.Point(190, 38);
-            this.tbCpfTitular.Name = "tbCpfTitular";
-            this.tbCpfTitular.Size = new System.Drawing.Size(167, 20);
-            this.tbCpfTitular.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(187, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "CPF Titular";
-            // 
-            // comboBoxSituacao
-            // 
-            this.comboBoxSituacao.FormattingEnabled = true;
-            this.comboBoxSituacao.Items.AddRange(new object[] {
-            "Reservada",
-            "Cancelada",
-            "Em andamento",
-            "Todas"});
-            this.comboBoxSituacao.Location = new System.Drawing.Point(60, 38);
-            this.comboBoxSituacao.Name = "comboBoxSituacao";
-            this.comboBoxSituacao.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSituacao.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(57, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 97;
-            this.label1.Text = "Situação";
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.Window;
-            this.button5.Location = new System.Drawing.Point(472, 29);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 36);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Listar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.hOTELDataSet.DataSetName = "HOTELDataSet";
+            this.hOTELDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lOCALBindingSource
             // 
@@ -456,16 +340,6 @@ namespace Telas {
             this.hotelDataSet1.DataSetName = "HOTELDataSet";
             this.hotelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // hOTELDataSet4
-            // 
-            this.hOTELDataSet4.DataSetName = "HOTELDataSet4";
-            this.hOTELDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lOCALBindingSource2
-            // 
-            this.lOCALBindingSource2.DataMember = "LOCAL";
-            this.lOCALBindingSource2.DataSource = this.hOTELDataSet4;
-            // 
             // lOCALTableAdapter1
             // 
             this.lOCALTableAdapter1.ClearBeforeFill = true;
@@ -476,8 +350,6 @@ namespace Telas {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(765, 561);
-            this.Controls.Add(this.panelListarReserva);
-            this.Controls.Add(this.btnListarReservas);
             this.Controls.Add(this.panelCadReserva);
             this.Controls.Add(this.btnCadReserva);
             this.Controls.Add(this.panelHospedagem);
@@ -490,14 +362,12 @@ namespace Telas {
             this.panelCadReserva.ResumeLayout(false);
             this.panelCadReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).EndInit();
-            this.panelListarReserva.ResumeLayout(false);
-            this.panelListarReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -509,15 +379,9 @@ namespace Telas {
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnCadReserva;
         private System.Windows.Forms.Panel panelCadReserva;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnReservar;
-        private System.Windows.Forms.Button btnListarReservas;
         private System.Windows.Forms.TextBox tbCPF;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelListarReserva;
-        private System.Windows.Forms.ComboBox comboBoxSituacao;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -532,10 +396,6 @@ namespace Telas {
         private System.Windows.Forms.NumericUpDown numericUpDownHospedes;
         private System.Windows.Forms.ComboBox comboBoxLocal;
         private System.Windows.Forms.BindingSource lOCALBindingSource1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tbID;
-        private System.Windows.Forms.TextBox tbCpfTitular;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbHoraSaida;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;

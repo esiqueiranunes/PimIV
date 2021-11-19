@@ -37,7 +37,6 @@ namespace Telas {
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.tbValor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.tbIdHospedagem = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -175,24 +174,12 @@ namespace Telas {
             this.label4.TabIndex = 139;
             this.label4.Text = "Valor";
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(617, 179);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 36);
-            this.button3.TabIndex = 141;
-            this.button3.Text = "Botão";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastrar.Location = new System.Drawing.Point(617, 137);
+            this.btnCadastrar.Location = new System.Drawing.Point(615, 177);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(106, 36);
             this.btnCadastrar.TabIndex = 140;
@@ -225,7 +212,6 @@ namespace Telas {
             this.ClientSize = new System.Drawing.Size(765, 561);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbIdHospedagem);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbValor);
@@ -264,7 +250,6 @@ namespace Telas {
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.TextBox tbValor;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox tbIdHospedagem;
         private System.Windows.Forms.Label label5;
