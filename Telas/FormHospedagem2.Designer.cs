@@ -30,9 +30,7 @@ namespace Telas {
             this.btnSair = new System.Windows.Forms.Button();
             this.btnAtualizarHospedagem = new System.Windows.Forms.Button();
             this.panelAtualizarHospedagem = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.tbCPF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -127,9 +125,7 @@ namespace Telas {
             // panelAtualizarHospedagem
             // 
             this.panelAtualizarHospedagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.panelAtualizarHospedagem.Controls.Add(this.checkBox1);
             this.panelAtualizarHospedagem.Controls.Add(this.btnExcluir);
-            this.panelAtualizarHospedagem.Controls.Add(this.dateTimePicker1);
             this.panelAtualizarHospedagem.Controls.Add(this.btnCheckout);
             this.panelAtualizarHospedagem.Controls.Add(this.tbCPF);
             this.panelAtualizarHospedagem.Controls.Add(this.label2);
@@ -143,17 +139,6 @@ namespace Telas {
             this.panelAtualizarHospedagem.Size = new System.Drawing.Size(765, 139);
             this.panelAtualizarHospedagem.TabIndex = 127;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBox1.Location = new System.Drawing.Point(267, 82);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(125, 17);
-            this.checkBox1.TabIndex = 106;
-            this.checkBox1.Text = "Pagamento realizado";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // btnExcluir
             // 
             this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -161,20 +146,13 @@ namespace Telas {
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnExcluir.Location = new System.Drawing.Point(462, 82);
+            this.btnExcluir.Location = new System.Drawing.Point(462, 81);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(123, 27);
+            this.btnExcluir.Size = new System.Drawing.Size(271, 27);
             this.btnExcluir.TabIndex = 105;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(60, 80);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 104;
             // 
             // btnCheckout
             // 
@@ -183,9 +161,9 @@ namespace Telas {
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.btnCheckout.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCheckout.Location = new System.Drawing.Point(462, 49);
+            this.btnCheckout.Location = new System.Drawing.Point(462, 48);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(123, 27);
+            this.btnCheckout.Size = new System.Drawing.Size(271, 27);
             this.btnCheckout.TabIndex = 103;
             this.btnCheckout.Text = "Check-out";
             this.btnCheckout.UseVisualStyleBackColor = false;
@@ -224,7 +202,7 @@ namespace Telas {
             this.button4.ForeColor = System.Drawing.SystemColors.Window;
             this.button4.Location = new System.Drawing.Point(462, 13);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 27);
+            this.button4.Size = new System.Drawing.Size(271, 27);
             this.button4.TabIndex = 99;
             this.button4.Text = "Check-in";
             this.button4.UseVisualStyleBackColor = false;
@@ -402,9 +380,7 @@ namespace Telas {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbIDHospedagem;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.BindingSource hOTELDataSet1BindingSource;

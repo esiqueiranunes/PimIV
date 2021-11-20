@@ -28,16 +28,14 @@ namespace Telas {
             this.label9 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.panelListar = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnGerarRelatorio = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnListarLocal = new System.Windows.Forms.Button();
+            this.btnListarHospedagem = new System.Windows.Forms.Button();
+            this.btnListarConta = new System.Windows.Forms.Button();
+            this.btnListarPessoas = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelRelatorios.SuspendLayout();
             this.panelListar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -47,6 +45,7 @@ namespace Telas {
             // panelRelatorios
             // 
             this.panelRelatorios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(37)))), ((int)(((byte)(76)))));
+            this.panelRelatorios.Controls.Add(this.label1);
             this.panelRelatorios.Controls.Add(this.label9);
             this.panelRelatorios.Controls.Add(this.btnSair);
             this.panelRelatorios.Dock = System.Windows.Forms.DockStyle.Top;
@@ -77,7 +76,7 @@ namespace Telas {
             this.btnSair.Location = new System.Drawing.Point(627, 26);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(106, 36);
-            this.btnSair.TabIndex = 106;
+            this.btnSair.TabIndex = 200;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -85,91 +84,16 @@ namespace Telas {
             // panelListar
             // 
             this.panelListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
-            this.panelListar.Controls.Add(this.label2);
-            this.panelListar.Controls.Add(this.dateTimePicker2);
-            this.panelListar.Controls.Add(this.dateTimePicker1);
-            this.panelListar.Controls.Add(this.comboBox1);
-            this.panelListar.Controls.Add(this.btnGerarRelatorio);
-            this.panelListar.Controls.Add(this.label1);
-            this.panelListar.Controls.Add(this.label5);
+            this.panelListar.Controls.Add(this.btnListarPessoas);
+            this.panelListar.Controls.Add(this.btnListarConta);
+            this.panelListar.Controls.Add(this.btnListarHospedagem);
+            this.panelListar.Controls.Add(this.btnListarLocal);
             this.panelListar.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelListar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelListar.Location = new System.Drawing.Point(0, 100);
             this.panelListar.Name = "panelListar";
-            this.panelListar.Size = new System.Drawing.Size(765, 75);
+            this.panelListar.Size = new System.Drawing.Size(765, 172);
             this.panelListar.TabIndex = 129;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(384, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 107;
-            this.label2.Text = "Data final";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(387, 33);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 106;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(181, 33);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 105;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Consumo",
-            "Hóspedes",
-            "Pedidos",
-            "Ocupação",
-            "Vendas"});
-            this.comboBox1.Location = new System.Drawing.Point(60, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
-            this.comboBox1.TabIndex = 104;
-            // 
-            // btnGerarRelatorio
-            // 
-            this.btnGerarRelatorio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGerarRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerarRelatorio.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnGerarRelatorio.Location = new System.Drawing.Point(627, 17);
-            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
-            this.btnGerarRelatorio.Size = new System.Drawing.Size(106, 36);
-            this.btnGerarRelatorio.TabIndex = 103;
-            this.btnGerarRelatorio.Text = "Gerar relatório";
-            this.btnGerarRelatorio.UseVisualStyleBackColor = true;
-            this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(178, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 101;
-            this.label1.Text = "Data inicial";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(57, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "Tipo de Relatório";
             // 
             // panel1
             // 
@@ -177,7 +101,7 @@ namespace Telas {
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 175);
+            this.panel1.Location = new System.Drawing.Point(0, 272);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(765, 359);
             this.panel1.TabIndex = 130;
@@ -191,7 +115,7 @@ namespace Telas {
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 17);
             this.label6.TabIndex = 112;
-            this.label6.Text = "RELATORIO";
+            this.label6.Text = "RELATÓRIO";
             // 
             // dataGridView1
             // 
@@ -203,8 +127,75 @@ namespace Telas {
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(33, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(700, 297);
+            this.dataGridView1.Size = new System.Drawing.Size(700, 234);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // btnListarLocal
+            // 
+            this.btnListarLocal.BackColor = System.Drawing.Color.Teal;
+            this.btnListarLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnListarLocal.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListarLocal.Location = new System.Drawing.Point(33, 21);
+            this.btnListarLocal.Name = "btnListarLocal";
+            this.btnListarLocal.Size = new System.Drawing.Size(700, 27);
+            this.btnListarLocal.TabIndex = 110;
+            this.btnListarLocal.Text = "LOCAL";
+            this.btnListarLocal.UseVisualStyleBackColor = false;
+            this.btnListarLocal.Click += new System.EventHandler(this.btnListarLocal_Click);
+            // 
+            // btnListarHospedagem
+            // 
+            this.btnListarHospedagem.BackColor = System.Drawing.Color.Teal;
+            this.btnListarHospedagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarHospedagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnListarHospedagem.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListarHospedagem.Location = new System.Drawing.Point(33, 54);
+            this.btnListarHospedagem.Name = "btnListarHospedagem";
+            this.btnListarHospedagem.Size = new System.Drawing.Size(700, 27);
+            this.btnListarHospedagem.TabIndex = 111;
+            this.btnListarHospedagem.Text = "HOSPEDAGEM";
+            this.btnListarHospedagem.UseVisualStyleBackColor = false;
+            this.btnListarHospedagem.Click += new System.EventHandler(this.btnListarHospedagem_Click);
+            // 
+            // btnListarConta
+            // 
+            this.btnListarConta.BackColor = System.Drawing.Color.Teal;
+            this.btnListarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnListarConta.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListarConta.Location = new System.Drawing.Point(33, 87);
+            this.btnListarConta.Name = "btnListarConta";
+            this.btnListarConta.Size = new System.Drawing.Size(700, 27);
+            this.btnListarConta.TabIndex = 112;
+            this.btnListarConta.Text = "CONTAS";
+            this.btnListarConta.UseVisualStyleBackColor = false;
+            this.btnListarConta.Click += new System.EventHandler(this.btnListarConta_Click);
+            // 
+            // btnListarPessoas
+            // 
+            this.btnListarPessoas.BackColor = System.Drawing.Color.Teal;
+            this.btnListarPessoas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarPessoas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnListarPessoas.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListarPessoas.Location = new System.Drawing.Point(33, 120);
+            this.btnListarPessoas.Name = "btnListarPessoas";
+            this.btnListarPessoas.Size = new System.Drawing.Size(700, 27);
+            this.btnListarPessoas.TabIndex = 113;
+            this.btnListarPessoas.Text = "PESSOAS";
+            this.btnListarPessoas.UseVisualStyleBackColor = false;
+            this.btnListarPessoas.Click += new System.EventHandler(this.btnListarPessoas_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(57, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 17);
+            this.label1.TabIndex = 107;
+            this.label1.Text = "Escolha um tipo de relatório";
             // 
             // FormRelatorios
             // 
@@ -221,7 +212,6 @@ namespace Telas {
             this.panelRelatorios.ResumeLayout(false);
             this.panelRelatorios.PerformLayout();
             this.panelListar.ResumeLayout(false);
-            this.panelListar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -235,15 +225,13 @@ namespace Telas {
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Panel panelListar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnGerarRelatorio;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnListarHospedagem;
+        private System.Windows.Forms.Button btnListarLocal;
+        private System.Windows.Forms.Button btnListarConta;
+        private System.Windows.Forms.Button btnListarPessoas;
+        private System.Windows.Forms.Label label1;
     }
 }
