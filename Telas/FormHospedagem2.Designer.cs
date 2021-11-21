@@ -56,6 +56,7 @@ namespace Telas {
             this.DATA_SAIDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HORA_SAIDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QUANT_PESSOAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             this.panelHospedagem.SuspendLayout();
             this.panelAtualizarHospedagem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).BeginInit();
@@ -125,6 +126,7 @@ namespace Telas {
             // panelAtualizarHospedagem
             // 
             this.panelAtualizarHospedagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.panelAtualizarHospedagem.Controls.Add(this.btnFiltrar);
             this.panelAtualizarHospedagem.Controls.Add(this.btnExcluir);
             this.panelAtualizarHospedagem.Controls.Add(this.btnCheckout);
             this.panelAtualizarHospedagem.Controls.Add(this.tbCPF);
@@ -150,7 +152,7 @@ namespace Telas {
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(271, 27);
             this.btnExcluir.TabIndex = 105;
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Text = "Cancelar Reserva";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
@@ -339,6 +341,19 @@ namespace Telas {
             this.QUANT_PESSOAS.HeaderText = "PESSOAS";
             this.QUANT_PESSOAS.Name = "QUANT_PESSOAS";
             // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltrar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnFiltrar.Location = new System.Drawing.Point(150, 69);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(235, 36);
+            this.btnFiltrar.TabIndex = 106;
+            this.btnFiltrar.Text = "Filtrar por titular";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
             // FormHospedagem2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,5 +417,6 @@ namespace Telas {
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_SAIDA;
         private System.Windows.Forms.DataGridViewTextBoxColumn HORA_SAIDA;
         private System.Windows.Forms.DataGridViewTextBoxColumn QUANT_PESSOAS;
+        private System.Windows.Forms.Button btnFiltrar;
     }
 }

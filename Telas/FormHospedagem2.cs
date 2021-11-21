@@ -43,6 +43,27 @@ namespace Telas {
                 MessageBox.Show("ERRO AO LISTAR");
             }
         }
+
+        public void listaGrid(string cpf) {
+            dataGridView1.RowsDefaultCellStyle.BackColor = Color.White;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Lavender;
+
+            try {
+                StringBuilder sb = new StringBuilder();
+                sb.Append("SELECT H.ID_HOSPEDAGEM, P.NOME, P.CPF, L.NOME_LOCAL AS LOCAL, H.STATUS, H.DATA_ENTRADA ,H.HORA_ENTRADA, H.DATA_SAIDA , H.HORA_SAIDA, H.QUANT_PESSOAS ")
+                    .Append(" FROM HOSPEDAGEM H ")
+                    .Append("INNER JOIN PESSOA P ON P.ID_PESSOA = H.FK_PESSOA ")
+                    .Append("INNER JOIN LOCAL L ON L.ID_LOCAL = H.FK_LOCAL ")
+                    .Append("WHERE P.CPF = '" + cpf + "'");
+
+                dataGridView1.DataSource = GridActions.Listar(sb.ToString());
+
+            }
+            catch {
+
+                MessageBox.Show("ERRO AO LISTAR");
+            }
+        }
         private void DataGridView2_Load(object sender, EventArgs e) {
             //dataGridView1.DataSource = GetDataHospedagem();
         }
@@ -113,15 +134,15 @@ namespace Telas {
 
         private void btnExcluir_Click(object sender, EventArgs e) {
             
-                StringBuilder sb = new StringBuilder();
-                sb.Append("DELETE FROM HOSPEDAGEM")
-                  .Append("WHERE ID_HOSPEDAGEM = @ID");
+            string query = "UPDATE HOSPEDAGEM SET STATUS = 'CANCELADA' WHERE ID_HOSPEDAGEM = @ID";
 
-            string query = "DELETE FROM HOSPEDAGEM WHERE ID_HOSPEDAGEM = @ID";
+            int id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
 
-            int id= int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            GridActions.Excluir(Convert.ToInt32(id), query);
-            listaGrid();
+
+            if (Hospedagens.RealizarCheck(Convert.ToInt32(id), query) != 0) {
+                MessageBox.Show("Reserva cancelada com sucesso!");
+            }
+            listaGrid(); 
 
 
         }
@@ -142,6 +163,10 @@ namespace Telas {
                 MessageBox.Show("Check-out realizado com sucesso!");
             }
             listaGrid();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e) {
+            listaGrid(this.tbCPF.Text);
         }
     }
 }

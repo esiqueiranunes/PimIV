@@ -15,7 +15,7 @@ namespace Telas {
     public partial class FormHospedagem1 : Form {
         public FormHospedagem1() {
             InitializeComponent();
-            customizeDesign();
+            //customizeDesign();
         }
 
         private void customizeDesign() {
