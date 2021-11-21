@@ -29,8 +29,7 @@ namespace DAL {
                 comando.Parameters.AddWithValue("@DESCRICAO", conta.Descricao);
                 comando.Parameters.AddWithValue("@CATEGORIA", conta.Categoria);
                 comando.Parameters.AddWithValue("@ID_HOSPEDAGEM", conta.Hospedagem);
-                
-       
+                      
 
 
                 BD.abrirConexao();
@@ -41,7 +40,7 @@ namespace DAL {
                 return true;
             }
             catch (SqlException erro) {
-                MessageBox.Show(erro.Message);
+                MessageBox.Show("Corriga os dados, conforme erro: " + erro.Message);
                 return false;
             }
             finally {

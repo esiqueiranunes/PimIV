@@ -19,6 +19,15 @@ namespace Control {
         public static DataTable Listar(string query) {
             return new DAL.BD().ListarGrid(query);
         }
+
+        public Boolean autenticarUsuario(string usuario, string senha) {
+            if (DAOUser.verificarUsuarioBanco(usuario, senha)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
     }
 
 }

@@ -52,7 +52,7 @@ namespace Telas {
         }
 
         private void btnCadReserva_Click(object sender, EventArgs e) {
-            showSubMenu(panelCadReserva);
+            //showSubMenu(panelCadReserva);
         }
 
 

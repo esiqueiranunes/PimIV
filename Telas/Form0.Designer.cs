@@ -81,8 +81,8 @@ namespace Telas
             this.btnLogar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogar.Location = new System.Drawing.Point(147, 201);
             this.btnLogar.Name = "btnLogar";
-            this.btnLogar.Size = new System.Drawing.Size(75, 23);
-            this.btnLogar.TabIndex = 0;
+            this.btnLogar.Size = new System.Drawing.Size(122, 23);
+            this.btnLogar.TabIndex = 2;
             this.btnLogar.Text = "Entrar";
             this.btnLogar.UseVisualStyleBackColor = true;
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
@@ -105,7 +105,7 @@ namespace Telas
             this.btnCancelar.Location = new System.Drawing.Point(275, 201);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

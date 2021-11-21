@@ -77,7 +77,7 @@ namespace Telas {
         }
 
         private void btnAtualizarHospedagem_Click(object sender, EventArgs e) {
-            showSubMenu(panelAtualizarHospedagem);
+            //showSubMenu(panelAtualizarHospedagem);
         }
 
         private void FormHospedagem2_Load(object sender, EventArgs e) {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace Telas
         {
             InitializeComponent();
         }
+        GridActions usuario = new GridActions();
 
 
         private void label2_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace Telas
             }
             else {
 
-                if (this.tbUsuario.Text == "admin" || this.tbSenha.Text == "1234") {
+                if (usuario.autenticarUsuario(this.tbUsuario.Text, this.tbSenha.Text)) {
                     this.Close();
                     tela = new Thread(Logar);
                     tela.SetApartmentState(ApartmentState.STA);

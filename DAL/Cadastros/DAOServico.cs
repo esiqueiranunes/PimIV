@@ -15,7 +15,7 @@ namespace DAL {
             //abrir a conexao
             SqlConnection conn = BD.abrirConexao();
             //string para inserção
-            string sql = "INSERT INTO SERVICOS VALUES(@NOME, @DESCRICAO, @VALOR, (SELECT ID_CATEGORIA FROM CATEGORIA WHERE @NOMECATEGORIA = NOME AND CLASSE = @CLASSE))";
+            string sql = "INSERT INTO SERVICOS VALUES(@NOME, @DESCRICAO, @VALOR, (SELECT ID_CATEGORIA FROM CATEGORIA WHERE @NOMECATEGORIA = NOME_CATEGORIA AND CLASSE = @CLASSE))";
             try {
                 //criar um objeto passando a conexao e a sql inserção
                 SqlCommand comando = new SqlCommand(sql, conn);
@@ -35,7 +35,7 @@ namespace DAL {
                 return true;
             }
             catch (SqlException erro) {
-                MessageBox.Show(erro.Message);
+                MessageBox.Show("Corriga os dados, conforme erro: " + erro.Message);
                 return false;
             }
             finally {

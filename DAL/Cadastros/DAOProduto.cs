@@ -15,7 +15,7 @@ namespace DAL {
             //abrir a conexao
             SqlConnection conn = BD.abrirConexao();
             //string para inserção
-            string sql = "INSERT INTO PRODUTOS VALUES(@NOME, @MARCA, @FORNECEDOR, @UNI_MEDIDA, @VALIDADE, @ESTOQUE, @VALOR, (SELECT ID_CATEGORIA FROM CATEGORIA WHERE @CATEGORIA = NOME AND CLASSE = 'PRODUTO'))";
+            string sql = "INSERT INTO PRODUTOS VALUES(@NOME, @MARCA, @FORNECEDOR, @UNI_MEDIDA, @VALIDADE, @ESTOQUE, @VALOR, (SELECT ID_CATEGORIA FROM CATEGORIA WHERE @CATEGORIA = NOME_CATEGORIA AND CLASSE = 'PRODUTO'))";
             try {
                 //criar um objeto passando a conexao e a sql inserção
                 SqlCommand comando = new SqlCommand(sql, conn);
@@ -40,7 +40,7 @@ namespace DAL {
                 return true;
             }
             catch (SqlException erro) {
-                MessageBox.Show(erro.Message);
+                MessageBox.Show("Corriga os dados, conforme erro: " + erro.Message);
                 return false;
             }
             finally {

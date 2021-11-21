@@ -43,7 +43,6 @@ namespace Telas {
             this.tbNomeCategoria = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCadastrarCategoria = new System.Windows.Forms.Button();
-            this.btnListarLocais = new System.Windows.Forms.Button();
             this.panelCadastrarServico.SuspendLayout();
             this.panelCadServico.SuspendLayout();
             this.panelCadCategoria.SuspendLayout();
@@ -262,28 +261,12 @@ namespace Telas {
             this.btnCadastrarCategoria.UseVisualStyleBackColor = true;
             this.btnCadastrarCategoria.Click += new System.EventHandler(this.btnCadastrarCategoria_Click);
             // 
-            // btnListarLocais
-            // 
-            this.btnListarLocais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(37)))), ((int)(((byte)(76)))));
-            this.btnListarLocais.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListarLocais.FlatAppearance.BorderSize = 0;
-            this.btnListarLocais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarLocais.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarLocais.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListarLocais.Location = new System.Drawing.Point(0, 443);
-            this.btnListarLocais.Name = "btnListarLocais";
-            this.btnListarLocais.Size = new System.Drawing.Size(765, 23);
-            this.btnListarLocais.TabIndex = 11;
-            this.btnListarLocais.Text = "LISTAR SERVIÇOS";
-            this.btnListarLocais.UseVisualStyleBackColor = false;
-            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(765, 561);
-            this.Controls.Add(this.btnListarLocais);
             this.Controls.Add(this.panelCadCategoria);
             this.Controls.Add(this.btnCadCategoria);
             this.Controls.Add(this.panelCadServico);
@@ -322,6 +305,5 @@ namespace Telas {
         private System.Windows.Forms.TextBox tbNomeCategoria;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnCadastrarCategoria;
-        private System.Windows.Forms.Button btnListarLocais;
     }
 }

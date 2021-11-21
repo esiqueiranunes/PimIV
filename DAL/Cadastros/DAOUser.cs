@@ -36,7 +36,39 @@ namespace DAL {
                 return true;
             }
             catch (SqlException erro) {
-                MessageBox.Show(erro.Message);
+                MessageBox.Show("Corriga os dados, conforme erro: " + erro.Message);
+                return false;
+            }
+            finally {
+                BD.fecharConexao();
+            }
+        }
+        public static Boolean verificarUsuarioBanco(string usuario, string senha) {
+            //abrir a conexao
+            SqlConnection conn = BD.abrirConexao();
+            SqlDataReader dr; //objeto para receber o retorno do banco
+            //string para pesquisa de usuario no banco
+            string sql = "SELECT LOGIN FROM USUARIO WHERE LOGIN = @LOGIN AND SENHA = @SENHA";
+            try {
+                //criar um objeto passando a conexao e a sql inserção
+                SqlCommand comando = new SqlCommand(sql, conn);
+                //adicionando os valores a sql
+                comando.Parameters.AddWithValue("@LOGIN", usuario);
+                comando.Parameters.AddWithValue("@SENHA", senha);
+                //abrir a conexao
+                BD.abrirConexao();
+                //executar os comandos
+                dr = comando.ExecuteReader();//Usado para quando a conexão retorna valores nesse caso usamos um select
+                //fechar a conexao
+                if (dr.HasRows) { //se foi encontrada linha com os dados enviados
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            catch (SqlException erro) {
+                MessageBox.Show("Corriga os dados, conforme erro: " + erro.Message);
                 return false;
             }
             finally {

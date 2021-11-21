@@ -90,7 +90,7 @@ namespace DAL {
                 return true;
             }
             catch (SqlException erro) {
-                MessageBox.Show(erro.Message);
+                MessageBox.Show("Corriga os dados, conforme erro: " + erro.Message);
                 return false;
             }
             finally {
@@ -167,7 +167,7 @@ namespace DAL {
                 BD.fecharConexao();
             }
         }
-        public  int Check(int id, string query) {
+        public int Check(int id, string query) {
 
             /* UPDATE HOSPEDAGEM SET DATA_ENTRADA = CONVERT (date, GETDATE()), HORA_ENTRADA = CONVERT (time, GETDATE()) WHERE ID_HOSPEDAGEM = @ID*/
             SqlConnection conn = BD.abrirConexao();

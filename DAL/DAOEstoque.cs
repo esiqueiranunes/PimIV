@@ -36,7 +36,7 @@ namespace DAL {
 
             }
             catch (SqlException erro) {
-                Console.WriteLine("Erro ao alterar dados no banco" + erro);
+                MessageBox.Show("Corriga os dados, conforme erro: " + erro.Message);
                 return 0;
             }
             finally {

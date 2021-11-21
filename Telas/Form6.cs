@@ -97,7 +97,7 @@ namespace Telas {
 
         private void button7_Click(object sender, EventArgs e) {
             CategoriaGeral produto = new CategoriaGeral();
-            produto.Classe = "Servico";
+            produto.Classe = "Produto";
             produto.Nome = this.tbNomeCategoria.Text;
 
             if (Cadastros.salvarCategoriaProduto(produto)) {

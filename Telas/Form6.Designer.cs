@@ -51,7 +51,6 @@ namespace Telas {
             this.tbNomeCategoria = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.btnListarProdutos = new System.Windows.Forms.Button();
             this.panelCadProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panelCadastrarProduto.SuspendLayout();
@@ -356,28 +355,12 @@ namespace Telas {
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // btnListarProdutos
-            // 
-            this.btnListarProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(37)))), ((int)(((byte)(76)))));
-            this.btnListarProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListarProdutos.FlatAppearance.BorderSize = 0;
-            this.btnListarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarProdutos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListarProdutos.Location = new System.Drawing.Point(0, 438);
-            this.btnListarProdutos.Name = "btnListarProdutos";
-            this.btnListarProdutos.Size = new System.Drawing.Size(765, 23);
-            this.btnListarProdutos.TabIndex = 16;
-            this.btnListarProdutos.Text = "LISTAR PRODUTOS ";
-            this.btnListarProdutos.UseVisualStyleBackColor = false;
-            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(765, 561);
-            this.Controls.Add(this.btnListarProdutos);
             this.Controls.Add(this.panelCadCategoria);
             this.Controls.Add(this.btnCadCategoria);
             this.Controls.Add(this.panelCadProduto);
@@ -423,7 +406,6 @@ namespace Telas {
         private System.Windows.Forms.TextBox tbNomeCategoria;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btnListarProdutos;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbValidade;
     }
