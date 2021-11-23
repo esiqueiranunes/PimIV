@@ -103,7 +103,7 @@ namespace Telas {
             this.comboBoxCategoria.FormattingEnabled = true;
             this.comboBoxCategoria.Items.AddRange(new object[] {
             "Entrada",
-            "Saída"});
+            "Saida"});
             this.comboBoxCategoria.Location = new System.Drawing.Point(62, 193);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(127, 21);
@@ -151,7 +151,7 @@ namespace Telas {
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.Items.AddRange(new object[] {
             "A",
-            "F"});
+            "P"});
             this.comboBoxStatus.Location = new System.Drawing.Point(195, 193);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(114, 21);
