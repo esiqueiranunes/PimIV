@@ -47,6 +47,7 @@ namespace Telas {
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCadastrarCategoriaLocal = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelCadLocal.SuspendLayout();
             this.panelCadCategoriaLocal.SuspendLayout();
@@ -110,6 +111,7 @@ namespace Telas {
             // panelCadLocal
             // 
             this.panelCadLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.panelCadLocal.Controls.Add(this.label7);
             this.panelCadLocal.Controls.Add(this.tbNomeLocal);
             this.panelCadLocal.Controls.Add(this.label1);
             this.panelCadLocal.Controls.Add(this.tbDescricaoLocal);
@@ -163,9 +165,9 @@ namespace Telas {
             // 
             this.comboBoxTipoLocal.FormattingEnabled = true;
             this.comboBoxTipoLocal.Items.AddRange(new object[] {
-            "Normal",
-            "Duplo",
-            "Triplo",
+            "SOLTEIRO",
+            "DUPLO",
+            "TRIPLO",
             "VIP"});
             this.comboBoxTipoLocal.Location = new System.Drawing.Point(222, 26);
             this.comboBoxTipoLocal.Name = "comboBoxTipoLocal";
@@ -311,6 +313,17 @@ namespace Telas {
             this.btnCadastrarCategoriaLocal.UseVisualStyleBackColor = true;
             this.btnCadastrarCategoriaLocal.Click += new System.EventHandler(this.btnCadastrarCategoriaLocal_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.Window;
+            this.label7.Location = new System.Drawing.Point(261, 11);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label7.Size = new System.Drawing.Size(93, 13);
+            this.label7.TabIndex = 118;
+            this.label7.Text = "(escolha ou digite)";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,5 +374,6 @@ namespace Telas {
         private System.Windows.Forms.TextBox tbDescontoLocal;
         private System.Windows.Forms.TextBox tbValorLocal;
         private System.Windows.Forms.TextBox tbCategoriaLocal;
+        private System.Windows.Forms.Label label7;
     }
 }

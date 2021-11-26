@@ -117,7 +117,7 @@ namespace Telas {
             this.btnContas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnContas.Size = new System.Drawing.Size(152, 30);
             this.btnContas.TabIndex = 1;
-            this.btnContas.Text = "Contas";
+            this.btnContas.Text = "Contas Hospedagens";
             this.btnContas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContas.UseVisualStyleBackColor = true;
             this.btnContas.Click += new System.EventHandler(this.btnContas_Click);

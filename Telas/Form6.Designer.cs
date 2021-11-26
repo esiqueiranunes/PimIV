@@ -172,7 +172,7 @@ namespace Telas {
             "1L",
             "2L",
             "3L",
-            "UNIDADE",
+            "UNID",
             "CAIXA"});
             this.comboBoxUnidade.Location = new System.Drawing.Point(42, 137);
             this.comboBoxUnidade.Name = "comboBoxUnidade";

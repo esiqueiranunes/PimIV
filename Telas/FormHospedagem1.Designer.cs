@@ -55,6 +55,7 @@ namespace Telas {
             this.lOCALTableAdapter = new Telas.HOTELDataSetTableAdapters.LOCALTableAdapter();
             this.hotelDataSet1 = new Telas.HOTELDataSet();
             this.lOCALTableAdapter1 = new Telas.HOTELDataSet4TableAdapters.LOCALTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelHospedagem.SuspendLayout();
             this.panelCadReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).BeginInit();
@@ -123,6 +124,7 @@ namespace Telas {
             // panelCadReserva
             // 
             this.panelCadReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.panelCadReserva.Controls.Add(this.label1);
             this.panelCadReserva.Controls.Add(this.tbHoraSaida);
             this.panelCadReserva.Controls.Add(this.label11);
             this.panelCadReserva.Controls.Add(this.label12);
@@ -144,12 +146,12 @@ namespace Telas {
             this.panelCadReserva.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadReserva.Location = new System.Drawing.Point(0, 123);
             this.panelCadReserva.Name = "panelCadReserva";
-            this.panelCadReserva.Size = new System.Drawing.Size(765, 196);
+            this.panelCadReserva.Size = new System.Drawing.Size(765, 223);
             this.panelCadReserva.TabIndex = 126;
             // 
             // tbHoraSaida
             // 
-            this.tbHoraSaida.Location = new System.Drawing.Point(543, 110);
+            this.tbHoraSaida.Location = new System.Drawing.Point(543, 125);
             this.tbHoraSaida.Name = "tbHoraSaida";
             this.tbHoraSaida.Size = new System.Drawing.Size(147, 20);
             this.tbHoraSaida.TabIndex = 9;
@@ -158,7 +160,7 @@ namespace Telas {
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.Window;
-            this.label11.Location = new System.Drawing.Point(540, 94);
+            this.label11.Location = new System.Drawing.Point(540, 109);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 13);
             this.label11.TabIndex = 116;
@@ -168,7 +170,7 @@ namespace Telas {
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.Window;
-            this.label12.Location = new System.Drawing.Point(223, 94);
+            this.label12.Location = new System.Drawing.Point(223, 109);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 115;
@@ -176,7 +178,7 @@ namespace Telas {
             // 
             // tbHoraEntrada
             // 
-            this.tbHoraEntrada.Location = new System.Drawing.Point(226, 110);
+            this.tbHoraEntrada.Location = new System.Drawing.Point(226, 125);
             this.tbHoraEntrada.Name = "tbHoraEntrada";
             this.tbHoraEntrada.Size = new System.Drawing.Size(144, 20);
             this.tbHoraEntrada.TabIndex = 7;
@@ -190,9 +192,15 @@ namespace Telas {
             // 
             // comboBoxLocal
             // 
-            this.comboBoxLocal.DataSource = this.lOCALBindingSource2;
-            this.comboBoxLocal.DisplayMember = "NOME_LOCAL";
             this.comboBoxLocal.FormattingEnabled = true;
+            this.comboBoxLocal.Items.AddRange(new object[] {
+            "101",
+            "102",
+            "203",
+            "204",
+            "303",
+            "304",
+            "401"});
             this.comboBoxLocal.Location = new System.Drawing.Point(236, 67);
             this.comboBoxLocal.Name = "comboBoxLocal";
             this.comboBoxLocal.Size = new System.Drawing.Size(121, 21);
@@ -210,7 +218,7 @@ namespace Telas {
             // 
             // tbDataSaida
             // 
-            this.tbDataSaida.Location = new System.Drawing.Point(378, 110);
+            this.tbDataSaida.Location = new System.Drawing.Point(378, 125);
             this.tbDataSaida.Name = "tbDataSaida";
             this.tbDataSaida.Size = new System.Drawing.Size(159, 20);
             this.tbDataSaida.TabIndex = 8;
@@ -229,7 +237,7 @@ namespace Telas {
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(375, 94);
+            this.label7.Location = new System.Drawing.Point(375, 109);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 109;
@@ -239,7 +247,7 @@ namespace Telas {
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(57, 94);
+            this.label6.Location = new System.Drawing.Point(57, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 108;
@@ -247,7 +255,7 @@ namespace Telas {
             // 
             // tbDataEntrada
             // 
-            this.tbDataEntrada.Location = new System.Drawing.Point(60, 110);
+            this.tbDataEntrada.Location = new System.Drawing.Point(60, 125);
             this.tbDataEntrada.Name = "tbDataEntrada";
             this.tbDataEntrada.Size = new System.Drawing.Size(160, 20);
             this.tbDataEntrada.TabIndex = 6;
@@ -308,7 +316,7 @@ namespace Telas {
             this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnReservar.Location = new System.Drawing.Point(472, 145);
+            this.btnReservar.Location = new System.Drawing.Point(472, 187);
             this.btnReservar.Name = "btnReservar";
             this.btnReservar.Size = new System.Drawing.Size(218, 36);
             this.btnReservar.TabIndex = 10;
@@ -343,6 +351,17 @@ namespace Telas {
             // lOCALTableAdapter1
             // 
             this.lOCALTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(264, 51);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.TabIndex = 119;
+            this.label1.Text = "(escolha ou digite)";
             // 
             // FormHospedagem1
             // 
@@ -404,5 +423,6 @@ namespace Telas {
         private HOTELDataSet4 hOTELDataSet4;
         private System.Windows.Forms.BindingSource lOCALBindingSource2;
         private HOTELDataSet4TableAdapters.LOCALTableAdapter lOCALTableAdapter1;
+        private System.Windows.Forms.Label label1;
     }
 }

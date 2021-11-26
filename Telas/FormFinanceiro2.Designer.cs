@@ -44,6 +44,7 @@ namespace Telas {
             this.NOME_CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_HOSPEDAGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hOSPEDAGEMTableAdapter = new Telas.HOTELDataSet2TableAdapters.HOSPEDAGEMTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelEstoque.SuspendLayout();
             this.panelListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hOSPEDAGEMBindingSource)).BeginInit();
@@ -94,6 +95,7 @@ namespace Telas {
             // panelListar
             // 
             this.panelListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.panelListar.Controls.Add(this.label2);
             this.panelListar.Controls.Add(this.comboBox2);
             this.panelListar.Controls.Add(this.btnFiltrar);
             this.panelListar.Controls.Add(this.label1);
@@ -106,9 +108,26 @@ namespace Telas {
             // 
             // comboBox2
             // 
-            this.comboBox2.DataSource = this.hOSPEDAGEMBindingSource;
-            this.comboBox2.DisplayMember = "ID_HOSPEDAGEM";
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "",
+            "",
+            ""});
             this.comboBox2.Location = new System.Drawing.Point(33, 33);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(115, 21);
@@ -224,6 +243,17 @@ namespace Telas {
             // 
             this.hOSPEDAGEMTableAdapter.ClearBeforeFill = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(30, 57);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.TabIndex = 120;
+            this.label2.Text = "(escolha ou digite)";
+            // 
             // FormFinanceiro2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,5 +300,6 @@ namespace Telas {
         private HOTELDataSet2 hOTELDataSet2;
         private System.Windows.Forms.BindingSource hOSPEDAGEMBindingSource;
         private HOTELDataSet2TableAdapters.HOSPEDAGEMTableAdapter hOSPEDAGEMTableAdapter;
+        private System.Windows.Forms.Label label2;
     }
 }

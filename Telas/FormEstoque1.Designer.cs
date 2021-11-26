@@ -29,7 +29,11 @@ namespace Telas {
             this.label9 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.panelListar = new System.Windows.Forms.Panel();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.btnListarGeral = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cATEGORIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOTELDataSet3 = new Telas.HOTELDataSet3();
             this.tbNomeProduto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,20 +48,19 @@ namespace Telas {
             this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FK_CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FORNECEDOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnListar = new System.Windows.Forms.Button();
-            this.btnListarGeral = new System.Windows.Forms.Button();
-            this.hOTELDataSet3 = new Telas.HOTELDataSet3();
             this.pRODUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pRODUTOSTableAdapter = new Telas.HOTELDataSet3TableAdapters.PRODUTOSTableAdapter();
-            this.cATEGORIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cATEGORIATableAdapter = new Telas.HOTELDataSet3TableAdapters.CATEGORIATableAdapter();
+            this.cATEGORIABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.panelEstoque.SuspendLayout();
             this.panelListar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEstoque
@@ -101,6 +104,7 @@ namespace Telas {
             // panelListar
             // 
             this.panelListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(100)))));
+            this.panelListar.Controls.Add(this.label2);
             this.panelListar.Controls.Add(this.btnListar);
             this.panelListar.Controls.Add(this.btnListarGeral);
             this.panelListar.Controls.Add(this.comboBox1);
@@ -114,15 +118,54 @@ namespace Telas {
             this.panelListar.Size = new System.Drawing.Size(765, 75);
             this.panelListar.TabIndex = 128;
             // 
+            // btnListar
+            // 
+            this.btnListar.BackColor = System.Drawing.Color.Teal;
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnListar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListar.Location = new System.Drawing.Point(392, 29);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(123, 27);
+            this.btnListar.TabIndex = 116;
+            this.btnListar.Text = "Filtrar";
+            this.btnListar.UseVisualStyleBackColor = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnListarGeral
+            // 
+            this.btnListarGeral.BackColor = System.Drawing.Color.Teal;
+            this.btnListarGeral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.btnListarGeral.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnListarGeral.Location = new System.Drawing.Point(521, 29);
+            this.btnListarGeral.Name = "btnListarGeral";
+            this.btnListarGeral.Size = new System.Drawing.Size(212, 27);
+            this.btnListarGeral.TabIndex = 115;
+            this.btnListarGeral.Text = "Listar";
+            this.btnListarGeral.UseVisualStyleBackColor = false;
+            this.btnListarGeral.Click += new System.EventHandler(this.btnListarGeral_Click);
+            // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.cATEGORIABindingSource;
-            this.comboBox1.DisplayMember = "NOME_CATEGORIA";
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "COMIDA",
+            "BEBIDA"});
             this.comboBox1.Location = new System.Drawing.Point(60, 33);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(115, 21);
             this.comboBox1.TabIndex = 104;
+            // 
+            // cATEGORIABindingSource
+            // 
+            this.cATEGORIABindingSource.DataMember = "CATEGORIA";
+            this.cATEGORIABindingSource.DataSource = this.hOTELDataSet3;
+            // 
+            // hOTELDataSet3
+            // 
+            this.hOTELDataSet3.DataSetName = "HOTELDataSet3";
+            this.hOTELDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbNomeProduto
             // 
@@ -244,39 +287,6 @@ namespace Telas {
             this.FORNECEDOR.HeaderText = "FORNECEDOR";
             this.FORNECEDOR.Name = "FORNECEDOR";
             // 
-            // btnListar
-            // 
-            this.btnListar.BackColor = System.Drawing.Color.Teal;
-            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.btnListar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnListar.Location = new System.Drawing.Point(392, 29);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(123, 27);
-            this.btnListar.TabIndex = 116;
-            this.btnListar.Text = "Filtrar";
-            this.btnListar.UseVisualStyleBackColor = false;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
-            // 
-            // btnListarGeral
-            // 
-            this.btnListarGeral.BackColor = System.Drawing.Color.Teal;
-            this.btnListarGeral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.btnListarGeral.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnListarGeral.Location = new System.Drawing.Point(521, 29);
-            this.btnListarGeral.Name = "btnListarGeral";
-            this.btnListarGeral.Size = new System.Drawing.Size(212, 27);
-            this.btnListarGeral.TabIndex = 115;
-            this.btnListarGeral.Text = "Listar";
-            this.btnListarGeral.UseVisualStyleBackColor = false;
-            this.btnListarGeral.Click += new System.EventHandler(this.btnListarGeral_Click);
-            // 
-            // hOTELDataSet3
-            // 
-            this.hOTELDataSet3.DataSetName = "HOTELDataSet3";
-            this.hOTELDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pRODUTOSBindingSource
             // 
             this.pRODUTOSBindingSource.DataMember = "PRODUTOS";
@@ -286,14 +296,25 @@ namespace Telas {
             // 
             this.pRODUTOSTableAdapter.ClearBeforeFill = true;
             // 
-            // cATEGORIABindingSource
-            // 
-            this.cATEGORIABindingSource.DataMember = "CATEGORIA";
-            this.cATEGORIABindingSource.DataSource = this.hOTELDataSet3;
-            // 
             // cATEGORIATableAdapter
             // 
             this.cATEGORIATableAdapter.ClearBeforeFill = true;
+            // 
+            // cATEGORIABindingSource1
+            // 
+            this.cATEGORIABindingSource1.DataMember = "CATEGORIA";
+            this.cATEGORIABindingSource1.DataSource = this.hOTELDataSet3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(68, 57);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 117;
+            this.label2.Text = "escolha ou digite";
             // 
             // FormEstoque1
             // 
@@ -312,11 +333,12 @@ namespace Telas {
             this.panelEstoque.PerformLayout();
             this.panelListar.ResumeLayout(false);
             this.panelListar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet3)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,5 +371,7 @@ namespace Telas {
         private HOTELDataSet3TableAdapters.PRODUTOSTableAdapter pRODUTOSTableAdapter;
         private System.Windows.Forms.BindingSource cATEGORIABindingSource;
         private HOTELDataSet3TableAdapters.CATEGORIATableAdapter cATEGORIATableAdapter;
+        private System.Windows.Forms.BindingSource cATEGORIABindingSource1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -55,6 +55,8 @@ namespace Telas {
             this.hOTELnomeProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOTELnomeProdutosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pRODUTOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelContagemEstoque.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource4)).BeginInit();
@@ -111,6 +113,8 @@ namespace Telas {
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.btnListar);
             this.panel1.Controls.Add(this.btnAtualizar);
@@ -120,14 +124,19 @@ namespace Telas {
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 384);
+            this.panel1.Size = new System.Drawing.Size(765, 438);
             this.panel1.TabIndex = 131;
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.pRODUTOSBindingSource4;
-            this.comboBox1.DisplayMember = "NOME";
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "REFRIGERANTE",
+            "SUCO",
+            "SALGADO",
+            "COXINHA",
+            "CERVEJA",
+            "VINHO"});
             this.comboBox1.Location = new System.Drawing.Point(48, 39);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 21);
@@ -163,7 +172,7 @@ namespace Telas {
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAtualizar.Location = new System.Drawing.Point(48, 337);
+            this.btnAtualizar.Location = new System.Drawing.Point(48, 378);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(673, 27);
             this.btnAtualizar.TabIndex = 113;
@@ -212,7 +221,7 @@ namespace Telas {
             this.ID_PRODUTO});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 78);
+            this.dataGridView1.Location = new System.Drawing.Point(48, 119);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -315,6 +324,28 @@ namespace Telas {
             this.pRODUTOSBindingSource3.DataMember = "PRODUTOS";
             this.pRODUTOSBindingSource3.DataSource = this.hOTELnomeProdutos;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(57, 62);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "escolha ou digite";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(57, 94);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(175, 13);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "altere: validade, estoque e/ou valor";
+            // 
             // FormEstoque2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,5 +410,7 @@ namespace Telas {
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn FORNECEDOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUTO;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
