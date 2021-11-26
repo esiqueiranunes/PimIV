@@ -37,7 +37,6 @@ namespace Telas {
             this.numericUpDownHospedes = new System.Windows.Forms.NumericUpDown();
             this.comboBoxLocal = new System.Windows.Forms.ComboBox();
             this.lOCALBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.hOTELDataSet4 = new Telas.HOTELDataSet4();
             this.tbDataSaida = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,21 +49,14 @@ namespace Telas {
             this.label2 = new System.Windows.Forms.Label();
             this.btnReservar = new System.Windows.Forms.Button();
             this.lOCALBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.hOTELDataSet = new Telas.HOTELDataSet();
             this.lOCALBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lOCALTableAdapter = new Telas.HOTELDataSetTableAdapters.LOCALTableAdapter();
-            this.hotelDataSet1 = new Telas.HOTELDataSet();
-            this.lOCALTableAdapter1 = new Telas.HOTELDataSet4TableAdapters.LOCALTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.panelHospedagem.SuspendLayout();
             this.panelCadReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHospedagem
@@ -193,14 +185,6 @@ namespace Telas {
             // comboBoxLocal
             // 
             this.comboBoxLocal.FormattingEnabled = true;
-            this.comboBoxLocal.Items.AddRange(new object[] {
-            "101",
-            "102",
-            "203",
-            "204",
-            "303",
-            "304",
-            "401"});
             this.comboBoxLocal.Location = new System.Drawing.Point(236, 67);
             this.comboBoxLocal.Name = "comboBoxLocal";
             this.comboBoxLocal.Size = new System.Drawing.Size(121, 21);
@@ -209,12 +193,6 @@ namespace Telas {
             // lOCALBindingSource2
             // 
             this.lOCALBindingSource2.DataMember = "LOCAL";
-            this.lOCALBindingSource2.DataSource = this.hOTELDataSet4;
-            // 
-            // hOTELDataSet4
-            // 
-            this.hOTELDataSet4.DataSetName = "HOTELDataSet4";
-            this.hOTELDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbDataSaida
             // 
@@ -327,30 +305,11 @@ namespace Telas {
             // lOCALBindingSource1
             // 
             this.lOCALBindingSource1.DataMember = "LOCAL";
-            this.lOCALBindingSource1.DataSource = this.hOTELDataSet;
-            // 
-            // hOTELDataSet
-            // 
-            this.hOTELDataSet.DataSetName = "HOTELDataSet";
-            this.hOTELDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lOCALBindingSource
             // 
             this.lOCALBindingSource.DataMember = "LOCAL";
             this.lOCALBindingSource.DataSource = this.hOTELDataSet;
-            // 
-            // lOCALTableAdapter
-            // 
-            this.lOCALTableAdapter.ClearBeforeFill = true;
-            // 
-            // hotelDataSet1
-            // 
-            this.hotelDataSet1.DataSetName = "HOTELDataSet";
-            this.hotelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lOCALTableAdapter1
-            // 
-            this.lOCALTableAdapter1.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -382,11 +341,8 @@ namespace Telas {
             this.panelCadReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHospedes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOTELDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCALBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

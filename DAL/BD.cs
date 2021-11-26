@@ -12,7 +12,7 @@ namespace DAL {
         //conectando com o bando sqlserver express à base de dados usando window authentication
         // para conectar com o banco de dados criado, segundo o arquivo de criação do "SCRIPT PIM.sql" na pasta SQL deste projeto
         // mude o nome "EDUARDO\SQLEXPRESS" para o nome da
-        private static string connString = @"Server = EDUARDO\SQLEXPRESS; Database = HOTELIV; Trusted_Connection = true";
+        private static string connString = @"Server = EDUARDO\SQLEXPRESS; Database = HOTEL; Trusted_Connection = true";
         //criar um atributo para a conexao
         private static SqlConnection conn = null;
         private static SqlConnection objConect = null;
